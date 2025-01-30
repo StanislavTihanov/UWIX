@@ -2,7 +2,6 @@
 .footer {
     padding: 1.5rem 0px;
     &__body {
-        @include content-center;
         gap: 10px;
     }
 }

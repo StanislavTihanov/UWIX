@@ -1,99 +1,48 @@
 /*----------------------------------form--------------------------------*/
 .form {
-    max-width: 600px;
     margin: 0 auto;
     color: var(--color-black);
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: var(--color-white);
     border-radius: 5px;
     margin-bottom: 1rem;
     position: relative;
-    &::after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #4d036231 url(../images/loading.gif) center / 50px no-repeat;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
-      }
-    &._sending::after {
-        opacity: 1;
-        visibility: visible;
+    &__title {
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+        @include mobile {
+            font-weight: 700;
+        }
+        span {
+            text-transform: uppercase;
+        }
     }
-    &__label {
-        font-size: 1rem;
-        display: block;
-        margin-bottom: 0.5rem;
+    &__text {
+        @include fluid-text(16, 18);
+        line-height: 120%;
+        margin-bottom: 1.5rem;
     }
-    &__input,
-    &__textarea {
+    &__item {
+        margin-bottom: 0.7rem;
+    }
+    &__input {
         width: 100%;
-        background-color: #f1d5f9;
         padding: 0.7rem;
         border-radius: 5px;
         transition: all 0.3s ease 0s;
+        border: 1px solid rgba(23, 23, 23, 0.7);
         &:focus {
-            box-shadow: 0 0 15px var(--color-blue);
+            box-shadow: 0 0 10px var(--color-orange);
         }
-        &._error {
-            border: 1px solid red;
-        }
-    }
-    &__error {
-        font-size: 0.7rem;
-        color: red;
-        opacity: 0;
-    }
-    &__error.view {
-        opacity: 1;
-    }
-    &__textarea {
-        resize: none;
-        margin-bottom: 1rem;
     }
     &__button {
         width: 100%;
-        padding: 1rem;
-        background-color: var(--color-blue);
+        padding: 1rem 2rem;
+        background-color: var(--color-orange);
         cursor: pointer;
         color: var(--color-white);
         border-radius: 5px;
-        font-weight: 700;
-        font-size: 1.5rem;
-    }
-}
-.file {
-    &__item {
-        position: relative;
-    }
-    &__input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        font-size: 0;
-        cursor: pointer;
-    }
-    &__button {
-        background-color: var(--color-blue);
-        color: var(--color-white);
-        display: inline-flex;
-        padding: 0.4rem;
-        border-radius: 5px;
-    }
-    &__preview {
-        display: inline-block;
-        max-width: 100px;
-        margin-top: 1rem;
-        img {
-            width: 100%;
-        }
+        @include fluid-text(14, 16);
     }
 }
 /*----------------------------------form--------------------------------*/

@@ -6,27 +6,3 @@ $table: 64rem;
 
 $mobile-above: 48.3rem;
 $mobile: 48rem;
-
-@mixin desktop {
-    @media(max-width: $desktop) {
-        @content;
-    }
-}
-@mixin table {
-    @media(max-width: $table) {
-        @content;
-    }
-}
-@mixin mobile {
-    @media(max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin hover {
-    @media (hover: hover) {
-      &:hover {
-        @content;
-      }
-    }
-}

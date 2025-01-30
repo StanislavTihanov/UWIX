@@ -133,36 +133,21 @@ document.addEventListener ('click', (e) => {
 //------------------------------------------------------------------------Прокрутка при клике
 
 //------------------------------------------------------------------------Слайдер
-//const mainSlider = document.querySelector('.main-slider');
-//if (mainSlider) {
-//  new Swiper(mainSlider, {
-//    direction: 'horizontal',
-//    loop: true,
-//    slidesPerView: 3,
-//    spaceBetween: 20,
-//    speed: 1000,
-//    autoHeight: false,
-//    navigation: {
-//      nextEl: '.swiper-button-next',
-//      prevEl: '.swiper-button-prev',
-//    },
-//    pagination: {
-//      el: '.swiper-pagination',
-//      clickable: true,
-//    },
-//    breakpoints: {
-//      320: {
-//        slidesPerView: 1,
-//      },
-//      640: {
-//        slidesPerView: 2,
-//      },
-//      980: {
-//        slidesPerView: 3,
-//      }
-//    }
-//  });
-//}
+const mainSlider = document.querySelector('.main-slider');
+if (mainSlider) {
+  new Swiper(mainSlider, {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 1000,
+    autoHeight: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
 //------------------------------------------------------------------------Слайдер
 
 

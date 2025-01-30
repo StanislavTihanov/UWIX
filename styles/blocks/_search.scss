@@ -1,54 +1,24 @@
 /*----------------------------------search--------------------------------*/
 .search {
-    &__box {
-        flex: none;
-        z-index: 4;
-        }
-    &__btn {
-        background-color: inherit;
-        cursor: pointer;
-        padding: 8.5px;
-        position: relative;
-        z-index: 4;
-    }
-    &__btn svg {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    &__btn._act {
-          opacity: 0;
-    }
-    &__label_input {
-        border-bottom: 1px solid rgb(17, 53, 167);
-        width: 100%;
-    }
-    &__window {
-        position: absolute;
-        right: 0;
-        width: 50rem;
-        background: rgba(255, 255, 255, 0.94);
-        padding: 50px 85px;
-        border-radius: 15px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.5s;
-        transform: translateY(-100%); 
-        z-index: 999;
-    }
+    flex-basis: 26rem;
     &__label {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        color: var(--color-blue);
-        font-size: 18px;
+        gap: 0.9rem;
+        background-color: var(--color-orange);
+        padding: 1px 1px 1px 31px;
+        border-radius: 10px;
     }
-    &__window._act {
-        opacity: 1;
-        visibility: visible;
-        width: 59%; 
-        transform: translateY(0); 
+    &__label_input {
+        width: 100%;
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+        &::placeholder {
+            @include fluid-text(12, 16);
+        }
     }
+
 }
    
 /*----------------------------------search--------------------------------*/

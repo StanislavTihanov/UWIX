@@ -21,10 +21,10 @@ body {
 ._container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0rem 0.6rem;
+    padding: 0rem 0.64rem;
 }
 .section {
-    padding: 4rem 0rem;
+    padding: 3.1rem 0rem;
 }
 ._ibg {
     position: relative;
@@ -38,9 +38,10 @@ body {
     }
 }
 .title {
-    @include fluid-text(24, 60);
-    line-height: 100%;
-    color: var(--color-black);
+    @include fluid-text(30, 60);
+    line-height: 120%;
+    color: var(--color-white);
+    text-transform: uppercase
 }
 .subtitle {
     @include fluid-text(18, 32);

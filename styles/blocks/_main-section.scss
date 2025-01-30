@@ -1,5 +1,84 @@
 /*----------------------------------main-section--------------------------------*/
 .main-section {
-    margin-top: 3rem;
+    position: relative;
+    padding-top: 13rem;
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .title {
+        margin-bottom: 2rem;
+    }
+    &__info {
+        flex-basis: 32rem;
+        min-width: 0;
+    }
+    &__form {
+        flex-basis: 22.5rem;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            object-position: right;
+        }
+    }
+    &__discount {
+        max-width: 20rem;
+        background-color: var(--color-white);
+        text-align: center;
+        padding: 0.7rem;
+        border-radius: 10px;
+
+        &_percent {
+            @include fluid-text(18, 24);
+            font-weight: 700;
+            color: var(--color-orange);
+            margin-bottom: 0.5rem;
+        }
+        &_text {
+            @include fluid-text(16, 18);
+        }
+    }
+    &__blocks {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 1rem;
+       margin-bottom: -6rem;
+       @include table {
+        flex-wrap: wrap;
+     }
+    }
 }
+.block {
+    background-color: var(--color-orange);
+    padding: 1.3rem;
+    border-radius: 10px;
+    flex-basis: 22.5rem;
+    color: var(--color-white);
+    @include table {
+        flex-basis: 100%;
+  }
+    &__icon {
+        margin-bottom: 0.6rem;
+    }
+    &__title {
+        @include fluid-text(18, 24);
+        margin-bottom: 0.6rem;
+    }
+    &__text {
+        @include fluid-text(16, 18);
+        line-height: 120%;
+    }
+ }
 /*----------------------------------main-section--------------------------------*/

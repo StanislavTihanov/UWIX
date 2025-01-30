@@ -1,9 +1,9 @@
 /*---------------------------------------sliders----------------------------*/
-.slider {
+.main-slider {
     overflow: hidden;
     position: relative;
-    padding-bottom: 4rem;
-    padding: 0px 1.3rem 3rem 1.5rem;
+    padding-bottom: 2.5rem;
+    max-width: 20rem;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .swiper-wrapper {
@@ -37,20 +37,15 @@
     border-radius: 1rem;
     background-color: var(--color-black);
 }
-  .swiper-pagination-bullet {
+.main-slider .swiper-pagination-bullet {
     opacity: 1;
-    background-color: var(--color-white);
+    background-color: #D9D9D9;
     transition: All 0.5s ease 0s;
-    width: 1rem;
-    height: 1rem;
-    scale: 0.7;
+    width: 0.7rem;
+    height: 0.7rem;
 }
-  .swiper-pagination-bullet-active {
-    width: 1rem;
-    height: 1rem;
-    scale: 1.2;
-    background-color: var(--color-brown-light);
-    background-color: #7B614D;
+.main-slider .swiper-pagination-bullet-active {
+    background-color: var(--color-orange);
 }
 
 /*---------------------------------------sliders----------------------------*/
