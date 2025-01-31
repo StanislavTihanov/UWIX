@@ -1315,6 +1315,62 @@ body {
 }
 
 /*----------------------------------consultation--------------------------------*/
+/*----------------------------------categories-------------------------------*/
+.categories__body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 6.25rem;
+}
+.categories__card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.categories__card_image {
+  padding-top: 200px;
+  margin-bottom: 0.625rem;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+}
+.categories__card_image img {
+  border-radius: 10px;
+}
+.categories__card_title {
+  margin-bottom: 1.25rem;
+}
+.categories__card .btn {
+  display: inline-block;
+  width: 127px;
+}
+.categories__blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 0.625rem 1.25rem;
+}
+@media (max-width: 48rem) {
+  .categories__blocks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+.categories__blocks .block {
+  display: flex;
+  gap: 0.5rem 1.25rem;
+}
+@media (max-width: 48rem) {
+  .categories__blocks .block {
+    flex-wrap: wrap;
+  }
+}
+.categories__blocks .block__icon {
+  flex: none;
+  margin-bottom: 0rem;
+}
+
+/*----------------------------------categories--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;

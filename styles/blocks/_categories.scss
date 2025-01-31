@@ -1,0 +1,56 @@
+/*----------------------------------categories-------------------------------*/
+
+.categories {
+    &__body {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 6.25rem;
+    }
+    &__card {
+        background-color: var(--color-white);
+        border-radius: 10px;
+        padding: 1.25rem;
+        border: 1px solid #ddd;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        &_image {
+            padding-top: 200px;
+            margin-bottom: 0.625rem;
+            border: 1px solid #dadada;
+            border-radius: 10px;
+            img {
+                border-radius: 10px;
+            }
+        }
+        &_title {
+            margin-bottom: 1.25rem;
+        }
+        .btn {
+            display: inline-block;
+            width: 127px;
+        }
+    }
+    &__blocks {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
+        gap: 0.625rem 1.25rem;
+        @include mobile {
+            grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .block {
+            display: flex;
+            gap: 0.5rem 1.25rem;
+            @include mobile {
+                flex-wrap: wrap;
+            }
+            &__icon {
+                flex: none;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}
+
+
+/*----------------------------------categories--------------------------------*/
