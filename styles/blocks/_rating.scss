@@ -31,7 +31,7 @@
      
     &__cards {
        display: grid;
-       grid-template-columns:repeat(auto-fit, minmax(262px, 1fr));
+       grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
        gap: 2.5rem 1.3rem;
        @include mobile {
         width: 100%;
@@ -39,10 +39,12 @@
     }
     &__card {
         display: grid;
+        grid-template-rows: auto 3.5rem 1fr 2.5rem;
         @include mobile {
             width: 100%;
         } 
         &_image {
+            padding: 182px 0px 0px 0px;
             img {
                 border-radius: 10px;
                 width: 100%;

@@ -40,6 +40,7 @@
         @include table {
             position: relative;
         }
+
     }
     &__discount {
         max-width: 20rem;
@@ -74,7 +75,7 @@
 }
 .block {
     background-color: var(--color-orange);
-    padding: 1.3rem;
+    padding: 1.25rem;
     border-radius: 10px;
     flex-basis: 22.5rem;
     color: var(--color-white);

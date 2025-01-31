@@ -21,29 +21,30 @@
         .block {
             background-color: var(--color-white);
             color: var(--color-black);
-            display: flex;
-            justify-content: space-between;
-            gap: 1.3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
             @include mobile {
                 background-color: inherit;
                 padding: 0rem;
-                justify-content: start;
-                align-items: center;
                 gap: 0.7rem;
+                grid-template-columns: 2rem 1fr;
+                align-items: center;
+            }
+            &__img {
+                padding: 160px 0px 0px 0px;
+                img {
+                    border-radius: 10px;
+                }
+                @include mobile {
+                    display: none;
+                }
             }
             &__icon {
-                margin-bottom: 0rem;
-                flex: none;
-                & :last-child {
-                    display: none;
-                }  
+                display: none;
                 @include mobile {
-                    & :first-child {
-                        display: none;
-                    }  
-                    & :last-child {
-                        display: block;
-                    }  
+                    display: block;
+                    margin-bottom: 0rem;
                 }
             }
             &__title {
