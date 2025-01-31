@@ -150,6 +150,32 @@ if (mainSlider) {
 }
 //------------------------------------------------------------------------Слайдер
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 768) { // Проверка на мобильное устройство
+      const moreButton = document.querySelector(".button__more");
+      const hideButton = document.querySelector(".button__hide");
+      const textMore = document.querySelector(".text-more");
+
+      if (moreButton && hideButton && textMore) {
+          moreButton.addEventListener("click", function () {
+              textMore.style.display = "block";
+              moreButton.style.display = "none";
+              hideButton.style.display = "block";
+          });
+
+          hideButton.addEventListener("click", function () {
+              textMore.style.display = "none";
+              moreButton.style.display = "block";
+              hideButton.style.display = "none";
+          });
+
+          hideButton.style.display = "none";
+      }
+  }
+});
+
+
+
 
 //-----------------------------------------------------------------------сортировка по атрибутам
 

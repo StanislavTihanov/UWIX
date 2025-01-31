@@ -1,0 +1,94 @@
+/*----------------------------------reliability--------------------------------*/
+.reliability {
+    position: relative;
+}
+.blockquote {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+    &__info {
+        .title {
+            margin-bottom: 1.25rem;
+            span {
+                color: var(--color-orange);
+            }
+            @include mobile {
+                position: absolute;
+                top: 0;
+            }
+        }
+        @include mobile {
+            order: 1;
+        }
+    }
+    &__block {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+        @include mobile {
+            grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+        }
+        &_photo {
+           padding-top: 195px;
+           @include mobile {
+            padding-top: 100px;
+        }
+           img {
+              border-radius: 10px;
+              width: 100%;
+           }
+        }
+        &_name {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 0.625rem;
+        }
+    }
+    &__more {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: var(--color-white);
+        padding: 1.25rem;
+        &_title {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 0.625rem;
+        }
+        &_text {
+            margin-bottom: 1.25rem;
+        }
+        &_buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.625rem 1.25rem;
+            @include mobile {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__text {
+        flex-basis: 59rem;
+        @include mobile {
+            margin-top: 2.5rem;
+        }
+        span {
+            display: inline;
+        }
+        .text {
+            @include fluid-text(16, 18);
+            margin-bottom: 2rem;
+            line-height: 110%;
+            @include mobile {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+/*----------------------------------reliability--------------------------------*/

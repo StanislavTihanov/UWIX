@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-address {
+address, cite {
   font-style: normal;
 }
 
@@ -258,6 +258,27 @@ body {
   .btn-filled:hover {
     color: var(--color-black);
     background-color: var(--color-white);
+  }
+}
+
+.button {
+  color: var(--color-orange);
+  background-color: inherit;
+  text-decoration: underline;
+  margin: 0 auto;
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  .button__more {
+    display: block;
+  }
+}
+
+@media (max-width: 48rem) {
+  .text-more {
+    display: none;
   }
 }
 
@@ -1114,6 +1135,114 @@ body {
 }
 
 /*----------------------------------guarantees--------------------------------*/
+/*----------------------------------reliability--------------------------------*/
+.reliability {
+  position: relative;
+}
+
+.blockquote {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+@media (max-width: 48rem) {
+  .blockquote {
+    flex-wrap: wrap;
+  }
+}
+.blockquote__info .title {
+  margin-bottom: 1.25rem;
+}
+.blockquote__info .title span {
+  color: var(--color-orange);
+}
+@media (max-width: 48rem) {
+  .blockquote__info .title {
+    position: absolute;
+    top: 0;
+  }
+}
+@media (max-width: 48rem) {
+  .blockquote__info {
+    order: 1;
+  }
+}
+.blockquote__block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 48rem) {
+  .blockquote__block {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+.blockquote__block_photo {
+  padding-top: 195px;
+}
+@media (max-width: 48rem) {
+  .blockquote__block_photo {
+    padding-top: 100px;
+  }
+}
+.blockquote__block_photo img {
+  border-radius: 10px;
+  width: 100%;
+}
+.blockquote__block_name {
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2.0689655172vw, 1.5rem);
+  margin-bottom: 0.625rem;
+}
+.blockquote__more {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  padding: 1.25rem;
+}
+.blockquote__more_title {
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2.0689655172vw, 1.5rem);
+  margin-bottom: 0.625rem;
+}
+.blockquote__more_text {
+  margin-bottom: 1.25rem;
+}
+.blockquote__more_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem 1.25rem;
+}
+@media (max-width: 48rem) {
+  .blockquote__more_buttons {
+    flex-wrap: wrap;
+  }
+}
+.blockquote__text {
+  flex-basis: 59rem;
+}
+@media (max-width: 48rem) {
+  .blockquote__text {
+    margin-top: 2.5rem;
+  }
+}
+.blockquote__text span {
+  display: inline;
+}
+.blockquote__text .text {
+  font-size: clamp(1rem, 1.5517241379vw, 1.125rem);
+  margin-bottom: 2rem;
+  line-height: 110%;
+}
+@media (max-width: 48rem) {
+  .blockquote__text .text {
+    margin-bottom: 1rem;
+  }
+}
+
+/*----------------------------------reliability--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;

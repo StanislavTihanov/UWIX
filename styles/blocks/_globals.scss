@@ -94,4 +94,22 @@ body {
         background-color: var(--color-white);
     }
 }
+.button {
+    color: var(--color-orange);
+    background-color: inherit;
+    text-decoration: underline;
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+}
+.button__more {
+    @include mobile {
+        display: block;
+    }
+}
+.text-more {
+    @include mobile {
+        display: none;
+    }
+}
 /*----------------------------------global--------------------------------*/
