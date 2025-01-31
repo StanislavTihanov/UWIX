@@ -1,0 +1,63 @@
+/*----------------------------------consultation--------------------------------*/
+
+.consultation {
+    @include mobile {
+        margin-top: 5rem;
+    }
+    &__body {
+        color: var(--color-white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.7rem;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__info {
+        flex-basis: 28rem;
+        @include mobile {
+            order: 1;
+        }
+    }
+    &__image {
+        margin-top: -7.5rem;
+        @include mobile {
+            margin-top: -9rem;
+        }
+    }
+    &__form {
+        .form {
+            margin-bottom: 0rem;
+            &__wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 0.625rem;
+                margin-bottom: 0.625rem;
+                @include mobile {
+                    flex-wrap: wrap;
+                }
+                .form__item {
+                    margin-bottom: 0rem;
+                    width: 33.333%;
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+            &__button {
+               flex-basis: 20rem;
+               @include mobile {
+                flex-basis: 100%;
+            }
+        }
+        .checkbox {
+            margin-bottom: 0rem;
+        }
+        }
+    }
+}
+
+/*----------------------------------consultation--------------------------------*/

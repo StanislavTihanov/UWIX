@@ -714,14 +714,14 @@
                   <p>Или вызовите инженера на объект <br> до следующего понедельника и получите скидку 3% от итоговой сметы</p>
                 </div>
                 <div class="form__item">
-                 <input class="form__input _req" id="formName" type="text" name="name" placeholder="Имя Фамаилия">
+                 <input class="form__input" id="formName" type="text" name="name" placeholder="Имя Фамаилия">
                 </div>
                 <div class="form__item">
-                 <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="Телефон">
+                 <input class="form__input" id="formNumber" type="text" name="number" placeholder="Телефон">
                 </div>
                 <div class="checkbox">
-                   <input class="checkbox__input _req" id="formAgreement" type="checkbox" name="agreement">
-                   <label class="checkbox__label" for="formAgreement">
+                   <input class="checkbox__input" id="fAgreement" type="checkbox">
+                   <label class="checkbox__label" for="fAgreement">
                      <span class="checkbox__text">Я согласен на обработку персональных данных и политику конфиденциальности</span>
                    </label>
                 </div>
@@ -1281,6 +1281,49 @@
                 </div>
               </div>
             </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="consultation section section--color">
+        <div class="consultation__content _container">
+          <div class="consultation__body">
+           <div class="consultation__info">
+             <div class="title">
+               <h2>Получите бесплатную консультацию</h2>
+             </div>
+             <div class="consultation__text">
+               <p>Заполните форму, и наши специалисты свяжутся с вами в ближайшее время для консультации по вашему проекту</p>
+             </div>
+           </div>
+           <div class="consultation__image">
+             <picture>
+               <source media="(max-width: 390px)" srcset="images/consultation-img-mob.webp">
+               <img src="images/consultation-img.webp" alt="consultation img" loading="lazy">
+             </picture>
+           </div>
+          </div>
+          <div class="consultation__form">
+            <form class="form">
+              <div class="form__wrapper">
+                <div class="form__item">
+                  <input class="form__input" id="formName" type="text" name="name" placeholder="Имя Фамаилия" required>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" id="formNumber" type="text" name="number" placeholder="Телефон" required>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" id="formNumber" type="email" name="number" placeholder="E-mail">
+                </div>
+                <button class="form__button" type="submit">Получить консультацию</button>
+              </div>
+              <div class="checkbox">
+                 <input class="checkbox__input" id="formAgreement" type="checkbox">
+                 <label class="checkbox__label" for="formAgreement">
+                   <span class="checkbox__text">Я согласен на обработку персональных данных и политику конфиденциальности</span>
+                 </label>
+              </div>
+            </form>
           </div>
         </div>
       </section>

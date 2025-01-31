@@ -1243,6 +1243,78 @@ body {
 }
 
 /*----------------------------------reliability--------------------------------*/
+/*----------------------------------consultation--------------------------------*/
+@media (max-width: 48rem) {
+  .consultation {
+    margin-top: 5rem;
+  }
+}
+.consultation__body {
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.7rem;
+}
+@media (max-width: 48rem) {
+  .consultation__body {
+    flex-wrap: wrap;
+  }
+}
+.consultation__info {
+  flex-basis: 28rem;
+}
+@media (max-width: 48rem) {
+  .consultation__info {
+    order: 1;
+  }
+}
+.consultation__image {
+  margin-top: -7.5rem;
+}
+@media (max-width: 48rem) {
+  .consultation__image {
+    margin-top: -9rem;
+  }
+}
+.consultation__form .form {
+  margin-bottom: 0rem;
+}
+.consultation__form .form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+@media (max-width: 48rem) {
+  .consultation__form .form__wrapper {
+    flex-wrap: wrap;
+  }
+}
+.consultation__form .form__wrapper .form__item {
+  margin-bottom: 0rem;
+  width: 33.333%;
+}
+@media (max-width: 48rem) {
+  .consultation__form .form__wrapper .form__item {
+    width: 100%;
+  }
+}
+.consultation__form .form__button {
+  flex-basis: 20rem;
+}
+@media (max-width: 48rem) {
+  .consultation__form .form__button {
+    flex-basis: 100%;
+  }
+}
+.consultation__form .form .checkbox {
+  margin-bottom: 0rem;
+}
+
+/*----------------------------------consultation--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;
@@ -1304,7 +1376,7 @@ body {
 .form {
   margin: 0 auto;
   color: var(--color-black);
-  padding: 1.5rem;
+  padding: 1.25rem;
   background-color: var(--color-white);
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -1337,13 +1409,14 @@ body {
   border-radius: 5px;
   transition: all 0.3s ease 0s;
   border: 1px solid rgba(23, 23, 23, 0.7);
+  height: 100%;
 }
 .form__input:focus {
   box-shadow: 0 0 10px var(--color-orange);
 }
 .form__button {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   background-color: var(--color-orange);
   cursor: pointer;
   color: var(--color-white);
@@ -1432,7 +1505,6 @@ body {
   border-radius: 5px;
   margin-right: 0.5rem;
   border: 1px solid var(--color-black);
-  margin-top: 3px;
 }
 .checkbox__label::after {
   transition: all 0.3s ease 0s;
@@ -1440,7 +1512,7 @@ body {
   content: "";
   width: 7px;
   height: 7px;
-  top: 7px;
+  top: 4px;
   left: 4px;
   background-color: var(--color-orange);
   transform: scale(0);
