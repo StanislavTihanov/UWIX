@@ -11,6 +11,9 @@
             transform: scale(1);
         }
     }
+    &__text {
+        font-size: 12px;
+    }
     &__label {
         @include fluid-text(12, 14);
         line-height: 140%;

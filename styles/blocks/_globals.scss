@@ -4,10 +4,10 @@ body.lock {
 }
 body { 
     font-family: var(--font-family-base); 
-    font-size: 1rem;
+    font-size: 1.13rem;
     font-weight: 400; 
     color: var(--color-black); 
-    background: var(--color-white);
+    background: var(--color-gray);
 }
 .wrapper {
     display: flex;
@@ -35,22 +35,62 @@ body {
         top: 0;
         left: 0;
         object-fit: cover;
+        @include mobile {
+            position: relative;
+        }
     }
 }
 .title {
     @include fluid-text(30, 60);
     line-height: 120%;
-    color: var(--color-white);
-    text-transform: uppercase
-}
-.subtitle {
-    @include fluid-text(18, 32);
-    line-height: 100%;
-    color: var(--color-white);
 }
 .text {
     @include fluid-text(14, 18);
     color: var(--color-black);
     line-height: 100%;
+}
+.yandex-rating {
+    @include mobile {
+        display: flex;
+        gap: 15px;
+    }
+    &__stars {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include mobile {
+            display: flex;
+            gap: 1px;
+            img {
+                width: 22px;
+            }
+        }
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 0.7rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+.btn-outline {
+    border: 1px solid var(--color-orange);
+    @include hover {
+        color: var(--color-white);
+        background-color: var(--color-orange);
+    }
+}
+.btn-filled {
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-orange);
+    color: var(--color-white);
+    @include hover {
+        color: var(--color-black);
+        background-color: var(--color-white);
+    }
 }
 /*----------------------------------global--------------------------------*/

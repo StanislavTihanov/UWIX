@@ -5,48 +5,52 @@
         width: 36px;
         height: 36px;
         flex: 0 0 auto;
-        border-radius: 50%;
+        background-color: var(--color-orange);
+        border-radius: 8px;
         position: relative;
         display: block;
-        z-index: 9;
+        z-index: 999;
         .burger {
             z-index: 2;
             cursor: pointer;
             &__line {
-                height: 5px;
-                width: 27px;
+                height: 2px;
+                width: 20px;
                 position: absolute;
                 transition: all 0.3s ease 0s;
-                background: #000;
+                background: var(--color-white);
                 transform: translate(-50%, -50%);
                 border-radius: 1px;
                 &:first-child {
                     left: 50%;
-                    top: 25%;
+                    top: 32%;
                 }
                 &:nth-child(2) {
                     left: 50%;
                     top: 50%;
                 }
                 &:last-child {
-                    left: 50%;
-                    top: 75%;
+                    top: 67%;
+                    width: 15px;
+                    right: 0.29px;
                 }
             }
             
         }
         &._active .burger__line:nth-child(2){
-            opacity: 0;
+            transform: rotate(45deg);
+            left: 25%;
+            top: 50%;
+            width: 20px;
         }
         &._active .burger__line:first-child{
             transform: rotate(-45deg);
-            left: 30%;
+            left: 25%;
             top: 50%;
         }
         &._active .burger__line:last-child{
-            transform: rotate(45deg);
-            left: 30%;
-            top: 50%;
+
+            opacity: 0;
         }
     }
 }

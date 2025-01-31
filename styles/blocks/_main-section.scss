@@ -2,6 +2,7 @@
 .main-section {
     position: relative;
     padding-top: 13rem;
+    margin-bottom: 6rem;
     &__content {
         position: relative;
         z-index: 1;
@@ -14,6 +15,11 @@
     }
     .title {
         margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: var(--color-white);
+        @include table {
+            color: var(--color-black);
+      }
     }
     &__info {
         flex-basis: 32rem;
@@ -31,6 +37,9 @@
         img {
             object-position: right;
         }
+        @include table {
+            position: relative;
+        }
     }
     &__discount {
         max-width: 20rem;
@@ -38,7 +47,6 @@
         text-align: center;
         padding: 0.7rem;
         border-radius: 10px;
-
         &_percent {
             @include fluid-text(18, 24);
             font-weight: 700;
@@ -47,6 +55,9 @@
         }
         &_text {
             @include fluid-text(16, 18);
+        }
+        @include mobile {
+            border: 1px solid var(--color-orange);
         }
     }
     &__blocks {
@@ -57,6 +68,7 @@
        margin-bottom: -6rem;
        @include table {
         flex-wrap: wrap;
+        margin-bottom: 2rem;
      }
     }
 }
