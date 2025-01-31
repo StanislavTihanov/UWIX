@@ -178,6 +178,10 @@ body {
   padding: 3.1rem 0rem;
 }
 
+.section--color {
+  background-color: #EA984F;
+}
+
 ._ibg {
   position: relative;
 }
@@ -984,6 +988,90 @@ body {
 }
 
 /*----------------------------------foundation--------------------------------*/
+/*----------------------------------working--------------------------------*/
+.working__content .title {
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 48rem) {
+  .working__content .title {
+    margin-bottom: 1.3rem;
+  }
+}
+.working__blocks {
+  margin-bottom: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 0.8rem;
+}
+@media (max-width: 48rem) {
+  .working__blocks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+.working__blocks .block {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.3rem;
+}
+@media (max-width: 48rem) {
+  .working__blocks .block {
+    background-color: inherit;
+    padding: 0rem;
+    justify-content: start;
+    align-items: center;
+    gap: 0.7rem;
+  }
+}
+.working__blocks .block__icon {
+  margin-bottom: 0rem;
+  flex: none;
+}
+.working__blocks .block__icon :last-child {
+  display: none;
+}
+@media (max-width: 48rem) {
+  .working__blocks .block__icon :first-child {
+    display: none;
+  }
+  .working__blocks .block__icon :last-child {
+    display: block;
+  }
+}
+@media (max-width: 48rem) {
+  .working__blocks .block__title {
+    margin-bottom: 0rem;
+    color: var(--color-white);
+  }
+}
+@media (max-width: 48rem) {
+  .working__blocks .block__text {
+    display: none;
+  }
+}
+.working__logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.7rem;
+}
+@media (max-width: 48rem) {
+  .working__logos {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+}
+.working__logo {
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/*----------------------------------working--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;

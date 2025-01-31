@@ -1,0 +1,81 @@
+/*----------------------------------working--------------------------------*/
+
+.working {
+    &__content {
+        .title {
+            color: var(--color-white);
+            margin-bottom: 2.5rem;
+            @include mobile {
+                margin-bottom: 1.3rem;
+            }
+        }
+    }
+    &__blocks {
+        margin-bottom: 0.7rem;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(450px, 1fr));
+        gap: 0.8rem;
+        @include mobile {
+            grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .block {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            display: flex;
+            justify-content: space-between;
+            gap: 1.3rem;
+            @include mobile {
+                background-color: inherit;
+                padding: 0rem;
+                justify-content: start;
+                align-items: center;
+                gap: 0.7rem;
+            }
+            &__icon {
+                margin-bottom: 0rem;
+                flex: none;
+                & :last-child {
+                    display: none;
+                }  
+                @include mobile {
+                    & :first-child {
+                        display: none;
+                    }  
+                    & :last-child {
+                        display: block;
+                    }  
+                }
+            }
+            &__title {
+                @include mobile {
+                    margin-bottom: 0rem;
+                    color: var(--color-white);
+                }
+            }
+            &__text {
+                @include mobile {
+                    display: none;
+                }
+            }   
+        }
+    }
+    &__logos {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));
+        gap: 0.7rem;
+        @include mobile {
+            grid-template-columns:repeat(auto-fit, minmax(60px, 1fr));
+        }
+    }
+    &__logo {
+        background-color: var(--color-white);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*----------------------------------working--------------------------------*/
