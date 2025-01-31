@@ -891,6 +891,8 @@ body {
 .block__title {
   font-size: clamp(1.125rem, 2.0689655172vw, 1.5rem);
   margin-bottom: 0.6rem;
+  font-weight: 700;
+  line-height: 120%;
 }
 .block__text {
   font-size: clamp(1rem, 1.5517241379vw, 1.125rem);
@@ -960,6 +962,28 @@ body {
 }
 
 /*----------------------------------rating--------------------------------*/
+/*----------------------------------foundation--------------------------------*/
+.foundation__text {
+  margin-bottom: 2.5rem;
+}
+.foundation__blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  gap: 0.8rem;
+}
+@media (max-width: 48rem) {
+  .foundation__blocks {
+    width: 100%;
+  }
+}
+.foundation__blocks .block {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+}
+
+/*----------------------------------foundation--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;

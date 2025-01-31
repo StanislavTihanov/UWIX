@@ -1,0 +1,24 @@
+/*----------------------------------foundation--------------------------------*/
+
+.foundation {
+    &__text {
+        margin-bottom: 2.5rem;
+    }
+    &__blocks {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(262px, 1fr));
+        gap: 0.8rem;
+        @include mobile {
+         width: 100%;
+        } 
+        .block {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+        }
+    }
+}
+
+
+/*----------------------------------foundation--------------------------------*/
