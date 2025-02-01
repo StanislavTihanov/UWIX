@@ -5,37 +5,42 @@
     padding-bottom: 2.5rem;
     max-width: 20rem;
 }
+.categories-slider {
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+}
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-  .swiper-wrapper {
+  .categories-slider .swiper-wrapper {
     display: flex;
     align-items: stretch;
 }
-  .swiper-slide {
+  .categories-slider .swiper-slide {
     height: auto;
     transition: all 0.5s ease;
 }
-  .card {
+  .card,
+  .categories__card--mod {
     height: 100%;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 45%;
+  .categories__wrapper .swiper-button-next,
+  .categories__wrapper .swiper-button-prev {
+    top: 30%;
 }
-  .swiper-button-next {
-    right: 1rem;
+  .categories__wrapper .swiper-button-next {
+    right: 0;
 }
-  .swiper-button-prev {
-    left: 1rem;
+  .categories__wrapper .swiper-button-prev {
+    left: 0;
 }
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 1.5rem;
+  .categories__wrapper .swiper-button-next::after,
+  .categories__wrapper .swiper-button-prev::after {
     color: var(--color-white);
-    border: 1px solid var(--color-white);
-    padding: 1rem 1.2rem;
-    border-radius: 1rem;
-    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    padding: 0.3rem 0.5rem;
+    border-radius: 50%;
+    background-color: var(--color-orange);
+    font-size: 1rem;
 }
 .main-slider .swiper-pagination-bullet {
     opacity: 1;

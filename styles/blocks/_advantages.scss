@@ -1,0 +1,30 @@
+/*----------------------------------advantages--------------------------------*/
+.advantages {
+    &__content {
+        .title,
+        .text {
+            color: var(--color-white);
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem 1.25rem;
+        flex-wrap: wrap;
+        @include mobile {
+            gap: 0.5rem 1rem;
+        }
+    }
+    &__item {
+        background-color: var(--color-white);
+        border-radius: 20px;
+        padding: 0.625rem 1.25rem;
+        @include fluid-text(14, 18);
+        @include mobile {
+            padding: 0.625rem;
+        }
+    }
+}
+
+/*----------------------------------advantages--------------------------------*/

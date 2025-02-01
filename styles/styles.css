@@ -758,43 +758,49 @@ body {
   max-width: 20rem;
 }
 
+.categories-slider {
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+}
+
 /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-.swiper-wrapper {
+.categories-slider .swiper-wrapper {
   display: flex;
   align-items: stretch;
 }
 
-.swiper-slide {
+.categories-slider .swiper-slide {
   height: auto;
   transition: all 0.5s ease;
 }
 
-.card {
+.card,
+.categories__card--mod {
   height: 100%;
 }
 
 /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-.swiper-button-next,
-.swiper-button-prev {
-  top: 45%;
+.categories__wrapper .swiper-button-next,
+.categories__wrapper .swiper-button-prev {
+  top: 30%;
 }
 
-.swiper-button-next {
-  right: 1rem;
+.categories__wrapper .swiper-button-next {
+  right: 0;
 }
 
-.swiper-button-prev {
-  left: 1rem;
+.categories__wrapper .swiper-button-prev {
+  left: 0;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1.5rem;
+.categories__wrapper .swiper-button-next::after,
+.categories__wrapper .swiper-button-prev::after {
   color: var(--color-white);
-  border: 1px solid var(--color-white);
-  padding: 1rem 1.2rem;
-  border-radius: 1rem;
-  background-color: var(--color-black);
+  border: 2px solid var(--color-white);
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  font-size: 1rem;
 }
 
 .main-slider .swiper-pagination-bullet {
@@ -1316,6 +1322,9 @@ body {
 
 /*----------------------------------consultation--------------------------------*/
 /*----------------------------------categories-------------------------------*/
+.categories__wrapper {
+  position: relative;
+}
 .categories__body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1329,6 +1338,7 @@ body {
   border: 1px solid #ddd;
   display: grid;
   grid-template-rows: auto 1fr;
+  position: relative;
 }
 .categories__card_image {
   padding-top: 200px;
@@ -1346,10 +1356,32 @@ body {
   display: inline-block;
   width: 127px;
 }
+.categories__card_cost {
+  font-family: "Roboto", Arial, sans-serif;
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+  font-size: 16px;
+}
+.categories__card_link {
+  margin-bottom: 0.625rem;
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+.categories__card_favourites {
+  position: absolute;
+  cursor: pointer;
+  top: 2rem;
+  right: 2rem;
+}
+.categories__card--mod {
+  background-color: inherit;
+  border: none;
+}
 .categories__blocks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 0.625rem 1.25rem;
+  margin-bottom: 6.25rem;
 }
 @media (max-width: 48rem) {
   .categories__blocks {
@@ -1371,6 +1403,36 @@ body {
 }
 
 /*----------------------------------categories--------------------------------*/
+/*----------------------------------advantages--------------------------------*/
+.advantages__content .title,
+.advantages__content .text {
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+.advantages__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 48rem) {
+  .advantages__items {
+    gap: 0.5rem 1rem;
+  }
+}
+.advantages__item {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 0.625rem 1.25rem;
+  font-size: clamp(0.875rem, 1.5517241379vw, 1.125rem);
+}
+@media (max-width: 48rem) {
+  .advantages__item {
+    padding: 0.625rem;
+  }
+}
+
+/*----------------------------------advantages--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
   position: fixed;
@@ -1780,6 +1842,32 @@ body {
 /* Скрываем сами радиокнопки */
 input[type=radio] {
   display: none;
+}
+
+.filtermenu__list {
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.filtermenu__list .active {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.filtermenu li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 100px;
+  background: var(--color-white);
+}
+
+.filtermenu__container .post {
+  display: none;
+}
+
+.filtermenu__container .post.active {
+  display: block;
 }
 
 /*---------------------------------------tabs----------------------------*/

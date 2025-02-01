@@ -148,6 +148,7 @@ if (mainSlider) {
     },
   });
 }
+
 //------------------------------------------------------------------------Слайдер
 
 
@@ -181,50 +182,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //-----------------------------------------------------------------------сортировка по атрибутам
 
-class FilterGallery {
-  
-  constructor() {
-    // Находим элементы меню и контейнер с постами
-    this.filterMenuList = document.querySelectorAll('.filtermenu__list li');
-    this.container = document.querySelector('.filtermenu__container');
-    this.posts = Array.from(this.container.querySelectorAll('.post'));  // Собираем все посты один раз в массив
-    
-    this.updateMenu('all');
-    this.filterMenuList.forEach(item => item.addEventListener('click', (event) => this.onClickFilterMenu(event)));
+document.addEventListener("DOMContentLoaded", function () {
+  // Инициализация слайдеров Swiper
+  const swiperInstances = [];
+
+  // Функция инициализации слайдера внутри вкладки
+  function initSwiper(sliderElement) {
+    return new Swiper(sliderElement, {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: sliderElement.querySelector('.swiper-button-next'),
+        prevEl: sliderElement.querySelector('.swiper-button-prev'),
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }
+    });
   }
 
-  onClickFilterMenu(event) {
-    const target = event.target.closest('li');  // Используем closest чтобы найти li
-    const targetFilter = target.getAttribute('data-filter');
+  // Инициализация всех слайдеров
+  document.querySelectorAll('.categories-slider').forEach(slider => {
+    swiperInstances.push(initSwiper(slider));
+  });
 
-    this.updateMenu(targetFilter);
-    this.updateGallery(targetFilter);
-  }
+  // Обработка переключения вкладок
+  const tabs = document.querySelectorAll('.filtermenu__tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+      // Убираем активный класс с вкладок
+      tabs.forEach(t => t.classList.remove('active'));
+      // Добавляем активный класс к текущей вкладке
+      this.classList.add('active');
 
-  updateMenu(targetFilter) {
-    this.filterMenuList.forEach(item => item.classList.remove('active_'));
-    const activeItem = Array.from(this.filterMenuList).find(item => item.getAttribute('data-filter') === targetFilter);
-    if (activeItem) activeItem.classList.add('active_');
-  }
+      const filter = this.getAttribute('data-filter');
+      const posts = document.querySelectorAll('.post');
+      
+      // Переключаем видимость постов
+      posts.forEach(post => {
+        if (post.classList.contains(filter)) {
+          post.classList.add('active');
+        } else {
+          post.classList.remove('active');
+        }
+      });
 
-  updateGallery(targetFilter) {
-    // Оптимизация через фильтрацию всех постов разом
-    const postsToShow = targetFilter === 'all'
-      ? this.posts
-      : this.posts.filter(post => post.classList.contains(targetFilter));
-    
-    const postsToHide = this.posts.filter(post => !postsToShow.includes(post));
+      // Переинициализируем слайдеры после смены вкладки
+      swiperInstances.forEach(instance => instance.update());
+    });
+  });
 
-    // Анимация скрытия и показа
-    this.container.style.opacity = 0;
-    setTimeout(() => {
-      postsToHide.forEach(post => post.style.display = 'none');
-      postsToShow.forEach(post => post.style.display = '');
-      this.container.style.opacity = 1;
-    }, 300);
-  }
-}
-const filterGallery = new FilterGallery();
+  // Начальная активация вкладки (например, первая вкладка)
+  tabs[0].classList.add('active');
+  const firstFilter = tabs[0].getAttribute('data-filter');
+  const posts = document.querySelectorAll('.post');
+  posts.forEach(post => {
+    if (post.classList.contains(firstFilter)) {
+      post.classList.add('active');
+    } else {
+      post.classList.remove('active');
+    }
+  });
+});
 
 
 //-----------------------------------------------------------------------сортировка по атрибутам

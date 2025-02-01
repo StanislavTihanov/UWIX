@@ -50,4 +50,32 @@
     display: none;
   }
 
+
+  .filtermenu {
+    &__list {
+        margin-bottom: 2.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        .active {
+          background-color: var(--color-orange);
+          color: var(--color-white);
+      }
+    }
+    li {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 100px;
+        background: var(--color-white);
+    }
+}
+.filtermenu__container .post {
+  display: none;
+}
+
+.filtermenu__container .post.active {
+  display: block;
+}
+
   /*---------------------------------------tabs----------------------------*/
