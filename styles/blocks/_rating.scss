@@ -3,15 +3,15 @@
 .rating {
     &__content {
         .title {
-            margin-bottom: 2rem;
+            margin-bottom: 32px;
         }
     }
 
     &__top {
         display: flex;
         align-items: center;
-        gap: 1rem 7rem;
-        margin-bottom: 2.5rem;
+        gap: 16px 112px;
+        margin-bottom: 40px;
         @include mobile {
             flex-wrap: wrap;
         }
@@ -19,12 +19,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 1rem;
+            gap: 16px;
             &:first-child {
                 display: block;
             }
             &:last-child {
-                flex-basis: 27rem;
+                flex-basis: 432px;
             }
         }
     }
@@ -32,14 +32,14 @@
     &__cards {
        display: grid;
        grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
-       gap: 2.5rem 1.3rem;
+       gap: 40px 21px;
        @include mobile {
         width: 100%;
        } 
     }
     &__card {
         display: grid;
-        grid-template-rows: auto 3.5rem 1fr 2.5rem;
+        grid-template-rows: auto 56px 1fr 40px;
         @include mobile {
             width: 100%;
         } 
@@ -49,15 +49,15 @@
                 border-radius: 10px;
                 width: 100%;
             }
-            margin-bottom: 1.3rem;
+            margin-bottom: 21px;
         }
         &_title {
             @include fluid-text(18,24);
             font-weight: 700;
-            margin-bottom: 0.7rem;
+            margin-bottom: 11px;
         }
         &_text {
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
         }
     }
 }

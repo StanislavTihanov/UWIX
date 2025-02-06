@@ -4,25 +4,25 @@
         .title,
         .text {
             color: var(--color-white);
-            margin-bottom: 1.25rem;
+            margin-bottom: 20px;
         }
     }
     &__items {
         display: flex;
         align-items: center;
-        gap: 0.5rem 1.25rem;
+        gap: 8px 20px;
         flex-wrap: wrap;
         @include mobile {
-            gap: 0.5rem 1rem;
+            gap: 8px 16px;
         }
     }
     &__item {
         background-color: var(--color-white);
         border-radius: 20px;
-        padding: 0.625rem 1.25rem;
+        padding: 10px 20px;
         @include fluid-text(14, 18);
         @include mobile {
-            padding: 0.625rem;
+            padding: 10px;
         }
     }
 }

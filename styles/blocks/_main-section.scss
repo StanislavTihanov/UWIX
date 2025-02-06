@@ -1,8 +1,8 @@
 /*----------------------------------main-section--------------------------------*/
 .main-section {
     position: relative;
-    padding-top: 13rem;
-    margin-bottom: 6rem;
+    padding-top: 208px;
+    margin-bottom: 96px;
     &__content {
         position: relative;
         z-index: 1;
@@ -10,11 +10,11 @@
     &__body {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 3rem;
+        gap: 16px;
+        margin-bottom: 48px;
     }
     .title {
-        margin-bottom: 2rem;
+        margin-bottom: 32px;
         text-transform: uppercase;
         color: var(--color-white);
         @include table {
@@ -22,11 +22,11 @@
       }
     }
     &__info {
-        flex-basis: 32rem;
+        flex-basis: 512px;
         min-width: 0;
     }
     &__form {
-        flex-basis: 22.5rem;
+        flex-basis: 360px;
     }
     &__bg {
         position: absolute;
@@ -43,16 +43,16 @@
 
     }
     &__discount {
-        max-width: 20rem;
+        max-width: 320px;
         background-color: var(--color-white);
         text-align: center;
-        padding: 0.7rem;
+        padding: 10px;
         border-radius: 10px;
         &_percent {
             @include fluid-text(18, 24);
             font-weight: 700;
             color: var(--color-orange);
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
         }
         &_text {
             @include fluid-text(16, 18);
@@ -65,29 +65,29 @@
        display: flex;
        justify-content: space-between;
        align-items: center;
-       gap: 1rem;
-       margin-bottom: -6rem;
+       gap: 16px;
+       margin-bottom: -96px;
        @include table {
         flex-wrap: wrap;
-        margin-bottom: 2rem;
+        margin-bottom: 32px;
      }
     }
 }
 .block {
     background-color: var(--color-orange);
-    padding: 1.25rem;
+    padding: 20px;
     border-radius: 10px;
-    flex-basis: 22.5rem;
+    flex-basis: 360px;
     color: var(--color-white);
     @include table {
         flex-basis: 100%;
   }
     &__icon {
-        margin-bottom: 0.6rem;
+        margin-bottom: 9px;
     }
     &__title {
         @include fluid-text(18, 24);
-        margin-bottom: 0.6rem;
+        margin-bottom: 9px;
         font-weight: 700;
         line-height: 120%;
     }

@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 2;
     color: var(--color-white);
-    padding-top: 1rem;
+    padding-top: 16px;
     &__bg {
         background-color: var(--color-blue);
         transition: all 0.3s ease 0s;
@@ -16,18 +16,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 0.7rem;
+        gap: 24px;
+        margin-bottom: 11px;
         position: relative;
         @include desktop {
-            gap: 0.5rem;
+            gap: 10px;
         }
     }
     &__locations {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 0.5rem;
+        gap: 10px;
         @include fluid-text(12, 16);
     }
     &__text {
@@ -37,21 +37,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 0.7rem;
+        gap: 16px;
+        margin-bottom: 12px;
     }
     &__logo {
         z-index: 3; 
-        margin-top: 0.1rem;
+        margin-top: 5px;
     }
     &__links {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 16px;
         @include fluid-text(12, 16);
         @include desktop {
-            gap: 0.5rem;
+            gap: 10px;
         }
     }
     &__link {
@@ -71,24 +71,24 @@
         position: absolute;
         z-index: 9;
         background-color: var(--color-orange);
-        top: 2.2rem;
-        width: 14rem;
+        top: 35px;
+        width: 224px;
         border-radius: 10px;
-        padding: 0.7rem;
+        padding: 11px;
         box-shadow: 0 0 25px 0 #000;
         border: 1px solid var(--color-white);
         &_text {
-            margin-bottom: 0.7rem;
+            margin-bottom: 11px;
         }
         &_name {
             font-weight: 700;
             @include fluid-text(14, 18);
-            margin-bottom: 0.7rem;
+            margin-bottom: 11px;
         }
         &_buttons {
             display: flex;
             align-items: center;
-            gap: 0.7rem;
+            gap: 11px;
         }
         &_btn--yes {
             border: 1px solid #f77705;
@@ -105,7 +105,7 @@
             width: 20px;
             height: 20px;
             top: -10.5px;
-            left: 1.6rem;
+            left: 25px;
             background-color: var(--color-orange);
             border-top-left-radius: 2px;
             transform: rotate(45deg);
@@ -115,7 +115,7 @@
     }
     &__catalog {
         background-color: var(--color-orange);
-        padding: 0.8rem;
+        padding: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -147,15 +147,15 @@
     }
     &__box--entry {
         background-color: var(--color-orange);
-        padding: 0.7rem 0.9rem 0.7rem 0.3rem;
+        padding: 11px 15px 11px 5px;
         border-radius: 10px;
     }
     &__bottom {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 24px;
         background-color: var(--color-white);
-        padding: 1rem;
+        padding: 16px;
         border: 1px solid #ddd;
         border-radius: 10px;
         position: relative;
@@ -164,15 +164,15 @@
         position: absolute;
         z-index: 9;
         background-color: var(--color-orange);
-        top: 2.2rem;
+        top: 35px;
         width: 100%;
         border-radius: 10px;
-        padding: 1rem 5rem 1rem 0.7rem;
+        padding: 16px 80px 256px 11px;
         box-shadow: 0 0 25px 0 #000;
         border: 1px solid var(--color-white);
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 16px;
         display: none;
         &::after {
             position: absolute;
@@ -180,7 +180,7 @@
             width: 20px;
             height: 20px;
             top: -10.8px;
-            left: 1.6rem;
+            left: 25px;
             background-color: var(--color-orange);
             border-top-left-radius: 2px;
             transform: rotate(45deg);
@@ -189,12 +189,12 @@
         }
         &_block {
             &:first-child {
-                flex-basis: 10rem;
+                flex-basis: 160px;
             }
         }
     }
     &__city {
-        margin-bottom: 0.5rem;
+        margin-bottom: 10px;
         cursor: pointer;
     }
     &__city--mod {

@@ -2,45 +2,45 @@
 
 .consultation {
     @include mobile {
-        margin-top: 5rem;
+        margin-top: 80px;
     }
     &__body {
         color: var(--color-white);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.7rem;
+        gap: 16px;
+        margin-bottom: 27px;
         @include mobile {
             flex-wrap: wrap;
         }
     }
     &__info {
-        flex-basis: 28rem;
+        flex-basis: 448px;
         @include mobile {
             order: 1;
         }
     }
     &__image {
-        margin-top: -7.5rem;
+        margin-top: -120px;
         @include mobile {
-            margin-top: -9rem;
+            margin-top: -144px;
         }
     }
     &__form {
         .form {
-            margin-bottom: 0rem;
+            margin-bottom: 0px;
             &__wrapper {
                 display: flex;
                 justify-content: space-between;
                 align-items: stretch;
-                gap: 0.625rem;
-                margin-bottom: 0.625rem;
+                gap: 10px;
+                margin-bottom: 10px;
                 @include mobile {
                     flex-wrap: wrap;
                 }
                 .form__item {
-                    margin-bottom: 0rem;
+                    margin-bottom: 0px;
                     width: 33.333%;
                     @include mobile {
                         width: 100%;
@@ -48,13 +48,13 @@
                 }
             }
             &__button {
-               flex-basis: 20rem;
+               flex-basis: 320px;
                @include mobile {
                 flex-basis: 100%;
             }
         }
         .checkbox {
-            margin-bottom: 0rem;
+            margin-bottom: 0px;
         }
         }
     }

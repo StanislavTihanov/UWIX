@@ -5,13 +5,13 @@
 .blockquote {
     display: flex;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 24px;
     @include mobile {
         flex-wrap: wrap;
     }
     &__info {
         .title {
-            margin-bottom: 1.25rem;
+            margin-bottom: 20px;
             span {
                 color: var(--color-orange);
             }
@@ -27,8 +27,8 @@
     &__block {
         display: grid;
         grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
-        margin-bottom: 1.25rem;
+        gap: 16px;
+        margin-bottom: 20px;
         @include mobile {
             grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
         }
@@ -45,27 +45,27 @@
         &_name {
             font-weight: 700;
             @include fluid-text(18, 24);
-            margin-bottom: 0.625rem;
+            margin-bottom: 10px;
         }
     }
     &__more {
         border: 1px solid #ddd;
         border-radius: 10px;
         background-color: var(--color-white);
-        padding: 1.25rem;
+        padding: 20px;
         &_title {
             font-weight: 700;
             @include fluid-text(18, 24);
-            margin-bottom: 0.625rem;
+            margin-bottom: 10px;
         }
         &_text {
-            margin-bottom: 1.25rem;
+            margin-bottom: 20px;
         }
         &_buttons {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 0.625rem 1.25rem;
+            gap: 10px 20px;
             @include mobile {
                 flex-wrap: wrap;
             }
@@ -73,19 +73,19 @@
     }
 
     &__text {
-        flex-basis: 59rem;
+        flex-basis: 944px;
         @include mobile {
-            margin-top: 2.5rem;
+            margin-top: 40px;
         }
         span {
             display: inline;
         }
         .text {
             @include fluid-text(16, 18);
-            margin-bottom: 2rem;
+            margin-bottom: 32px;
             line-height: 110%;
             @include mobile {
-                margin-bottom: 1rem;
+                margin-bottom: 16px;
             }
         }
     }

@@ -2,12 +2,12 @@
 
 .foundation {
     &__text {
-        margin-bottom: 2.5rem;
+        margin-bottom: 40px;
     }
     &__blocks {
         display: grid;
         grid-template-columns:repeat(auto-fit, minmax(262px, 1fr));
-        gap: 0.8rem;
+        gap: 10px;
         @include mobile {
          width: 100%;
         } 
@@ -15,7 +15,7 @@
             background-color: var(--color-white);
             color: var(--color-black);
             border: 1px solid #ddd;
-            padding: 0.8rem;
+            padding: 10px;
         }
     }
 }
