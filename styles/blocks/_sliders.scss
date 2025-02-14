@@ -2,8 +2,8 @@
 .main-slider {
     overflow: hidden;
     position: relative;
-    padding-bottom: 2.5rem;
-    max-width: 20rem;
+    padding-bottom: 40px;
+    max-width: 320px;
 }
 .categories-slider {
   overflow: hidden;
@@ -16,7 +16,6 @@
 }
   .categories-slider .swiper-slide {
     height: auto;
-    transition: all 0.5s ease;
 }
   .card,
   .categories__card--mod {
@@ -25,7 +24,12 @@
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .categories__wrapper .swiper-button-next,
   .categories__wrapper .swiper-button-prev {
-    top: 30%;
+    top: 44%;
+    border-radius: 50%;
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-white);
+    width: 30px;
+    height: 30px;
 }
   .categories__wrapper .swiper-button-next {
     right: 0;
@@ -36,11 +40,7 @@
   .categories__wrapper .swiper-button-next::after,
   .categories__wrapper .swiper-button-prev::after {
     color: var(--color-white);
-    border: 2px solid var(--color-white);
-    padding: 0.3rem 0.5rem;
-    border-radius: 50%;
-    background-color: var(--color-orange);
-    font-size: 1rem;
+    font-size: 10px;
 }
 .main-slider .swiper-pagination-bullet {
     opacity: 1;

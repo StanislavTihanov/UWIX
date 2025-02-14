@@ -178,83 +178,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //-----------------------------------------------------------------------код для кнопок показать скрыть текст
 
-
-
-//-----------------------------------------------------------------------сортировка по атрибутам
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Инициализация слайдеров Swiper
-  const swiperInstances = [];
-
-  // Функция инициализации слайдера внутри вкладки
-  function initSwiper(sliderElement) {
-    return new Swiper(sliderElement, {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: sliderElement.querySelector('.swiper-button-next'),
-        prevEl: sliderElement.querySelector('.swiper-button-prev'),
+const categoriesSliders = document.querySelectorAll('.categories-slider');
+categoriesSliders.forEach((slider, index) => {
+  new Swiper(slider, {
+    direction: 'horizontal',
+    spaceBetween: 20,
+    speed: 1000,
+    autoHeight: false,
+    navigation: {
+      nextEl: `.swiper-button-next-${index}`,
+      prevEl: `.swiper-button-prev-${index}`,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      }
-    });
-  }
-
-  // Инициализация всех слайдеров
-  document.querySelectorAll('.categories-slider').forEach(slider => {
-    swiperInstances.push(initSwiper(slider));
-  });
-
-  // Обработка переключения вкладок
-  const tabs = document.querySelectorAll('.filtermenu__tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function () {
-      // Убираем активный класс с вкладок
-      tabs.forEach(t => t.classList.remove('active'));
-      // Добавляем активный класс к текущей вкладке
-      this.classList.add('active');
-
-      const filter = this.getAttribute('data-filter');
-      const posts = document.querySelectorAll('.post');
-      
-      // Переключаем видимость постов
-      posts.forEach(post => {
-        if (post.classList.contains(filter)) {
-          post.classList.add('active');
-        } else {
-          post.classList.remove('active');
-        }
-      });
-
-      // Переинициализируем слайдеры после смены вкладки
-      swiperInstances.forEach(instance => instance.update());
-    });
-  });
-
-  // Начальная активация вкладки (например, первая вкладка)
-  tabs[0].classList.add('active');
-  const firstFilter = tabs[0].getAttribute('data-filter');
-  const posts = document.querySelectorAll('.post');
-  posts.forEach(post => {
-    if (post.classList.contains(firstFilter)) {
-      post.classList.add('active');
-    } else {
-      post.classList.remove('active');
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
     }
   });
 });
-
-
-//-----------------------------------------------------------------------сортировка по атрибутам
 
 //------------------------------------------------------------------------select выпадающий список
 //document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {

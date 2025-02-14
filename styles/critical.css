@@ -149,7 +149,7 @@ address, cite {
   width: 100%;
   z-index: 2;
   color: var(--color-white);
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 .header__bg {
   background-color: var(--color-blue);
@@ -162,20 +162,20 @@ address, cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 0.7rem;
+  gap: 24px;
+  margin-bottom: 11px;
   position: relative;
 }
 @media (max-width: 80rem) {
   .header__top {
-    gap: 0.5rem;
+    gap: 10px;
   }
 }
 .header__locations {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   font-size: clamp(0.75rem, 1.3793103448vw, 1rem);
 }
 .header__text {
@@ -185,23 +185,23 @@ address, cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.7rem;
+  gap: 16px;
+  margin-bottom: 12px;
 }
 .header__logo {
   z-index: 3;
-  margin-top: 0.1rem;
+  margin-top: 5px;
 }
 .header__links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   font-size: clamp(0.75rem, 1.3793103448vw, 1rem);
 }
 @media (max-width: 80rem) {
   .header__links {
-    gap: 0.5rem;
+    gap: 10px;
   }
 }
 .header__link {
@@ -223,25 +223,25 @@ address, cite {
   position: absolute;
   z-index: 9;
   background-color: var(--color-orange);
-  top: 2.2rem;
-  width: 14rem;
+  top: 35px;
+  width: 224px;
   border-radius: 10px;
-  padding: 0.7rem;
+  padding: 11px;
   box-shadow: 0 0 25px 0 #000;
   border: 1px solid var(--color-white);
 }
 .header__place_text {
-  margin-bottom: 0.7rem;
+  margin-bottom: 11px;
 }
 .header__place_name {
   font-weight: 700;
   font-size: clamp(0.875rem, 1.5517241379vw, 1.125rem);
-  margin-bottom: 0.7rem;
+  margin-bottom: 11px;
 }
 .header__place_buttons {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 11px;
 }
 .header__place_btn--yes {
   border: 1px solid #f77705;
@@ -258,7 +258,7 @@ address, cite {
   width: 20px;
   height: 20px;
   top: -10.5px;
-  left: 1.6rem;
+  left: 25px;
   background-color: var(--color-orange);
   border-top-left-radius: 2px;
   transform: rotate(45deg);
@@ -267,7 +267,7 @@ address, cite {
 }
 .header__catalog {
   background-color: var(--color-orange);
-  padding: 0.8rem;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,15 +299,15 @@ address, cite {
 }
 .header__box--entry {
   background-color: var(--color-orange);
-  padding: 0.7rem 0.9rem 0.7rem 0.3rem;
+  padding: 11px 15px 11px 5px;
   border-radius: 10px;
 }
 .header__bottom {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px;
   background-color: var(--color-white);
-  padding: 1rem;
+  padding: 16px;
   border: 1px solid #ddd;
   border-radius: 10px;
   position: relative;
@@ -316,15 +316,15 @@ address, cite {
   position: absolute;
   z-index: 9;
   background-color: var(--color-orange);
-  top: 2.2rem;
+  top: 35px;
   width: 100%;
   border-radius: 10px;
-  padding: 1rem 5rem 1rem 0.7rem;
+  padding: 16px 80px 256px 11px;
   box-shadow: 0 0 25px 0 #000;
   border: 1px solid var(--color-white);
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 16px;
   display: none;
 }
 .header__cities::after {
@@ -333,7 +333,7 @@ address, cite {
   width: 20px;
   height: 20px;
   top: -10.8px;
-  left: 1.6rem;
+  left: 25px;
   background-color: var(--color-orange);
   border-top-left-radius: 2px;
   transform: rotate(45deg);
@@ -341,10 +341,10 @@ address, cite {
   border-top: 1px solid var(--color-white);
 }
 .header__cities_block:first-child {
-  flex-basis: 10rem;
+  flex-basis: 160px;
 }
 .header__city {
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .header__city--mod {
@@ -577,8 +577,8 @@ address, cite {
 /*----------------------------------main-section--------------------------------*/
 .main-section {
   position: relative;
-  padding-top: 13rem;
-  margin-bottom: 6rem;
+  padding-top: 208px;
+  margin-bottom: 96px;
 }
 .main-section__content {
   position: relative;
@@ -587,11 +587,11 @@ address, cite {
 .main-section__body {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 16px;
+  margin-bottom: 48px;
 }
 .main-section .title {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   text-transform: uppercase;
   color: var(--color-white);
 }
@@ -601,11 +601,11 @@ address, cite {
   }
 }
 .main-section__info {
-  flex-basis: 32rem;
+  flex-basis: 512px;
   min-width: 0;
 }
 .main-section__form {
-  flex-basis: 22.5rem;
+  flex-basis: 360px;
 }
 .main-section__bg {
   position: absolute;
@@ -624,17 +624,17 @@ address, cite {
   }
 }
 .main-section__discount {
-  max-width: 20rem;
+  max-width: 320px;
   background-color: var(--color-white);
   text-align: center;
-  padding: 0.7rem;
+  padding: 10px;
   border-radius: 10px;
 }
 .main-section__discount_percent {
   font-size: clamp(1.125rem, 2.0689655172vw, 1.5rem);
   font-weight: 700;
   color: var(--color-orange);
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 .main-section__discount_text {
   font-size: clamp(1rem, 1.5517241379vw, 1.125rem);
@@ -648,21 +648,21 @@ address, cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: -6rem;
+  gap: 16px;
+  margin-bottom: -96px;
 }
 @media (max-width: 64rem) {
   .main-section__blocks {
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 }
 
 .block {
   background-color: var(--color-orange);
-  padding: 1.25rem;
+  padding: 20px;
   border-radius: 10px;
-  flex-basis: 22.5rem;
+  flex-basis: 360px;
   color: var(--color-white);
 }
 @media (max-width: 64rem) {
@@ -671,11 +671,11 @@ address, cite {
   }
 }
 .block__icon {
-  margin-bottom: 0.6rem;
+  margin-bottom: 9px;
 }
 .block__title {
   font-size: clamp(1.125rem, 2.0689655172vw, 1.5rem);
-  margin-bottom: 0.6rem;
+  margin-bottom: 9px;
   font-weight: 700;
   line-height: 120%;
 }

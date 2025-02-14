@@ -1,81 +1,57 @@
-  /*---------------------------------------tabs----------------------------*/
-  .tabs {
-    display: flex;
-    flex-direction: column;
-  }
-  .tab-labels {
-    background-color: #1E1F25;
-    padding: 1.3rem 1.9rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.8rem 5rem;
-    border-radius: 6px;
-    margin-bottom: 2.5rem;
-  }
-  .tab-label {
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-    width: 100%;
-    text-align: center;
-    border-radius: 4px;
-  }
-  .tab-label:hover {
-    background-color: #e2e2e270;
-  }
-  .tab-content {
-    display: none;
-    padding: 1.2rem;
-  }
-  .tab-content .easy__info {
-    flex-basis: 80rem;
-  }
-  .tab-content .easy__image {
-    flex-basis: 40rem;
-  }
-  #tab-1:checked ~ .content-1,
-  #tab-2:checked ~ .content-2,
-  #tab-3:checked ~ .content-3 {
-    display: block;
-  }
-  #tab-1:checked ~ .tab-labels label[for="tab-1"],
-  #tab-2:checked ~ .tab-labels label[for="tab-2"],
-  #tab-3:checked ~ .tab-labels label[for="tab-3"] {
-    background-color: #272A34;
-  }
-  /* Скрываем сами радиокнопки */
-  input[type="radio"] {
-    display: none;
-  }
-
-
-  .filtermenu {
-    &__list {
-        margin-bottom: 2.5rem;
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-        flex-wrap: wrap;
-        .active {
-          background-color: var(--color-orange);
-          color: var(--color-white);
-      }
-    }
-    li {
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 100px;
-        background: var(--color-white);
-    }
+/*---------------------------------------tabs----------------------------*/
+.tabs {
+  display: flex;
+  flex-direction: column;
 }
-.filtermenu__container .post {
+.tab-labels {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.tab-label {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: var(--color-red);
+  font-weight: 500;
+  @include fluid-text(12, 14);
+  line-height: 171%;
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+}
+.tab-label:hover {
+  background-color: #e2e2e270;
+}
+.tab-content {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+  padding: 20px;
+}
+#tab-1:checked ~ .content-1,
+#tab-2:checked ~ .content-2,
+#tab-3:checked ~ .content-3 {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+#tab-1:checked ~ .tab-labels label[for="tab-1"],
+#tab-2:checked ~ .tab-labels label[for="tab-2"],
+#tab-3:checked ~ .tab-labels label[for="tab-3"] {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: 1px solid var(--color-orange);
+}
+input[type="radio"] {
   display: none;
 }
-
-.filtermenu__container .post.active {
-  display: block;
+.product-slider {
+  overflow: hidden;
 }
-
-  /*---------------------------------------tabs----------------------------*/
+/*---------------------------------------tabs----------------------------*/
