@@ -1,8 +1,92 @@
 /*----------------------------------footer--------------------------------*/
 .footer {
-    padding: 1.5rem 0px;
+    background-color: #EA984F;
+    color: var(--color-white);
+    @include fluid-text(16, 18);
+    padding: 40px 0px 40px 0px;
+    &__content {
+        h3 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 10px;
+        }
+        ul {
+
+            li {
+                margin-bottom: 10px;
+                @include hover {
+                    color: #FFEBDA;
+                }
+            }
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px 30px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+        p {
+            flex-basis: 690px;
+        }
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-white);
+        margin-bottom: 20px;
+    }
+    &__logo {
+        flex: none;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include mobile {
+            display: none;
+        }
+        .header__catalog {
+            background-color: var(--color-white);
+            color: var(--color-orange);
+            border: 1px solid var(--color-orange);
+            transition: All 0.3s ease 0s;
+            @include hover {
+                .header__catalog-burger span {
+                    background-color: var(--color-white);
+                }
+                background-color: var(--color-orange);
+                color: var(--color-white);
+                border: 1px solid var(--color-white);
+            }
+        }
+        .header__catalog-burger span {
+            background-color: var(--color-orange);
+        }
+    }
     &__body {
+        display: flex;
+        justify-content: space-between;
         gap: 10px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-white);
+        margin-bottom: 20px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__bottom {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            @include mobile {
+                flex-wrap: wrap;
+            }
+        }
     }
 }
 

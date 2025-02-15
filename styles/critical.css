@@ -272,10 +272,10 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   gap: 4px;
   border-radius: 10px;
 }
-.header__catalog_burger {
+.header__catalog-burger {
   width: 24px;
 }
-.header__catalog_burger span {
+.header__catalog-burger span {
   display: block;
   border-radius: 2px;
   height: 2px;

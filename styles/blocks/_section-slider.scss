@@ -11,6 +11,9 @@
         align-items: center;
         gap: 10px;
         margin-bottom: 40px;
+        .button {
+            padding: 11px 34px;
+        }
     }
     &__animate {
         background-color: #D9D9D9;

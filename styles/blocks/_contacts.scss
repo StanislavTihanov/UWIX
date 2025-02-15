@@ -1,0 +1,54 @@
+/*----------------------------------last-article--------------------------------*/
+
+.contacts {
+
+    &__content {
+        @include fluid-text(16, 18);
+        line-height: 120%;
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: stretch;
+        gap: 22px 80px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        position: relative;
+        @include mobile {
+            display: block;
+        }
+    }
+    &__block {
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+    &__block-link {
+        margin-top: 10px;
+        font-family: 'Roboto', Arial, sans-serif;
+        transition: All 0.3s ease 0s;
+        @include hover {
+            color: var(--color-orange);
+        }
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: -40px;
+        @include mobile {
+            position: static;
+            margin-bottom: 10px;
+        }
+        .contacts__block-link {
+            margin-top: 0px;
+        }
+    }
+}
+
+
+/*----------------------------------last-article--------------------------------*/

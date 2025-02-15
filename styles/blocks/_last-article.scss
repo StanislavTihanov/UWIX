@@ -1,8 +1,11 @@
 /*----------------------------------last-article--------------------------------*/
-
 .last-article {
-
     &__content {
+        p {
+            @include fluid-text(16, 18);
+            margin-bottom: 10px;
+            line-height: 120%;
+        }
     }
 
     &__top {
@@ -12,45 +15,98 @@
         gap: 10px;
         margin-bottom: 40px;
         .button {
+            padding: 11px 34px;
             @include mobile {
                 display: none;
             }
         }
     }
-
-    &__btn {
-    }
-
     &__body {
+        position: relative;
+        margin-bottom: 40px;
+        .section-slider__animate {
+           position: absolute;
+           right: 0;
+           bottom: 7px;
+        }
     }
-}
-.button-filled {
 }
 .preview {
-    &__image {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    max-width: 360px;
+    height: 100%;
+    @include mobile {
+        max-width: 100%; 
     }
-}
-.section-slider {
-
-    &__animate {
+    &__image {
+        padding-top: 138px;
+        margin-bottom: 10px;
+        img {
+            border-radius: 10px 10px 2px 2px;
+        }
+    }
+    &__button {
+        margin: 20px 0px;
+    }
+    .button {
+        display: inline;
     }
 }
 .subscribe {
-
+     h3 {
+        @include fluid-text(18, 24);
+        font-weight: 700;
+        margin-bottom: 10px;
+     }
     &__form {
+        max-width: 465px;
+        margin-top: 20px;
+        .form {
+            background-color: inherit;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0;
+            @include mobile {
+                max-width: 100%; 
+                flex-wrap: wrap;
+            }
+            &__item {
+                margin-bottom: 0px;
+                width: 100%;
+            }
+            &__button {
+                max-width: 170px;
+                @include mobile {
+                    max-width: 100%; 
+                }
+            }
+        }
     }
 }
-.form {
-
-    &__item {
+.last-article-slider {
+    overflow: hidden;
+    .swiper-pagination-bullet {
+        opacity: 0;
+        @include mobile {
+            opacity: 1;
+        }
     }
-
-    &__input {
-    }
-
-    &__button {
+    @include mobile {
+        padding-bottom: 40px;
     }
 }
-
-
+.last-article-slider .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+.last-article-slider .swiper-slide {
+    height: auto;
+}
 /*----------------------------------last-article--------------------------------*/
