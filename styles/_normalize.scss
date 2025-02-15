@@ -27,8 +27,7 @@ button {cursor: pointer;}
 button::-moz-focus-inner {padding: 0;border: 0;}
 a,a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}
-a {font-size: inherit;color: inherit;display: inherit;}
-ul li {list-style: none;}
-img {vertical-align: top; max-width: 100%; object-fit: cover;}
-h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: inherit;}
-address,cite{font-style: normal;}
+a{font-size: inherit;color:inherit;display:inherit;}
+ul li{list-style: none;}
+img{vertical-align:top;max-width:100%;object-fit:cover;}
+h1,h2,h3,h4,h5,h6,p,address,cite,span,ul,li{font-style:normal;font-size:inherit;font-weight:inherit;line-height:inherit;}

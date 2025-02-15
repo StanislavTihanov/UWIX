@@ -21,7 +21,7 @@
         display: grid;
         grid-template-rows: auto 1fr;
         position: relative;
-        &_image {
+        &-image {
             padding-top: 200px;
             margin-bottom: 10px;
             border: 1px solid #dadada;
@@ -30,29 +30,29 @@
                 border-radius: 10px;
             }
         }
-        &_title {
+        &-title {
             margin-bottom: 20px;
         }
         .btn {
             display: inline-block;
             width: 127px;
         }
-        &_cost {
+        &-cost {
             font-family: 'Roboto', Arial, sans-serif;
             margin-bottom: 10px;
             font-weight: 700;
             font-size: 16px;
         }
-        &_link {
+        &-link {
             margin-bottom: 10px;
             color: var(--color-orange);
             text-decoration: underline;
         }
-        &_favourites {
+        &-favourites {
             position: absolute;
             cursor: pointer;
-            top: 32px;
-            right: 32px;
+            top: 30px;
+            right: 28px;
         }
     }
     &__card--mod {

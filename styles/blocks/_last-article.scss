@@ -1,0 +1,56 @@
+/*----------------------------------last-article--------------------------------*/
+
+.last-article {
+
+    &__content {
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        .button {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+    }
+
+    &__body {
+    }
+}
+.button-filled {
+}
+.preview {
+    &__image {
+    }
+}
+.section-slider {
+
+    &__animate {
+    }
+}
+.subscribe {
+
+    &__form {
+    }
+}
+.form {
+
+    &__item {
+    }
+
+    &__input {
+    }
+
+    &__button {
+    }
+}
+
+
+/*----------------------------------last-article--------------------------------*/

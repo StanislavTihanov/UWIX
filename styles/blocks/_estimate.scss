@@ -1,0 +1,118 @@
+/*----------------------------------estimate--------------------------------*/
+
+.estimate {
+    &__body {
+        background-color: #EA984F;
+       border-radius: var(--border-radius);
+       padding: 40px 20px;
+       display: flex;
+       justify-content: space-between;
+       gap: 20px;
+       @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px 10px;
+       }
+    }
+
+    &__info {
+        color: var(--color-white);
+        flex-basis: 600px;
+        @include mobile {
+            flex-basis: 100%;
+        }
+        h2 {
+            @include fluid-text(30, 60);
+            margin-bottom: 20px;
+            line-height: 120%;
+        }
+        p {
+            font-weight: 700;
+            @include fluid-text(16, 24);
+            line-height: 120%;
+        }
+    }
+
+    &__form {
+        .form {
+            margin-bottom: 0px;
+            &__item {
+                width: 100%;
+                &-download {
+                    padding: 8px 10px;
+                    border: 1px solid rgba(23, 23, 23, 0.7);
+                    border-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    cursor: pointer;
+                    transition: all 0.3s ease 0s;
+                    @include fluid-text(13, 16);
+                    @include hover {
+                        background-color: #EA984F;
+                    }
+                    @include mobile {
+                        background-color: var(--color-gray);
+                        border: none;
+                        color: var(--color-black);
+                        gap: 10px;
+                    }
+                }
+            }
+            &__button {
+                background-color: #EA984F;
+                transition: all 0.3s ease 0s;
+                @include hover {
+                    background-color: #F77705;
+                }
+                @include mobile {
+                    border: 1px solid var(--color-white);
+                    margin-bottom: 10px;
+                }
+            }
+            &__wrapper {
+                display: flex;
+                justify-content: space-between;
+                gap: 0px 10px;
+                @include table {
+                    flex-wrap: wrap;
+                }
+            }
+            &__input {
+                border: none;
+                background-color: var(--color-gray);
+            }
+            @include mobile {
+                padding: 0;
+                background-color: inherit;
+                border: none;
+                color: var(--color-white);
+                .checkbox__label::before {
+                    border: 1px solid var(--color-white);
+                }
+                .checkbox__label::after {
+                    background-color: var(--color-white);
+                }
+                display: flex;
+                flex-direction: column;
+            }
+            .checkbox {
+                @include mobile {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+}
+input[type="file"] {
+    display: none;
+}
+#fileName {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+/*----------------------------------estimate--------------------------------*/

@@ -1,8 +1,22 @@
 /*----------------------------------consultation--------------------------------*/
 
 .consultation {
+    position: relative;
     @include mobile {
         margin-top: 80px;
+    }
+    &__content {
+        position: relative;
+        z-index: 2;
+        &--mod {
+            padding: 100px 10px;
+            @include mobile {
+                padding-bottom: 70px;
+            }
+            .consultation__body {
+                margin-bottom: 60px;
+            }
+        }
     }
     &__body {
         color: var(--color-white);
@@ -11,6 +25,7 @@
         align-items: center;
         gap: 16px;
         margin-bottom: 27px;
+        position: relative;
         @include mobile {
             flex-wrap: wrap;
         }
@@ -57,6 +72,13 @@
             margin-bottom: 0px;
         }
         }
+    }
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
     }
 }
 

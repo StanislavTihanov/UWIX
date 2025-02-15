@@ -22,8 +22,8 @@
     height: 100%;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-  .categories__wrapper .swiper-button-next,
-  .categories__wrapper .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     top: 44%;
     border-radius: 50%;
     background-color: var(--color-orange);
@@ -31,14 +31,14 @@
     width: 30px;
     height: 30px;
 }
-  .categories__wrapper .swiper-button-next {
+.swiper-button-next {
     right: 0;
 }
-  .categories__wrapper .swiper-button-prev {
+.swiper-button-prev {
     left: 0;
 }
-  .categories__wrapper .swiper-button-next::after,
-  .categories__wrapper .swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
     color: var(--color-white);
     font-size: 10px;
 }
@@ -52,5 +52,4 @@
 .main-slider .swiper-pagination-bullet-active {
     background-color: var(--color-orange);
 }
-
 /*---------------------------------------sliders----------------------------*/
