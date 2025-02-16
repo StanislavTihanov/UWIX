@@ -1,5 +1,7 @@
 /*----------------------------------categories--------------------------------*/
 .completed {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
     &__content {
         .title {
             margin-bottom: 60px;

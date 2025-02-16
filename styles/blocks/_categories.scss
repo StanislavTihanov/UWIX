@@ -1,6 +1,8 @@
 /*----------------------------------categories-------------------------------*/
 
 .categories {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
     .title {
         margin-bottom: 40px;
     }

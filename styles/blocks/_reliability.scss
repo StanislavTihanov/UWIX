@@ -1,6 +1,8 @@
 /*----------------------------------reliability--------------------------------*/
 .reliability {
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
 }
 .blockquote {
     display: flex;

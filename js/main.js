@@ -90,14 +90,18 @@ if(burgerMenu) {
       menuBody.classList.toggle('_active');
     });
 }
-//------------------------------------------------------------------------закрытие меню при клике вне его
-document.addEventListener ('click', (e) => {
-  if (!burgerMenu.contains(e.target)) {
-    menuBody.classList.remove('_active');
-    burgerMenu.classList.remove('_active');
-  }
-})
-//------------------------------------------------------------------------закрытие меню при клике вне его
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".menu__btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+          const dropdown = this.querySelector(".menu__dropdown-submenu");
+          if (dropdown) {
+              dropdown.classList.toggle("open-submenu");
+          }
+      });
+  });
+});
+
 
 
 //------------------------------------------------------------------------Прокрутка при клике
@@ -133,9 +137,9 @@ document.addEventListener ('click', (e) => {
 //------------------------------------------------------------------------Прокрутка при клике
 
 //------------------------------------------------------------------------Слайдер
-const mainSlider = document.querySelector('.main-slider');
-if (mainSlider) {
-  new Swiper(mainSlider, {
+const mainSliders = document.querySelectorAll('.main-slider');
+mainSliders.forEach((slider) => {
+  new Swiper(slider, {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
@@ -143,11 +147,12 @@ if (mainSlider) {
     speed: 1000,
     autoHeight: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: slider.querySelector('.swiper-pagination'),
       clickable: true,
     },
   });
-}
+});
+
 const categoriesSliders = document.querySelectorAll('.categories-slider');
 categoriesSliders.forEach((slider, index) => {
   new Swiper(slider, {
@@ -246,6 +251,34 @@ if (lastArticleSslider) {
     }
   });
 }
+const ratingSlider = document.querySelector('.rating-slider');
+if (ratingSlider) {
+  new Swiper(ratingSlider, {
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 10,
+    speed: 1000,
+    autoHeight: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1, 
+        spaceBetween: 10,  
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    }
+  });
+}
 //------------------------------------------------------------------------Слайдер
 
 
@@ -276,12 +309,12 @@ document.addEventListener("DOMContentLoaded", function () {
 //-----------------------------------------------------------------------код для кнопок показать скрыть текст
 
 
-
+//-----------------------------------------------------------------------код для загрузки файлов в форме
 document.getElementById("fileInput").addEventListener("change", function() {
   const fileName = this.files.length > 0 ? this.files[0].name : "Файл не выбран";
   document.getElementById("fileName").textContent = fileName;
 });
-
+//-----------------------------------------------------------------------код для загрузки файлов в форме
 
 //------------------------------------------------------------------------Fancybox
 document.addEventListener("DOMContentLoaded", function () {
@@ -292,6 +325,60 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 //------------------------------------------------------------------------Fancybox
+
+//------------------------------------------------------------------------выбор городов в шапке сайта
+const places = document.querySelectorAll('.header__place');  
+const btnYesList = document.querySelectorAll('.header__place-btn--yes');
+const btnAnother = document.querySelectorAll('.header__place-btn--another');
+const cities = document.querySelectorAll('.cities');
+const cityList = document.querySelectorAll('.cities__block-city');
+const placesLocation = document.querySelectorAll('.header__locations-place');
+
+document.addEventListener("DOMContentLoaded", function () {
+  btnYesList.forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+      if (places[index]) {
+        places[index].style.display = "none";
+      }
+    });
+  });
+
+  btnAnother.forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+      if (cities[index]) {
+        cities[index].classList.add("show");
+      }
+    });
+  });
+
+  placesLocation.forEach((location, index) => {
+    location.addEventListener('click', function () {
+      if (cities[index]) {
+        cities[index].classList.add("show"); // Открываем список городов
+      }
+    });
+  });
+
+  cityList.forEach(city => {
+    city.addEventListener('click', function () {
+      const cityName = this.textContent.trim(); // Получаем название города
+
+      placesLocation.forEach(location => {
+        location.textContent = cityName; // Устанавливаем название в placesLocation
+      });
+
+      cities.forEach(cityBlock => {
+        cityBlock.classList.remove("show"); // Закрываем список городов
+      });
+
+      places.forEach(place => {
+        place.style.display = "none"; // Закрываем places
+      });
+    });
+  });
+});
+
+//------------------------------------------------------------------------выбор городов в шапке сайта
 
 
 //------------------------------------------------------------------------select выпадающий список

@@ -1,6 +1,8 @@
 /*----------------------------------working--------------------------------*/
 
 .working {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
     &__content {
         .title {
             color: var(--color-white);

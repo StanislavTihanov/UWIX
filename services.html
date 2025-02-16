@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Ювикс">
+  <meta name="keywords" content="Ювикс">
+  <meta property="og:title" content="Ювикс">
+  <meta property="og:url" content="ссылка на сайт">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="500">
+  <meta property="og:description" content="Ювикс">
+  <meta property="og:image" content="путь к картинке/image.webp">
+  <title>Ювикс</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header lock-padding">
+      <div class="header__content _container">
+        <div class="header__top">
+          <div class="header__top-logo">
+            <a class="logo" href="index.html" aria-label="логотип">
+              <img src="images/icons/logo.svg" alt="logo">
+            </a>
+          </div>
+          <div class="header__locations">
+            <div class="header__locations-icon">
+              <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.3.08C5.68.18 5.33.28 4.73.51 3.74.89 3.05 1.33 2.23 2.11 1.13 3.15.52 4.21.15 5.66c-.14.58-.2 1.84-.11 2.48.36 2.6 1.92 5.68 4.57 9 .96 1.2 2.24 2.62 2.5 2.77.2.11.61.11.81 0 .25-.15 1.53-1.58 2.49-2.77 2.41-3.03 3.92-5.85 4.45-8.33.15-.67.2-1.93.12-2.55C14.73 4.66 14.02 3.29 12.78 2.11 11.68 1.07 10.58.48 9.05.14 8.36-.02 7-.05 6.3.08ZM8.49 4.48c.84.28 1.55.98 1.83 1.78.1.28.11.41.11.93 0 .57 0 .62-.15.96-.36.85-1.14 1.51-2.06 1.73-.36.09-1.06.09-1.44 0-1.06-.26-1.89-1.06-2.16-1.88-.12-.44-.08-1.17.09-1.61.55-1.47 2.25-2.24 3.78-1.91Z" fill="white"/>
+              </svg>              
+            </div>
+            <span class="header__locations-place">Калининградская область</span>
+          </div>
+          <div class="header__place">
+            <div class="header__place-text">
+              <p>Ваш город</p>
+            </div>
+            <div class="header__place-name">
+               <h3>Переславль-Залеский</h3>
+            </div>
+            <div class="header__place-buttons">
+              <button class="header__place-btn header__place-btn--yes">Да</button>
+              <button class="header__place-btn header__place-btn--another">Выбрать другой</button>
+            </div>
+          </div>
+          <div class="header__text">
+            <p>Надежный поставщик услуг и товаров по гидроизоляции и усилению конструкций</p>
+          </div>
+          <div class="burger__wrapper" aria-label="кнопка открытия меню">
+            <div class="burger" id="hamb">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+            </div>
+          </div>
+          <div class="cities">
+            <div class="cities__block">
+               <div class="cities__block-city cities__block-city--mod">
+                 <span>Москва</span>
+               </div>
+               <div class="cities__block-city cities__block-city--mod">
+                 <span>Санкт-Петербург</span>
+               </div>
+               <div class="cities__block-city cities__block-city--mod">
+                 <span>Сочи</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Алтайский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Забайкальский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Камчатский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Краснодарский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Красноярский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Пермский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Приморский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Ставропольский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Хабаровский край</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Еврейская автономная область</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Ненецкий автономный округ</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Ханты-Мансийский автономный округ</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Чукотский автономный округ</span>
+               </div>
+               <div class="cities__block-city">
+                 <span>Ямало-Ненецкий автономный округ</span>
+               </div>
+            </div>
+            <div class="cities__block">
+             <div class="cities__block-city">
+               <span>Алтай</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Адыгея</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Башкортостан</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Бурятия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Дагестан</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Ингушетия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Кабардино-Балкария</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Калмыкия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Карачаево-Черкесия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Карелия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Коми</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Марий Эл</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Мордовия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Северная Осетия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Татарстан</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Тыва</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Удмуртия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Хакасия</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Чечня</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Чувашия</span>
+             </div>
+            </div>
+            <div class="cities__block">
+             <div class="cities__block-city">
+               <span>Амурская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Архангельская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Астраханская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Белгородская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Брянская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Владимирская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Волгоградская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Вологодская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Воронежская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Иркутская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Ивановская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Калининградская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Калужская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Кемеровская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Кировская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Костромская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Курганская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Курская область</span>
+             </div>
+            </div>
+            <div class="cities__block">
+             <div class="cities__block-city">
+               <span>Ленинградская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Липецкая область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Магаданская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Московская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Мурманская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Новгородская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Нижегородская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Новосибирская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Омская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Оренбургская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Орловская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Пензенская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Псковская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Ростовская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Рязанская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Сахалинская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Самарская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Саратовская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Смоленская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Свердловская область</span>
+             </div>
+            </div>
+            <div class="cities__block">
+             <div class="cities__block-city">
+               <span>Тамбовская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Томская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Тульская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Тверская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Тюменская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Ульяновская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Челябинская область</span>
+             </div>
+             <div class="cities__block-city">
+               <span>Ярославская область</span>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__body">
+            <a class="header__catalog" href="#!">
+             <div class="header__catalog-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+             </div>
+              Каталог
+            </a>
+            <div class="search">
+              <label class="search__label">
+                <span>Поиск</span>
+                <input class="search__label_input" type="text" placeholder="Пример популярного запроса">
+              </label>
+            </div>
+            <a class="header__box" href="#!">
+              <img src="images/icons/header-wholesale.svg" alt="icon wholesale">
+              Оптовым покупателям            
+            </a>
+            <a class="header__box" href="#!">
+              <img src="images/icons/header-favourites.svg" alt="icon favourites">            
+              Избранное       
+            </a>
+            <a class="header__box" href="#!">
+              <img src="images/icons/header-cart.svg" alt="icon cart">           
+              Корзина     
+            </a>
+            <a class="header__box--entry" href="#!">
+               <img src="images/icons/header-entry.svg" alt="icon entry">
+               Войти
+            </a>
+        </div>
+        <div class="header__bottom">
+          <a class="header__logo" href="index.html" aria-label="логотип">
+            <img src="images/icons/logo.svg" alt="logo">
+          </a>
+          <nav class="menu" id="menu">
+            <ul>
+              <a class="logo-mobile" href="index.html" aria-label="логотип">
+                <img src="images/icons/logo-mobile.svg" alt="logo">
+              </a>
+              <li class="menu__btn">
+                <a class="menu__link" href="#">О компании</a>
+                <div class="menu__dropdown menu__dropdown-submenu">
+                  <div class="menu__dropdown-inner">
+                    <ul>
+                      <li>
+                        <a href="#!">О нас</a>
+                      </li>
+                      <li>
+                        <a href="#!">Парнёрам</a>
+                      </li>
+                      <li>
+                        <a href="#!">Сертификаты</a>
+                      </li>
+                      <li>
+                        <a href="#!">Производители</a>
+                      </li>
+                      <li>
+                        <a href="#!">Реквизиты</a>
+                      </li>
+                      <li>
+                        <a href="#!">Правовая информация</a>
+                      </li>
+                      <li>
+                        <a href="#!">Работа у нас</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__btn">
+                <a class="menu__link" href="#">Услуги</a>
+                <div class="menu__dropdown menu__dropdown--mod">
+                  <div class="menu__dropdown-inner">
+                    <div class="menu__wrapper">
+                      <div class="menu__blocks">
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                             <h2>Усиление конструкций</h2>
+                          </div>
+                          <div class="menu__block-subtitle">
+                             <h3>Реконструкция зданий и сооружений</h3>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="#!" class="menu__block-link">Реставрация кирпичной кладки</a>
+                            </li>
+                          </ul>
+                          <div class="menu__block-subtitle">
+                             <h3>Усиление любых видов конструкций</h3>
+                          </div>
+                          <div class="menu__block-subtitle">
+                             <h3>Усиление колонн углеволокном</h3>
+                          </div>
+                          <ul>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление фундамента углеволокном</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление балок</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление стен</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление балок</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление ферм</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Усиление плит перекрытий</a>
+                             </li>
+                          </ul>
+                          <div class="menu__block-subtitle">
+                           <h3>Химзащита конструкций</h3>
+                          </div>
+                          <div class="menu__block-subtitle">
+                           <h3>Антикорозийная защита металоконструкций</h3>
+                          </div>
+                          <div class="menu__block-subtitle">
+                           <h3>Наливные полимерные полы</h3>
+                          </div>
+                          <div class="menu__block-subtitle">
+                           <h3>Усиление проемов</h3>
+                          </div>
+                          <div class="menu__block-subtitle">
+                           <h3>Усиление фундамента</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="menu__blocks">
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                            <h2>Гидроизоляция конструкций</h2>
+                         </div>
+                          <ul>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция стен</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция кровли</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция полов</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция фундамента</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция подвала</a>
+                             </li>
+                             <li>
+                               <a href="#!" class="menu__block-link">Гидроизоляция ввода</a>
+                             </li>
+                             <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция паркинга</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция мостов</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция бассейнов</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция бетонных резервуаров</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция кирпича</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция блоков</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция мембраной</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Гидроизоляция полимочевиной</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Деформационный шов</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="menu__blocks">
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                            <h2>Инъектирование</h2>
+                         </div>
+                          <ul>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование деформационных швов</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование кирпичной кладки</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование бетона</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование трещин</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъекционная гидроизоляция</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Усиление грунта</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование стен</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование фундамента</a>
+                              </li>
+                              <li>
+                                <a href="#!" class="menu__block-link">Инъектирование подвалов</a>
+                              </li>
+                          </ul>
+                        </div>
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                            <h2>Торкретирование</h2>
+                         </div>
+                          <ul>
+                            <li>
+                              <a href="#!" class="menu__block-link">Мокрое торкретирование</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Сухое торкретирование</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Усиление конструкций металлом</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="menu__blocks">
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                            <h2>Проектирование конструкций</h2>
+                         </div>
+                          <ul>
+                            <li>
+                              <a href="#!" class="menu__block-link">Техническое обследование зданий</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="menu__block">
+                          <div class="menu__block-title">
+                            <h2>Обследование конструкций</h2>
+                         </div>
+                          <ul>
+                            <li>
+                              <a href="#!" class="menu__block-link">Обследование перекрытий</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Обследование ограждающих конструкций</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Обследование зданий и сооружений</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Обследование несущих конструкций</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="menu__block-link">Обследование оснований и фундаментов</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__dropdown-submenu">
+                  <div class="menu__dropdown-inner">
+                    <ul>
+                      <li>
+                        <a href="#!">Гидроизоляция</a>
+                      </li>
+                      <li>
+                        <a href="#!">Проектирование</a>
+                      </li>
+                      <li>
+                        <a href="#!">Усиление конструкций</a>
+                      </li>
+                      <li>
+                        <a href="#!">Инъектирование</a>
+                      </li>
+                      <li>
+                        <a href="#!">Обследование</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="menu__link" href="#">Цены</a>
+              </li>
+              <li class="menu__btn">
+                <a class="menu__link" href="#">Акции
+                  <span class="menu__link-promo">3</span>
+                </a>
+                <div class="menu__dropdown menu__dropdown-submenu">
+                  <div class="menu__dropdown-inner">
+                    <ul>
+                      <li>
+                        <a href="#!">Наши акции</a>
+                      </li>
+                      <li>
+                        <a href="#!">Компаниям</a>
+                      </li>
+                      <li>
+                        <a href="#!">Компаниям</a>
+                      </li>
+                      <li>
+                        <a href="#!">Организациям</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="menu__link" href="#">Наши работы</a>
+              </li>
+              <li>
+                <a class="menu__link" href="#">Отзывы</a>
+              </li>
+              <li>
+                <a class="menu__link" href="#">Статьи</a>
+              </li>
+              <li>
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-section main-section--mod">
+        <div class="main-section__content _container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="#" class="breadcrumbs__item-link">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Каталог услуг</span>
+                <meta itemprop="position" content="2"/>
+              </li>
+            </ul>
+          </div>
+          <div class="main-section__body">
+            <div class="main-section__container">
+              <div class="title">
+                <h1>Каталог услуг</h1>
+              </div>
+              <div class="main-section__item">
+                <img src="" alt="icon">
+                <div class="main-section__box">
+                  <h3>Гарантия до 20 лет</h3>
+                  <p> <span>300+</span> объектов под нашей гарантией</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-blocks">
+            <div class="service-block">
+              <div class="service-block__image">
+                 <img src="images/block-image1.webp" alt="Усиление конструкций">
+              </div>
+              <div class="service-block__info">
+                <h3>Усиление конструкций</h3>
+                <p>
+                  Усиление конструкций – это одна из важнейших составляющих любого строительного процесса, 
+                  особенно при эксплуатации зданий. Правильно и вовремя проведенное усиление конструкций 
+                  обеспечит защиту усиленного объекта на многие годы от воздействия различных факторов.
+                </p>
+              </div>
+              <div class="service-block__buttons">
+                 <a class="button button-filled" href="#!">Консультация</a>
+                 <a class="button button-outline" href="#!">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="foundation">
+        <div class="foundation__content _container">
+          <div class="title">
+            <h2>На рынке строительных услуг с 2010 года</h2>
+          </div>
+          <div class="foundation__text">
+            За это время мы стали официальными <b>дилерами 10 брендов</b>. Наши материалы доступны только в специализированных компаниях
+          </div>
+          <div class="foundation__blocks">
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon1.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Выполненные объекты</h3>
+              </div>
+              <div class="block__text">
+                <p>Сотни успешно завершённых проектов по всей России</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon2.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Гарантия</h3>
+              </div>
+              <div class="block__text">
+                <p>Предоставляем гарантию на все виды работ</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon3.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Технологии</h3>
+              </div>
+              <div class="block__text">
+                <p>Использование новейших технологий и материалов</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon4.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Экспертность</h3>
+              </div>
+              <div class="block__text">
+                <p>Наши специалисты имеют более 5 лет опыта работы</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon5.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Проверенное оборудование</h3>
+              </div>
+              <div class="block__text">
+                <p>Используем современное строительное оборудование</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon6.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Гибкая ценовая политика</h3>
+              </div>
+              <div class="block__text">
+                <p>Конкурентные цены и поэтапная оплата</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon7.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Продукция напрямую от производителя</h3>
+              </div>
+              <div class="block__text">
+                <p>Используем сертифицированные материалы напрямую от производителей</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block__icon">
+                <img src="images/icons/foundation-icon8.svg" alt="icon">
+              </div>
+              <div class="block__title">
+                <h3>Выполнение <br> работ в срок</h3>
+              </div>
+              <div class="block__text">
+                <p>Всегда соблюдаем сроки выполнения работ, гарантируя оперативность</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-slider">
+        <div class="section-slider__content _container">
+          <div class="section-slider__top">
+            <div class="title">
+              <h2>Отзывы наших клиентов</h2>
+            </div>
+            <div class="section-slider__animate">
+              <span></span>
+            </div>
+            <div class="section-slider__btn">
+              <a class="button button-filled" href="#!">Смотреть все</a>
+            </div>
+          </div>
+          <div class="section-slider__body">
+            <div class="sec-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img1.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img1.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img2.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img2.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img3.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img3.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img4.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img4.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img5.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img5.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img6.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img6.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img1.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img1.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/sec-slide-img2.webp" data-fancybox="gallery-reviews">
+                    <img src="images/sec-slide-img2.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-0"></div>
+            <div class="swiper-button-next swiper-button-next-0"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-slider">
+        <div class="section-slider__content _container">
+          <div class="section-slider__top">
+            <div class="title">
+              <h2>Сертификаты и допуски</h2>
+            </div>
+            <div class="section-slider__animate">
+              <span></span>
+            </div>
+          </div>
+          <div class="section-slider__body">
+            <div class="sec-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img1.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img1.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img2.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img2.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img3.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img3.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img4.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img4.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img5.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img5.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img6.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img6.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img1.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img1.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sec-slide" href="images/certificates-img2.webp" data-fancybox="gallery-certificates">
+                    <img src="images/certificates-img2.webp" alt="img">
+                    <div class="sec-slide__icon">
+                      <img src="images/icons/loupe.svg" alt="icon">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-1"></div>
+            <div class="swiper-button-next swiper-button-next-1"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scheme">
+        <div class="scheme__content _container">
+          <div class="title">
+            <h2>Схема взаимодействия по услугам</h2>
+          </div>
+          <div class="scheme__body">
+            <div class="scheme__block">
+               <span>01</span>
+               <h3>Звонок или заявка</h3>
+               <p>Вы связываетесь с нами по телефону или через сайт, чтобы обсудить проект</p>
+            </div>
+            <div class="scheme__block">
+              <span>02</span>
+              <h3>Выезд инженера</h3>
+              <p>Инженер приезжает на объект для обследования и составления технического задания</p>
+            </div>
+            <div class="scheme__block">
+              <span>03</span>
+              <h3>Смета и сроки</h3>
+              <p>Наш сметный отдел готовит подробную смету и оценивает сроки выполнения работ</p>
+            </div>
+            <div class="scheme__block">
+              <span>04</span>
+              <h3>Договор</h3>
+              <p>Заключаем договор, в котором прописываются все сроки и гарантии</p>
+            </div>
+            <div class="scheme__block">
+              <span>05</span>
+              <h3>Начало работ</h3>
+              <p>Выход на объект и начало работ в течение 1 дня после подписания договора</p>
+            </div>
+            <div class="scheme__block">
+              <span>06</span>
+              <h3>Смета и сроки</h3>
+              <p>Сдача объекта по акту сдачи-приемки. Постановка на гарантию</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="partners__content _container">
+          <div class="section-slider__top">
+            <div class="title">
+              <h2>Наши клиенты и партнёры</h2>
+            </div>
+            <div class="section-slider__animate">
+              <span></span>
+            </div>
+          </div>
+           <div class="partners__body">
+            <div class="partners-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="partners__wrapper">
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners__wrapper">
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners__wrapper">
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                    <div class="partner partner--mod">
+                      <img src="images/icons/partner-logo.svg" alt="логотип партнера">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+           </div>
+        </div>
+      </section>
+
+      <section class="consultation">
+        <div class="consultation__content _container consultation__content--mod">
+          <div class="consultation__body">
+           <div class="consultation__info">
+             <div class="title">
+               <h2>Получите бесплатную консультацию</h2>
+             </div>
+             <div class="consultation__text">
+               <p>Заполните форму, и наши специалисты свяжутся с вами в ближайшее время для консультации по вашему проекту</p>
+             </div>
+           </div>
+          </div>
+          <div class="consultation__form">
+            <form class="form">
+              <div class="form__wrapper">
+                <div class="form__item">
+                  <input class="form__input" type="text" name="name" placeholder="Имя Фамаилия" required autocomplete="name">
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="text" name="number" placeholder="Телефон" required autocomplete="tel">
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="email" name="email" placeholder="E-mail" autocomplete="email">
+                </div>
+                <button class="form__button" type="submit">Получить консультацию</button>
+              </div>
+              <div class="checkbox">
+                 <input class="checkbox__input" id="formAgreement2" type="checkbox" name="checkbox">
+                 <label class="checkbox__label" for="formAgreement2">
+                   <span class="checkbox__text">Я согласен на обработку персональных данных и политику конфиденциальности</span>
+                 </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="consultation__bg _ibg">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/form-bg-mob.webp">
+            <source media="(min-width: 1920px)" srcset="images/form-bg@2x.webp">
+            <img src="images/form-bg.webp" alt="img bg">
+          </picture>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__content _container">
+          <div class="title">
+            <h2>Контакты</h2>
+          </div>
+          <div class="contacts__body">
+            <div class="contacts__block">
+              <img src="images/icons/Телефон.svg" alt="телефон">
+              <a class="contacts__block-link" href="tel:+74952302181">+7 495 230 21 81</a>
+            </div>
+            <div class="contacts__box">
+              <a class="contacts__block-link" href="tel:+78008888888">8 800 888 88 88</a>
+              <p>Бесплатный звонок из регионов</p>
+            </div>
+            <div class="contacts__block">
+              <img src="images/icons/Почта.svg" alt="почта">
+              <a class="contacts__block-link" href="mailto:zakaz@polyalpan-msk.ru">zakaz@polyalpan-msk.ru</a>
+            </div>
+            <div class="contacts__block">
+              <img src="images/icons/whatsapp outstroke.svg" alt="whatsapp">
+              <a class="contacts__block-link" href="https://wa.me/79299228794">8 (929) 922 87-94</a>
+            </div>
+            <div class="contacts__block">
+              <img src="images/icons/ТЕЛЕГА.svg" alt="телеграм">
+              <a class="contacts__block-link" href="https://t.me/Alexeiscorpion">@Alexeiscorpion</a>
+            </div>
+            <div class="contacts__block">
+              <img src="images/icons/viber.svg" alt="viber">
+              <a class="contacts__block-link" href="viber://chat?number=%2B79299228794">8 (929) 922 87-94</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content _container">
+        <div class="footer__top">
+          <a class="footer__logo" href="index.html">
+            <img src="images/icons/logo-footer.svg" alt="logo">
+          </a>
+          <p>
+            Ювикс Групп — профессионалы в области гидроизоляции и восстановления зданий. Мы 
+            предоставляем услуги на высшем уровне с использованием современных технологий
+          </p>
+          <div class="footer__buttons">
+            <a class="header__catalog" href="#!">
+              <div class="header__catalog-burger">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+              </div>
+               Каталог
+            </a>
+            <a class="header__catalog" href="#!">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.99609 0.331916C7.58203 0.460823 7.25 0.761604 7.05469 1.17567C6.95312 1.39832 6.94922 1.42176 6.9375 2.22254C6.92969 2.67176 6.93359 3.08192 6.94922 3.12879C6.99609 3.3202 7.34375 3.43348 7.56641 3.33192C7.76172 3.24207 7.78906 3.12489 7.78906 2.40223C7.78906 1.68739 7.81641 1.53895 7.99609 1.35145C8.19531 1.1366 7.96875 1.14832 12.4375 1.14832C15.9297 1.14832 16.5977 1.15614 16.6875 1.20301C16.8281 1.27723 16.9922 1.45692 17.043 1.58973C17.0742 1.66785 17.0859 3.98426 17.0859 9.15613C17.0859 14.328 17.0742 16.6444 17.043 16.7225C16.9883 16.871 16.8203 17.0468 16.668 17.1093C16.5625 17.1561 15.8359 17.1639 12.4336 17.1639H8.32422L8.16406 17.0702C8.07422 17.0194 7.96484 16.9061 7.91406 16.8202C7.83594 16.6757 7.82812 16.6171 7.82812 16.0272C7.82812 15.2772 7.79688 15.121 7.62109 15.0116C7.44922 14.9022 7.19141 14.9296 7.05078 15.0702L6.94922 15.1718V16.0233C6.94922 16.8163 6.95703 16.8866 7.04297 17.0975C7.16797 17.4139 7.49219 17.7538 7.82031 17.9139L8.08203 18.0429H16.832L17.0469 17.9413C17.4922 17.7304 17.8438 17.2929 17.9414 16.8202C17.9727 16.6718 17.9844 14.4608 17.9844 9.14442C17.9844 2.64051 17.9766 1.64442 17.9258 1.4491C17.7969 0.956916 17.5391 0.636604 17.0938 0.417854L16.7969 0.269416L12.5195 0.261604C8.35938 0.253791 8.23047 0.253791 7.99609 0.331916Z" fill="#EA984F" />
+                <path d="M10.0156 4.84754C9.82422 4.91785 9.70313 5.17176 9.75781 5.3866C9.77344 5.4452 10.4414 6.17957 11.3047 7.09754L12.8281 8.70692L0.410156 8.72645L0.292969 8.84754C0.195312 8.9452 0.171875 8.99989 0.171875 9.14051C0.171875 9.3202 0.246094 9.47645 0.359375 9.53504C0.394531 9.55067 3.21484 9.5741 6.625 9.58582L12.8281 9.60535L11.3047 11.246C9.72266 12.9491 9.69531 12.9882 9.75781 13.2421C9.82031 13.4804 10.1328 13.6327 10.3555 13.5233C10.4141 13.496 11.3125 12.5585 12.3477 11.4452C14.3125 9.33192 14.3242 9.3202 14.2578 9.05848C14.2305 8.95692 10.6445 5.05848 10.4375 4.90614C10.3242 4.8241 10.1484 4.80067 10.0156 4.84754Z" fill="#EA984F" />
+              </svg>
+              Войти
+            </a>
+          </div>
+        </div>
+        <div class="footer__body">
+          <div class="footer__box">
+            <h3>О компании</h3>
+              <ul>
+                <li>
+                  <a href="#!">Реквизиты</a>
+                </li>
+                <li>
+                  <a href="#!">О нас</a>
+                </li>
+                <li>
+                  <a href="#!">Парнёрам</a>
+                </li>
+                <li>
+                  <a href="#!">Сертификаты</a>
+                </li>
+                <li>
+                  <a href="#!">Производители</a>
+                </li>
+                <li>
+                  <a href="#!">Правовая информация</a>
+                </li>
+              </ul>
+          </div>
+          <div class="footer__box">
+            <h3>Акции</h3>
+              <ul>
+                <li>
+                  <a href="#!">Наши акции</a>
+                </li>
+                <li>
+                  <a href="#!">Компаниям</a>
+                </li>
+                <li>
+                  <a href="#!">Поставщикам</a>
+                </li>
+                <li>
+                  <a href="#!">Организациям</a>
+                </li>
+              </ul>
+          </div>
+          <div class="footer__box">
+            <h3>Услуги</h3>
+              <ul>
+                <li>
+                  <a href="#!">Гидроизоляция</a>
+                </li>
+                <li>
+                  <a href="#!">Усиление конструкций</a>
+                </li>
+                <li>
+                  <a href="#!">Инъектирование</a>
+                </li>
+                <li>
+                  <a href="#!">Обследование</a>
+                </li>
+                <li>
+                  <a href="#!">Проектирование</a>
+                </li>
+              </ul>
+          </div>
+          <div class="footer__box">
+            <h3>Получение и оплата</h3>
+              <ul>
+                <li>
+                  <a href="#!">Доставка курьером</a>
+                </li>
+                <li>
+                  <a href="#!">Доставка транспортной компанией</a>
+                </li>
+                <li>
+                  <a href="#!">Самовывоз</a>
+                </li>
+                <li>
+                  <a href="#!">Способы оплаты</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <h3>Сервис и поддержка</h3>
+          <ul>
+            <li>
+              <a href="#!">Сервисный центр</a>
+            </li>
+            <li>
+              <a href="#!">Обратная связь</a>
+            </li>
+            <li>
+              <a href="#!">Работа у нас</a>
+            </li>
+            <li>
+              <a href="#!">Помощь по работе с сайтом</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#!">Политика конфиденциальности и обработка персональных данных</a>
+            </li>
+            <li>Все права защищены © Ювикс Групп, 2024</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script defer src="js/main.js"></script>  
+</body>
+
+</html>

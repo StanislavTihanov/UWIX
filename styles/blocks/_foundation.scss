@@ -1,6 +1,8 @@
 /*----------------------------------foundation--------------------------------*/
 
 .foundation {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
     &__text {
         margin-bottom: 40px;
     }

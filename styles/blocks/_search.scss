@@ -1,6 +1,9 @@
 /*----------------------------------search--------------------------------*/
 .search {
-    flex-basis: 26rem;
+    flex-basis: 416px;
+    @include table {
+        flex-basis: 100%;
+    }
     &__label {
         display: flex;
         justify-content: space-between;
@@ -18,7 +21,13 @@
             @include fluid-text(12, 16);
         }
     }
-
+    &-mobile {
+        color: var(--color-white);
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
 }
    
 /*----------------------------------search--------------------------------*/

@@ -3,6 +3,10 @@
     position: relative;
     padding-top: 208px;
     margin-bottom: 96px;
+    z-index: 3;
+    @include mobile {
+        padding-top: 60px; 
+    }
     &__content {
         position: relative;
         z-index: 1;
@@ -12,21 +16,53 @@
         justify-content: space-between;
         gap: 16px;
         margin-bottom: 48px;
+        flex-wrap: wrap;
+        margin-bottom: -100px;
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     .title {
         margin-bottom: 32px;
         text-transform: uppercase;
         color: var(--color-white);
-        @include table {
+        @include mobile {
             color: var(--color-black);
-      }
+        }
     }
     &__info {
         flex-basis: 512px;
         min-width: 0;
+        &-image {
+            display: none;
+            @include mobile {
+                display: block;
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        @include table {
+            flex-basis: 350px;
+        }
+        @include mobile {
+            flex-basis: 100%;
+        }
     }
     &__form {
         flex-basis: 360px;
+        @include mobile {
+            order: 1;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        .form {
+            @include mobile {
+                padding: 20px 10px;
+            }
+        }
     }
     &__bg {
         position: absolute;
@@ -37,10 +73,9 @@
         img {
             object-position: right;
         }
-        @include table {
-            position: relative;
+        @include mobile {
+            display: none;
         }
-
     }
     &__discount {
         max-width: 320px;
@@ -66,11 +101,70 @@
        justify-content: space-between;
        align-items: center;
        gap: 16px;
-       margin-bottom: -96px;
        @include table {
-        flex-wrap: wrap;
-        margin-bottom: 32px;
-     }
+          flex-wrap: wrap;
+          max-width: 100%;
+       }
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        position: absolute;
+        z-index: 9;
+        top: -190px;
+        right: 10px;
+        @include mobile {
+            position: static;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            color: var(--color-white);
+            @include mobile {
+                width: 100%;
+                color: var(--color-black);
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+        @include fluid-text(12, 16);
+        @include desktop {
+            gap: 10px;
+        }
+    }
+    &__link {
+        transition: All 0.3s ease 0s;
+        white-space: nowrap;
+        font-family: 'Roboto', Arial, sans-serif;
+        @include hover {
+            color: var(--color-orange);
+            svg path {
+                fill: var(--color-orange);
+                transition: All 0.3s ease 0s;
+            }
+        }
+        @include mobile {
+            svg {
+                width: 35px;
+                height: 28px;
+                path {
+                    fill: #F77705;
+                }
+            }
+        }
+        &--mod {
+            @include mobile {
+                svg {
+                    width: 80px;
+                }
+            }
+        }
     }
 }
 .block {
@@ -94,6 +188,28 @@
     &__text {
         @include fluid-text(16, 18);
         line-height: 120%;
+    }
+ }
+ .slider-desktop {
+    @include mobile {
+        display: none;
+    }
+ }
+ .slider-mobile {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    @include mobile {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        margin-bottom: 20px;
+        .main-slider {
+            max-width: 100%;
+        }
+        .main-section__discount {
+            max-width: 100%;
+        }
     }
  }
 /*----------------------------------main-section--------------------------------*/
