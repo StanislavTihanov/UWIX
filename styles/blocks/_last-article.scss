@@ -88,6 +88,9 @@
                 }
             }
         }
+        @include mobile {
+            max-width: 100%; 
+        }
     }
 }
 .last-article-slider {

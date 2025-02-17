@@ -310,10 +310,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //-----------------------------------------------------------------------код для загрузки файлов в форме
-document.getElementById("fileInput").addEventListener("change", function() {
-  const fileName = this.files.length > 0 ? this.files[0].name : "Файл не выбран";
-  document.getElementById("fileName").textContent = fileName;
+document.addEventListener("DOMContentLoaded", function() {
+  const fileInput = document.getElementById("fileInput");
+  
+  // Проверяем, существует ли элемент
+  if (fileInput) {
+    fileInput.addEventListener("change", function() {
+      const fileName = this.files.length > 0 ? this.files[0].name : "Файл не выбран";
+      document.getElementById("fileName").textContent = fileName;
+    });
+  }
 });
+
 //-----------------------------------------------------------------------код для загрузки файлов в форме
 
 //------------------------------------------------------------------------Fancybox

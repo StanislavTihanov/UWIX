@@ -52,7 +52,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        transition: All 0.5s ease 0s;
+        transition: All 0.3s ease 0s;
         background: rgba(0, 0, 0, 0.51);
         overflow: auto;
         z-index: 9;
@@ -130,6 +130,7 @@
                 flex-direction: column;
                 align-items: start;
                 li {
+                    transition: All 0.3s ease 0s;
                     @include hover {
                         color: var(--color-orange);
                     }
@@ -184,6 +185,10 @@
         &-subtitle {
             font-weight: 700;
             margin-bottom: 11px;
+            transition: All 0.3s ease 0s;
+            @include hover {
+                color: var(--color-orange);
+            }
         }
         ul {
             margin-bottom: 11px;

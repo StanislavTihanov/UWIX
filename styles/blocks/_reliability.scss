@@ -34,7 +34,7 @@
         @include mobile {
             grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
         }
-        &_photo {
+        &-photo {
            padding-top: 195px;
            @include mobile {
             padding-top: 100px;
@@ -44,7 +44,7 @@
               width: 100%;
            }
         }
-        &_name {
+        &-name {
             font-weight: 700;
             @include fluid-text(18, 24);
             margin-bottom: 10px;
@@ -55,15 +55,15 @@
         border-radius: 10px;
         background-color: var(--color-white);
         padding: 20px;
-        &_title {
+        h3 {
             font-weight: 700;
             @include fluid-text(18, 24);
             margin-bottom: 10px;
         }
-        &_text {
+        p {
             margin-bottom: 20px;
         }
-        &_buttons {
+        &-buttons {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -76,6 +76,12 @@
 
     &__text {
         flex-basis: 944px;
+        p {
+            @include fluid-text(14, 18);
+            color: var(--color-black);
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
         @include mobile {
             margin-top: 40px;
         }

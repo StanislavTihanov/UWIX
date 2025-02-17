@@ -4,6 +4,15 @@
     width: 100%;
     color: var(--color-white);
     padding-top: 16px;
+    &--mod {
+        .header__top {
+            .header__locations,
+            .header__text {
+                color: var(--color-black);
+            }
+            justify-content: space-between;
+        }
+    }
     &__top {
         display: flex;
         align-items: center;
@@ -20,7 +29,12 @@
             display: none;
             @include mobile {
                 display: block;
+                position: relative;
+                z-index: 9;
             }
+        }
+        &--mod {
+            justify-content: space-between;
         }
     }
     &__locations {
@@ -62,6 +76,11 @@
         z-index: 9;
         @include mobile {
             display: none;
+        }
+        &--mod {
+            .header__box {
+                color: var(--color-black);
+            }
         }
     }
     &__logo {
@@ -192,6 +211,45 @@
             padding: 0;
         }
     }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-family: 'Roboto', Arial, sans-serif;
+        color: var(--color-black);
+        z-index: 9;
+        @include table {
+            gap: 5px;
+        }
+        @include mobile {
+            display: none;
+        }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            @include table {
+                gap: 5px;
+            }
+        }
+        .header__link {
+            transition: All 0.3s ease 0s;
+            @include fluid-text(12, 16);
+            @include hover {
+                color: var(--color-orange);
+           }
+            @include hover {
+                 svg path {
+                    fill: #D16403;
+                    transition: All 0.3s ease 0s;
+                 }
+            }
+        }
+    }
+    
 }
 .cities {
     position: absolute;

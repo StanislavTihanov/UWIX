@@ -22,6 +22,25 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+        &--mod {
+            margin-bottom: -170px;
+            .main-section__info {
+                flex-basis: 730px;
+                p {
+                    margin-bottom: 40px;
+                    @include fluid-text(16, 18);
+                    color: var(--color-white);
+                }
+            }
+
+        }
+    }
+    &__button {
+        margin-bottom: 40px;
+        .button {
+            display: inline;
+            padding: 10px 40px;
+        }
     }
     .title {
         margin-bottom: 32px;
@@ -99,11 +118,22 @@
     &__blocks {
        display: flex;
        justify-content: space-between;
-       align-items: center;
+       align-items: stretch;
        gap: 16px;
        @include table {
           flex-wrap: wrap;
           max-width: 100%;
+       }
+       &-wrapper{
+           background-color: var(--color-orange);
+           border-radius: 10px;
+           padding: 20px;
+           .block {
+               padding: 0;
+           }
+           .main-section__blocks {
+            margin-bottom: 20px;
+           }
        }
     }
     &__links {
@@ -137,6 +167,11 @@
         @include desktop {
             gap: 10px;
         }
+        &--mod {
+            @include mobile {
+                display: none;
+            }
+        }
     }
     &__link {
         transition: All 0.3s ease 0s;
@@ -166,6 +201,68 @@
             }
         }
     }
+    &--mod {
+        .main-section__body {
+            margin-bottom: 60px;
+            @include mobile {
+                margin-bottom: 40px;
+            }
+        }
+        @include mobile {
+            margin-bottom: 0px;
+        }
+    }
+    &__container {
+        background-color: var(--color-orange-altr);
+        padding: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        @include mobile {
+            display: block;
+            background-color: inherit;
+            padding: 0;
+        }
+        .title {
+            margin-bottom: 0px;
+            @include mobile {
+                color: var(--color-white);
+                margin-bottom: 10px;
+                background-color: var(--color-orange-altr);
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+    &__box {
+        color: var(--color-white);
+        h3 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 10px;
+        }
+        p {
+            @include fluid-text(15, 18);
+        }
+        span {
+            font-weight: 700;
+        }
+        @include mobile {
+            color: var(--color-black);
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include mobile {
+            svg path {
+                fill: #171717;
+            }
+        }
+    }
 }
 .block {
     background-color: var(--color-orange);
@@ -175,7 +272,7 @@
     color: var(--color-white);
     @include table {
         flex-basis: 100%;
-  }
+    }
     &__icon {
         margin-bottom: 9px;
     }
@@ -190,12 +287,64 @@
         line-height: 120%;
     }
  }
- .slider-desktop {
+ .service-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+    &__image {
+        flex-basis: 245px;
+        img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        @include mobile {
+           flex-basis: 100%;
+        }
+    }
+
+    &__info {
+        flex-basis: 580px;
+        h3 {
+            @include fluid-text(18, 24);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            @include fluid-text(16, 18);
+            line-height: 120%;
+        }
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+    &__button {
+        width: 100%;
+    }
+}
+.slider-desktop {
     @include mobile {
         display: none;
     }
- }
- .slider-mobile {
+}
+.slider-mobile {
     opacity: 0;
     visibility: hidden;
     position: absolute;

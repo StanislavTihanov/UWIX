@@ -49,7 +49,7 @@ section {
 }
 .text {
     @include fluid-text(14, 18);
-    color: var(--color-black);
+    color: var(--color-white);
     line-height: 100%;
 }
 .yandex-rating {
