@@ -49,8 +49,26 @@ section {
 }
 .text {
     @include fluid-text(14, 18);
-    color: var(--color-white);
-    line-height: 100%;
+    color: var(--color-black);
+    line-height: 120%;
+    h3 {
+        @include fluid-text(18,24);
+        font-weight: 700;
+        margin-bottom: 10px;
+        &:first-of-type {
+            text-transform: uppercase;
+        }
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        li {
+          list-style: decimal;
+        }
+    }
 }
 .yandex-rating {
     @include mobile {
@@ -94,6 +112,28 @@ section {
     color: var(--color-white);
     @include hover {
         background-color: #D16403;
+    }
+}
+.button-download {
+    background-color: var(--color-gray);
+}
+.button-white,
+.button-download {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 10px;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid var(--color-white);
+    transition: All 0.3s ease 0s;
+    @include fluid-text(14, 16);
+    text-align: center;
+    display: block;
+    max-width: 260px;
+    @include hover {
+        border: 1px solid var(--color-white);
+        background-color: var(--color-orange);
+        color: var(--color-white);
     }
 }
 .btn-more {
