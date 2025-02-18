@@ -1,0 +1,57 @@
+/*----------------------------------card--------------------------------*/
+.card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    &__image {
+        padding-top: 200px;
+        margin-bottom: 10px;
+        border: 1px solid #dadada;
+        border-radius: 10px;
+        img {
+            border-radius: 10px;
+        }
+        @include mobile {
+            padding-top: 112px;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        @include fluid-text(16, 18);
+    }
+    .button {
+        display: inline-block;
+        width: 127px;
+    }
+    &__cost {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    &__link {
+        margin-bottom: 10px;
+        color: var(--color-orange);
+        text-decoration: underline;
+    }
+    &__favourites {
+        position: absolute;
+        cursor: pointer;
+        top: 30px;
+        right: 28px;
+    }
+    @include mobile {
+        padding: 0px;
+        border: none;
+        background-color: inherit;
+    }
+}
+.card--mod {
+    background-color: inherit;
+    border: none;
+}
+/*----------------------------------card--------------------------------*/

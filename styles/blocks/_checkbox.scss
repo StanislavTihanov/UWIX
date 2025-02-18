@@ -44,7 +44,17 @@
             border-radius: 2px;
         }
     }
-
+    &--mod {
+        .checkbox__label {
+            &::before {
+                border-radius: 2px;
+                border: 1px solid var(--color-orange);
+            }
+        }
+        .checkbox__text {
+            font-size: 16px;
+        }
+    }
 }
 
 

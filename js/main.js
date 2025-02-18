@@ -12,6 +12,78 @@
 //}
 //------------------------------------------------------------------------preloader
 
+
+//------------------------------------------------------------------------разворот тегов
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.toggle-btn');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const tags = document.querySelector('.tags');
+      if (!tags) return; // Если .tags нет на странице, выходим
+
+      tags.classList.toggle('collapsed');
+      this.innerHTML = tags.classList.contains('collapsed')
+        ? 'Развернуть весь список <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+        : 'Свернуть <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 15l6-6 6 6" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    });
+  }
+});
+
+//----------------------------------------------------------------------ползунки для фильтра
+document.addEventListener("DOMContentLoaded", function () {
+  function initializeSlider(sliderId, minInputId, maxInputId, startValues, range) {
+      let slider = document.getElementById(sliderId);
+      let minInput = document.getElementById(minInputId);
+      let maxInput = document.getElementById(maxInputId);
+
+      if (slider && minInput && maxInput) {
+          noUiSlider.create(slider, {
+              start: startValues, // Начальные значения
+              connect: true,
+              range: range,
+              step: 1,
+              format: {
+                  to: value => Math.round(value),
+                  from: value => Number(value)
+              }
+          });
+          
+          // Устанавливаем начальные значения в input
+          minInput.value = startValues[0];
+          maxInput.value = startValues[1];
+
+          // Обновление input при изменении ползунка
+          slider.noUiSlider.on('update', function (values, handle) {
+              if (handle === 0 && document.activeElement !== minInput) {
+                  minInput.value = values[0];
+              }
+              if (handle === 1 && document.activeElement !== maxInput) {
+                  maxInput.value = values[1];
+              }
+          });
+
+          // Обновление ползунка при вводе значений вручную
+          minInput.addEventListener('change', function () {
+              slider.noUiSlider.set([this.value || range.min, null]);
+          });
+
+          maxInput.addEventListener('change', function () {
+              slider.noUiSlider.set([null, this.value || range.max]);
+          });
+      }
+  }
+
+  // Инициализация одного слайдера
+  initializeSlider('slider1', 'minInput1', 'maxInput1', [380, 3450], {'min': 1, 'max': 4000});
+});
+
+//----------------------------------------------------------------------ползунки для фильтра
+
+//------------------------------------------------------------------------разворот тегов
+
+
+
 //------------------------------------------------------------------------таймер обратного отсчета
 //const startDays = 2; // Количество дней
 //const startHours = 5; // Количество часов
@@ -42,17 +114,6 @@
 //
 //const timer = setInterval(updateCountdown, 1000);
 //------------------------------------------------------------------------таймер обратного отсчета
-
-
-//------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
-window.addEventListener('scroll', () => {
-  if(pageYOffset > 50) {
-    document.querySelector('.header').classList.add('header__bg');
-  } else {
-    document.querySelector('.header').classList.remove('header__bg');
-  }
-});
-//------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
 
 
 //------------------------------------------------------------------------search
@@ -101,8 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-
-
 
 //------------------------------------------------------------------------Прокрутка при клике
 //let buttons = document.querySelectorAll('.menu__link');
@@ -190,8 +249,8 @@ cesSliders.forEach((slider, index) => {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1.8,  // Например, для экранов шириной до 480px будет 1 слайд
-        spaceBetween: 10,  // Интервал между слайдами уменьшится
+        slidesPerView: 1.8, 
+        spaceBetween: 10,  
       },
       768: {
         slidesPerView: 3,
@@ -199,7 +258,7 @@ cesSliders.forEach((slider, index) => {
       },
       1024: {
         slidesPerView: 6,
-        spaceBetween: 30,  // Можно изменить интервал между слайдами на 30px для разрешения 1024px
+        spaceBetween: 30,  
       },
     }
   });
@@ -565,6 +624,37 @@ document.addEventListener('keydown', function (e) {
   }
 });
 //------------------------------------------------------------------------popup
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterItems = document.querySelectorAll(".filter-menu__list li");
+  const posts = document.querySelectorAll(".filter-menu__container .post");
+
+  filterItems.forEach(item => {
+      item.addEventListener("click", function () {
+          const filter = this.getAttribute("data-filter");
+          
+          // Удаляем активный класс у всех элементов
+          filterItems.forEach(i => i.classList.remove("active"));
+          this.classList.add("active");
+
+          // Скрываем все посты
+          posts.forEach(post => {
+              if (post.classList.contains(filter)) {
+                  post.style.display = "block";
+              } else {
+                  post.style.display = "none";
+              }
+          });
+      });
+  });
+
+  // По умолчанию показываем первый элемент
+  if (filterItems.length > 0) {
+      filterItems[0].click();
+  }
+});
+
+
 
 
 //------------------------------------------------------------------------Animation

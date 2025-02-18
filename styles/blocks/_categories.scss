@@ -14,53 +14,11 @@
         grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
         margin-bottom: 100px;
-    }
-    &__card {
-        background-color: var(--color-white);
-        border-radius: 10px;
-        padding: 20px;
-        border: 1px solid #ddd;
-        display: grid;
-        grid-template-rows: auto 1fr;
-        position: relative;
-        &-image {
-            padding-top: 200px;
-            margin-bottom: 10px;
-            border: 1px solid #dadada;
-            border-radius: 10px;
-            img {
-                border-radius: 10px;
-            }
-        }
-        &-title {
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            width: 127px;
-        }
-        &-cost {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin-bottom: 10px;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        &-link {
-            margin-bottom: 10px;
-            color: var(--color-orange);
-            text-decoration: underline;
-        }
-        &-favourites {
-            position: absolute;
-            cursor: pointer;
-            top: 30px;
-            right: 28px;
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
         }
     }
-    &__card--mod {
-        background-color: inherit;
-        border: none;
-    }
+
 
     &__blocks {
         display: grid;
@@ -89,5 +47,4 @@
         }
     }
 }
-
 /*----------------------------------categories--------------------------------*/

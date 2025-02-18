@@ -7,7 +7,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: end;
         gap: 10px;
         margin-bottom: 40px;
         .button {
@@ -22,6 +22,9 @@
         padding: 0px 5px;
         overflow: hidden;
         display: none;
+        margin-bottom: 10px;
+        margin-left: auto;
+        right: 10px;
         @include mobile {
             display: block;
         }

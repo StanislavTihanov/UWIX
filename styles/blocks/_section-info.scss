@@ -1,0 +1,125 @@
+/*----------------------------------section-info--------------------------------*/
+.section-info {
+    &--color {
+        background-color: #E7E7E7;
+    }
+}
+.text {
+    @include fluid-text(14, 18);
+    color: var(--color-black);
+    line-height: 120%;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 10px;
+        p {
+            flex-basis: 49%;
+            @include mobile {
+                flex-basis: 100%;
+            }
+        }
+    }
+    h3,
+    h2 {
+        @include fluid-text(18,24);
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    ol {
+        margin-bottom: 10px;
+        padding-left: 30px;
+    }
+    ul {
+        margin-bottom: 10px;
+    }
+    .text__list {
+        margin-bottom: 20px;
+    }
+    &__list {
+        li {
+            h4 {
+                @include fluid-text(18,24);
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-left: -30px;
+            }
+        }
+        li::marker {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        ul {
+            display: flex;
+            align-items: stretch;
+            gap: 0px 30px;
+            margin-bottom: 10px;
+            li {
+                list-style: disc;
+                flex-basis: 260px;
+                &::marker {
+                    font-size: 20px;
+                }
+            }
+            @include mobile {
+                flex-wrap: wrap;
+                gap: 0;
+            }
+        }
+        &-li {
+            ul li {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1px;
+        flex-wrap: wrap;
+        li {
+            flex-basis: 48%;
+            margin-bottom: 10px;
+            @include mobile {
+                flex-basis: 100%;
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        text-decoration: underline;
+    }
+}
+.list-disc {
+    display: flex;
+    align-items: stretch;
+    gap: 0px 30px;
+    margin-bottom: 10px;
+    li {
+        list-style: disc;
+        flex-basis: 260px;
+        margin-left: 30px;
+        &::marker {
+            font-size: 20px;
+        }
+    }
+    @include mobile {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    &--mod {
+        display: block;
+    }
+}
+
+/*----------------------------------section-info--------------------------------*/

@@ -1,0 +1,173 @@
+/*----------------------------------filter--------------------------------*/
+.filter {
+    &__links {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 5px;
+       flex-wrap: wrap;
+       @include mobile {
+        justify-content: start;
+    }
+    }
+    &__link {
+        border: 1px solid var(--color-orange);
+        background-color: var(--color-orange-altr);
+        color: var(--color-white);
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 20px;
+        @include fluid-text(14, 16);
+        transition: All 0.3s ease 0s;
+        @include hover {
+            background-color: var(--color-orange);
+        }
+        @include mobile {
+            padding: 5px 10px;
+        }
+    }
+}
+.filter-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+    @include table {
+        gap: 10px;
+    }
+    &__list-wrapper {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin-bottom: 20px;
+        li {
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 1px;
+                top: 5px;
+                left: 0;
+                background-color: var(--color-black);
+                transform: rotate(-45deg);
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 1px;
+                top: 10px;
+                left: 0;
+                background-color: var(--color-black);
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &__body-title {
+        background-color: var(--color-orange-altr);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        color: var(--color-white);
+        margin-bottom: 23px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px 15px;
+        @include table {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__card {
+        max-width: 235px;
+        .card {
+            background-color: inherit;
+            border: none;
+            padding: 0;
+            .card__title {
+                @include fluid-text(14, 16);
+            }
+            .button {
+                background-color: var(--color-orange-altr);
+                @include fluid-text(14, 16);
+                @include hover {
+                    background-color: #D16403;
+                }
+            }
+        }
+        .card__image {
+            padding-top: 160px;
+            @include mobile {
+                padding-top: 112px;
+            }
+        }
+    }
+    &__slider {
+        margin-bottom: 20px;
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 16px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid rgba(23, 23, 23, 0.7);
+        border-radius: 6px;
+        padding: 8px;
+        input {
+            width: 100%;
+            background-color: inherit;
+        }
+    }
+}
+.noUi-target {
+    background: #525252;
+    border: none;
+    box-shadow: none;
+}
+.noUi-connect {
+    background: var(--color-orange);
+}
+.noUi-horizontal .noUi-handle {
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -4px;
+}
+.noUi-handle {
+    background: var(--color-orange); 
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: none;
+}
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+.noUi-horizontal {
+    height: 2px;
+}
+.noUi-target, .noUi-handle {
+    border: none;
+}
+/*----------------------------------filter--------------------------------*/

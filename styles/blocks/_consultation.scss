@@ -34,6 +34,9 @@
     }
     &__info {
         flex-basis: 448px;
+        .title {
+            margin-bottom: 20px;
+        }
         @include mobile {
             order: 1;
         }
@@ -73,6 +76,18 @@
         .checkbox {
             margin-bottom: 0px;
         }
+        }
+        &--mod {
+            max-width: 540px;
+            .form__wrapper .form__item {
+                width: 100%;
+            }
+            .form__wrapper {
+                .form__button {
+                    flex-basis: 100%;
+                    padding: 10px 0px;
+                }
+            }
         }
     }
     &__bg {

@@ -43,13 +43,18 @@
             }
         }
         .advantages__blocks:first-child {
+            justify-content: space-between;
+            flex-wrap: wrap;
             .block {
                 background-color: var(--color-white);
                 color: var(--color-black);
-                flex-basis: 100%;
+                flex-basis: 49%;
+                @include table {
+                    flex-basis: 100%;
+                }
             }
         }
-        .advantages__blocks:last-child {
+        .advantages__blocks--mod {
             .block {
                 background-color: inherit;
                 padding: 0px;

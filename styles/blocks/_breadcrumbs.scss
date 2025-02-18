@@ -28,10 +28,54 @@
         @include fluid-text(12, 16);
         color: var(--color-black);
         opacity: 0.7;
-        &_link:hover {
-            color: var(--color-blue);
+        &-link:hover {
+            transition: All 0.3s ease 0s;
+            color: var(--color-orange);
+        }
+    }
+    &--mod {
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        margin-bottom: 0px;
+        .breadcrumbs__list {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include mobile {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                position: relative;
+            }
+          }
+          
+          .breadcrumbs__item {
+            flex-shrink: 0;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+          }
+          
+        .breadcrumbs__list::before {
+            content: "...";
+            display: none;
+            flex-shrink: 0;
+            margin-right: 5px;
+            @include mobile {
+                display: block;
+            }
+        }
+        @include mobile {
+            .breadcrumbs__item:nth-child(-n+2) {
+                display: none;
+            }
         }
     }
 }
+  
+
 
 /*----------------------------------breadcrumbs--------------------------------*/
