@@ -219,11 +219,16 @@ categoriesSliders.forEach((slider, index) => {
     spaceBetween: 20,
     speed: 1000,
     autoHeight: false,
+    loop: true,
     navigation: {
       nextEl: `.swiper-button-next-${index}`,
       prevEl: `.swiper-button-prev-${index}`,
     },
     breakpoints: {
+      320: {
+        slidesPerView: 2, 
+        spaceBetween: 10,  
+      },
       768: {
         slidesPerView: 3,
         spaceBetween: 20,

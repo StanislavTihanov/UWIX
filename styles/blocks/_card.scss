@@ -37,12 +37,17 @@
         margin-bottom: 10px;
         color: var(--color-orange);
         text-decoration: underline;
+        @include fluid-text(16, 18);
     }
     &__favourites {
         position: absolute;
         cursor: pointer;
         top: 30px;
         right: 28px;
+        @include mobile {
+            top: 5px;
+            right: 5px;
+        }
     }
     @include mobile {
         padding: 0px;

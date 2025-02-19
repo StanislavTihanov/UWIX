@@ -48,7 +48,9 @@
             font-size: 16px;
             position: relative;
             padding-left: 10px;
-            margin-bottom: 10px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
             &::before {
                 position: absolute;
                 content: '';
@@ -119,6 +121,60 @@
             font-weight: 700;
             font-size: 16px;
             margin-bottom: 10px;
+        }
+    }
+    &--mod {
+        justify-content: start;
+        gap: 10px;
+        margin-bottom: 0px;
+        .filter-menu__list-wrapper {
+            @include mobile {
+                display: block;
+                order: 1;
+            }
+        }
+        .filter-menu__list {
+            margin-bottom: 0px;
+            li {
+                img {
+                    width: 50px;
+                    height: 45px;
+                    border-radius: var(--border-radius);
+                    border: 1px solid #dadada;
+                    @include mobile {
+                        width: 60px;
+                        height: 53px;
+                    }
+                }
+                &::before,
+                &::after {
+                    display: none;
+                }
+                padding-left: 0px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                    @include mobile {
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+        .filter-menu__container {
+            img {
+                width: 210px;
+                height: 210px;
+                border-radius: var(--border-radius);
+                border: 1px solid #dadada;
+                @include mobile {
+                    width: 220px;
+                    height: 220px;
+                }
+            }
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-between;
         }
     }
 }

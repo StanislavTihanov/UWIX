@@ -5,8 +5,11 @@
     margin-bottom: 96px;
     z-index: 3;
     @include mobile {
-        padding-top: 80px; 
+        padding-top: 60px; 
         margin-bottom: 20px;
+    }
+    &--mod {
+        
     }
     &__content {
         position: relative;
@@ -337,6 +340,14 @@
     .tags {
         margin-top: 0px;
     }
+    &__hidden {
+        .toggle-btn__wrapper {
+            margin-bottom: 0px;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
 }
 .block {
     background-color: var(--color-orange);
@@ -361,7 +372,7 @@
         line-height: 120%;
     }
  }
- .service-block {
+.service-block {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -507,6 +518,7 @@
     &__wrapper {
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
     }
 }
 .arrow {

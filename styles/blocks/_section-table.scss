@@ -110,11 +110,14 @@ td.table__title {
         background-color: var(--color-white);
     }
 }
+td.table__subtitle {
+    font-weight: 700;
+}
 .table--mod td[colspan="2"] {
     width: calc(100% / 7 * 1);
-    @include mobile {
-
-    }
+}
+.table--mod2 td[colspan="1"] {
+    width: calc(100% / 4 * 1);
 }
 .table--mod td.price {
     width: calc(100% / 7);

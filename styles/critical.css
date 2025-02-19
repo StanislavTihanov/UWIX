@@ -795,7 +795,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 }
 @media (max-width: 768px) {
   .main-section {
-    padding-top: 80px;
+    padding-top: 60px;
     margin-bottom: 20px;
   }
 }
@@ -1178,6 +1178,14 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 .main-section .tags {
   margin-top: 0px;
 }
+.main-section__hidden .toggle-btn__wrapper {
+  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .main-section__hidden {
+    display: none;
+  }
+}
 
 .block {
   background-color: var(--color-orange);
@@ -1381,6 +1389,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 .toggle-btn__wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .arrow {

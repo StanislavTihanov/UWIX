@@ -24,10 +24,7 @@ body {
     padding: 0rem 0.64rem;
 }
 section {
-    padding: 40px 0px;
-    @include mobile {
-        padding: 20px 0px;
-    }
+    padding: 30px 0px;
 }
 .section--color {
     background-color: #EA984F;
@@ -114,6 +111,14 @@ section {
         border: 1px solid var(--color-white);
         background-color: var(--color-orange);
         color: var(--color-white);
+    }
+}
+.button-white-outline {
+    border: 1px solid var(--color-white);
+    background-color: inherit;
+    color: var(--color-white);
+    @include hover {
+        background-color: var(--color-orange);
     }
 }
 .btn-more {

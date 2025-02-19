@@ -5,6 +5,12 @@
         margin-bottom: 40px;
     }
     &__body {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(262px, 1fr));
+        gap: 20px;
+        @include mobile {
+            grid-template-columns: 1fr 1fr; 
+        }
         &--mod {
             @include mobile {
                 grid-template-columns: 1fr; 

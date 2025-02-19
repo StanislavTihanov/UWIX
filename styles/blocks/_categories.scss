@@ -16,10 +16,9 @@
         margin-bottom: 100px;
         @include mobile {
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 50px;
         }
     }
-
-
     &__blocks {
         display: grid;
         grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
@@ -27,6 +26,7 @@
         margin-bottom: 100px;
         @include mobile {
             grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+            margin-bottom: 50px;
         }
         .block {
             display: flex;
