@@ -4,7 +4,8 @@ body.lock {
 }
 body { 
     font-family: var(--font-family-base); 
-    font-size: 18px;
+    @include fluid-text(16, 18);
+    line-height: 120%;
     font-weight: 400; 
     color: var(--color-black); 
     background: var(--color-gray);
@@ -21,10 +22,10 @@ body {
 ._container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0rem 0.64rem;
+    padding: 0px 10px;
 }
 section {
-    padding: 30px 0px;
+    padding: 50px 0px;
 }
 .section--color {
     background-color: #EA984F;

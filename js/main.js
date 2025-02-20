@@ -137,9 +137,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //------------------------------------------------------------------------search
 
+//------------------------------------------------------------------------код для прилипания блока в Price
+document.addEventListener("DOMContentLoaded", function () {
+  const priceLinks = document.querySelector(".price__links");
 
+  // Проверяем, существует ли нужный элемент на странице
+  if (!priceLinks) return;
 
+  const links = document.querySelectorAll('a[href^="#"]');
+  let stickyOffset = priceLinks.offsetTop;
 
+  // Функция для получения полной высоты блока с учетом margin
+  function getFullHeight(element) {
+    const styles = window.getComputedStyle(element);
+    const marginTop = parseFloat(styles.marginTop);
+    const marginBottom = parseFloat(styles.marginBottom);
+    return element.offsetHeight + marginTop + marginBottom;
+  }
+
+  // Обработчик скролла для фиксации блока
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= stickyOffset) {
+      if (!priceLinks.classList.contains("fixed")) {
+        priceLinks.classList.add("fixed");
+      }
+    } else {
+      priceLinks.classList.remove("fixed");
+    }
+  });
+
+  // Обработчик клика по якорным ссылкам
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        // Получаем точную высоту priceLinks с учетом margin
+        const fixedHeight = priceLinks.classList.contains("fixed") ? getFullHeight(priceLinks) : 0;
+
+        window.scrollTo({
+          top: target.offsetTop - fixedHeight,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+//------------------------------------------------------------------------код для прилипания блока в Price
 
 //------------------------------------------------------------------------Меню-Бургер
 const burgerMenu = document.querySelector('.burger__wrapper');
@@ -403,7 +448,7 @@ const places = document.querySelectorAll('.header__place');
 const btnYesList = document.querySelectorAll('.header__place-btn--yes');
 const btnAnother = document.querySelectorAll('.header__place-btn--another');
 const cities = document.querySelectorAll('.cities');
-const cityList = document.querySelectorAll('.cities__block-city');
+const cityList = document.querySelectorAll('.cities__block span');
 const placesLocation = document.querySelectorAll('.header__locations-place');
 
 document.addEventListener("DOMContentLoaded", function () {

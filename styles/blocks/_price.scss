@@ -1,0 +1,68 @@
+/*----------------------------------price--------------------------------*/
+
+.price {
+    &__links {
+        @include mobile {
+            display: none;
+        }
+    }
+    &__links-inner {
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding-top: 10px;
+        position: relative;
+        z-index: 9;
+    }
+
+    &__block {
+        flex-basis: 260px;
+    }
+
+    &__block-link {
+        margin-bottom: 10px;
+        transition: all 0.8s ease 0s;
+        @include fluid-text(14, 18);
+        a {
+            display: inline;
+        }
+        @include hover {
+            a {
+                color: var(--color-orange);
+            }
+            svg path {
+                fill: var(--color-orange);
+            }
+        }
+    }
+
+    &__info {
+        display: none;
+        h3 {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .button {
+            margin-bottom: 20px;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-gray);
+}
+/*----------------------------------price--------------------------------*/

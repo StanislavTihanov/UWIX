@@ -1,0 +1,291 @@
+/*----------------------------------about--------------------------------*/
+
+.about {
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+    &__info-text {
+        flex-basis: 865px;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    &__video {
+        background-color: var(--color-gray);
+        img {
+            width: 100%;
+            border-radius: var(--border-radius);
+        }
+    }
+}
+.about-mission {
+    &__info {
+        background-color: var(--color-orange-altr);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        width: 100%;
+        color: var(--color-white);
+    }
+}
+.about-advantages {
+    .title {
+        margin-bottom: 40px;
+    }
+    &__block {
+       background-color: var(--color-white);
+       margin-bottom: 10px;
+       padding: 20px;
+       border-radius: var(--border-radius);
+       display: flex;
+       justify-content: space-between;
+       gap: 10px 20px;
+       border: 1px solid #ddd;
+       @include mobile {
+          flex-wrap: wrap;
+       }
+       img {
+          width: 40px;
+          height: 40px;
+       }
+       h3 {
+        @include fluid-text(18, 24);
+        font-weight: 700;
+        flex-basis: 200px;
+        @include mobile {
+            flex-basis: 100%;
+         }
+       }
+       p {
+        flex-basis: 840px;
+       }
+    }
+}
+.about-personnel {
+    &__body {
+       display: flex;
+       justify-content: space-between;
+       gap: 40px 10px;
+       @include mobile {
+        flex-wrap: wrap;
+    }
+    }
+    &__info {
+        flex-basis: 550px;
+    }
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        flex-basis: 570px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+        }
+        @include mobile {
+            gap: 10px;
+        }
+    }
+    &__bottom {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 10px 20px;
+        @include mobile {
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+    }
+    &__block {
+        background-color: var(--color-white);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        border: 1px solid #ddd;
+        width: 50%;
+        h3 {
+            @include fluid-text(18, 24);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+.about-objects {
+    &__content {
+        position: relative;
+    }
+    &__top {
+        margin-bottom: 20px;
+    }
+    &__info {
+        width: 70vw;
+        width: clamp(300px, 70vw, 885px);
+    }
+    .button {
+        padding: 10px 43px;
+        white-space: nowrap;
+    }
+    &__photo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+        }
+        @include mobile {
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 20px;
+        }
+    }
+    &__button {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        @include mobile {
+            position: static;
+        }
+    }
+}
+.about-values {
+    &__top {
+       margin-bottom: 20px;
+    }
+    &__body {
+       display: flex;
+       justify-content: space-between;
+       align-items: stretch;
+       gap: 10px;
+       @include mobile {
+        flex-wrap: wrap;
+    }
+    }
+    &__block {
+        background-color: var(--color-white);
+        padding: 20px 15px;
+        border-radius: var(--border-radius);
+        border: 1px solid #ddd;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            margin-bottom: 10px;
+            width: 40px;
+        }
+    }
+}
+.about-cooperation {
+    padding: 100px 0px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    &__info {
+        color: var(--color-white);
+        flex-basis: 540px;
+        @include mobile {
+            flex-basis: 100%;
+            .consultation__form--mod {
+                max-width: 100%;
+            }
+            .form {
+                background-color: inherit;
+                padding: 0px;
+                border: none;
+                .form__item {
+                    input {
+                        border: none;
+                    }
+                }
+                &__button {
+                   @include mobile {
+                    background-color: transparent;
+                    border: 1px solid var(--color-white);
+                }
+                }
+                .checkbox__text {
+                    @include mobile {
+                        color: var(--color-white);
+                    }
+                }
+                .checkbox__label::before {
+                    @include mobile {
+                        border: 1px solid var(--color-white);
+                    }
+                }
+            }
+        }
+        .title {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &__logo {
+        @include mobile {
+            display: none;
+        }
+    }
+    @include mobile {
+        padding: 50px 0px;
+    }
+}
+
+.about-geography {
+    &__top {
+        margin-bottom: 40px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include mobile {
+            display: none;
+        }
+        .cities {
+            &__block {
+                span {
+                    display: block;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                &:first-child {
+                    span {
+                        &:first-child,
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__map {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+}
+
+
+
+
+
+
+/*----------------------------------about--------------------------------*/

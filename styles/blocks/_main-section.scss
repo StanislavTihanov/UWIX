@@ -8,9 +8,6 @@
         padding-top: 60px; 
         margin-bottom: 20px;
     }
-    &--mod {
-        
-    }
     &__content {
         position: relative;
         z-index: 1;
@@ -245,7 +242,7 @@
     &__container {
         background-color: var(--color-orange-altr);
         padding: 20px;
-        border-radius: 10px;
+        border-radius: var(--border-radius);
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
@@ -348,7 +345,18 @@
             display: none;
         }
     }
+    &__solid {
+        background-color: var(--color-orange-altr);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        width: 100%;
+        .title {
+            text-transform: none;
+            margin-bottom: 0px;
+        }
+    }
 }
+
 .block {
     background-color: var(--color-orange);
     padding: 20px;

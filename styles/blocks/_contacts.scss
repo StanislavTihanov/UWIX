@@ -1,7 +1,7 @@
 /*----------------------------------last-article--------------------------------*/
 
 .contacts {
-
+    padding-bottom: 80px;
     &__content {
         @include fluid-text(16, 18);
         line-height: 120%;
@@ -47,6 +47,9 @@
         .contacts__block-link {
             margin-top: 0px;
         }
+    }
+    @include mobile {
+        padding-bottom: 20px;
     }
 }
 

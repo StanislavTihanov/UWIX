@@ -280,16 +280,21 @@
         border-top: 1px solid var(--color-white);
     }
     &__block {
+        span {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
         &:first-child {
             flex-basis: 160px;
-        }
-        &-city {
-            margin-bottom: 10px;
-            cursor: pointer;
-            @include fluid-text(14, 18);
-        }
-        &-city--mod {
-            font-weight: 700;
+            span {
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3) {
+                    font-weight: 700;
+                }
+            }
         }
     }
     @include mobile {

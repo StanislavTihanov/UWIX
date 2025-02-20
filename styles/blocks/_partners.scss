@@ -2,6 +2,10 @@
 .partners {
     &__content {
         position: relative;
+        .section-slider__top {
+            margin-bottom: 20px;
+            display: block;
+        }
     }
     &__body {
         position: relative;
