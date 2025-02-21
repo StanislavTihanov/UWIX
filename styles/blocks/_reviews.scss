@@ -1,0 +1,132 @@
+/*----------------------------------reviews--------------------------------*/
+
+.reviews {
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        @include table {
+            gap: 10px;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__company {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: var(--color-white);
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        padding: 20px;
+        flex-basis: 48%;
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__company-logo {
+        @include mobile {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__company-info {
+        flex-basis: 300px;
+        h3 {
+            @include fluid-text(18, 24);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &__company-button {
+        max-width: 160px;
+    }
+}
+.feedback {
+    padding-top: 0px;
+    &__content {
+        position: relative;
+    }
+}
+.swiper-button-prev-feedback,
+.swiper-button-next-feedback {
+    position: static;
+    cursor: pointer;
+    min-width: 160px;
+    @include mobile {
+        display: none;
+    }
+}
+
+.feedback-slider {
+   overflow: hidden;
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      position: absolute;
+      z-index: 3;
+      right: 50px;
+      bottom: 0;
+      .feedback-slider__button {
+           min-width: 250px;
+           @include mobile {
+            min-width: 100%;
+        }
+      }
+      @include mobile {
+        position: static;
+    }
+   }
+}
+.feedback-slide {
+    &__top {
+        .title {
+            @include fluid-text(18, 24);
+            font-weight: 700;
+        }
+        margin-bottom: 60px;
+    }
+    &__body {
+        display: flex;
+        gap: 40px;
+        @include mobile {
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+    }
+    &__image {
+        position: relative;
+        flex-basis: 360px;
+        img {
+            width: 100%;
+        }
+    }
+    &__image-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__info {
+        flex-basis: 560px;
+        p {
+            margin-bottom: 40px;
+        }
+    }
+    &__video {
+        max-width: 360px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/*----------------------------------reviews--------------------------------*/

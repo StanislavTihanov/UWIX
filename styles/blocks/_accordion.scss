@@ -1,7 +1,13 @@
 /*----------------------------------accordion--------------------------------*/
 .accordion {
     &__block {
-        margin-bottom: 1.5rem;
+        @include mobile {
+            margin-bottom: 10px;
+            background-color: var(--color-white);
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 100%;
+        }
     }
     &__summary {
         list-style: none;
@@ -9,54 +15,85 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         cursor: pointer; 
-        padding: 0.5rem;
+        padding: 10px 10px 10px 0px;
         position: relative;
         width: 100%;
-        background-color: #E0F0FA;
         z-index: 3;
+        font-weight: 700;
+        @include fluid-text(18, 24);
+        cursor: default;
+        pointer-events: none;
+        @include mobile {
+            padding: 10px;
+            cursor: pointer;
+            pointer-events: all;
+        }
         &::after,
         &::before {
             position: absolute;
             content: '';
-            width: 10px;
-            height: 2px;
+            width: 22px;
+            height: 4px;
             top: 40%;
             right: 0;
-            background-color: var(--color-black);
+            background-color: var(--color-orange);
             transition: transform 0.2s ease-out;
+            display: none;
+            @include mobile {
+                display: block;
+            }
         }
         &::after {
-            transform: rotate(-45deg);
             right: 5px;
         }
         &::before {
-            transform: rotate(45deg);
-            right: 12px;
+            transform: rotate(90deg);
+            right: 5px;
         }
     }
     &__details[open] &__summary::after {
+        background-color: var(--color-black);
         transform: rotate(45deg);
     }
     &__details[open] &__summary::before {
+        background-color: var(--color-black);
         transform: rotate(-45deg);
     }
     &__content {
         display: grid;
         grid-template-rows: 0fr;
         transition-duration: 0.5s;
-        padding: 10px;
-        margin-bottom: 0.5rem;
-        background-color: #E0F0FA;
+        padding: 10px 10px 10px 0px;
+        margin-bottom: 10px;
         opacity: 0;
-        margin-top: -2rem;
-        &_body {
+        margin-top: -32px;
+        @include fluid-text(16, 18);
+        @include mobile {
+            padding: 10px;
+        }
+        &-body {
             overflow: hidden;
+        }
+        ul {
+            margin-left: 30px;
+            li {
+                list-style: disc;
+            }
         }
     }
     &__details[open] + &__content {
         grid-template-rows: 1fr;
         opacity: 1;
         margin-top: 0px;
+    }
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 0px;
+        }
     }
 }
 

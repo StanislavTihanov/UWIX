@@ -26,6 +26,9 @@ body {
 }
 section {
     padding: 50px 0px;
+    @include mobile {
+        padding: 30px 0px;
+    }
 }
 .section--color {
     background-color: #EA984F;

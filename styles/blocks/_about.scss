@@ -201,32 +201,6 @@
             .consultation__form--mod {
                 max-width: 100%;
             }
-            .form {
-                background-color: inherit;
-                padding: 0px;
-                border: none;
-                .form__item {
-                    input {
-                        border: none;
-                    }
-                }
-                &__button {
-                   @include mobile {
-                    background-color: transparent;
-                    border: 1px solid var(--color-white);
-                }
-                }
-                .checkbox__text {
-                    @include mobile {
-                        color: var(--color-white);
-                    }
-                }
-                .checkbox__label::before {
-                    @include mobile {
-                        border: 1px solid var(--color-white);
-                    }
-                }
-            }
         }
         .title {
             margin-bottom: 10px;

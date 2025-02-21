@@ -1196,6 +1196,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 .main-section__solid .title {
   text-transform: none;
   margin-bottom: 0px;
+  color: var(--color-white);
 }
 
 .block {
@@ -1372,7 +1373,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 }
 
 .tags.collapsed {
-  max-height: 85px;
+  max-height: 95px;
 }
 @media (max-width: 768px) {
   .tags.collapsed {

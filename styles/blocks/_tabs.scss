@@ -33,10 +33,7 @@
 }
 #tab-1:checked ~ .content-1,
 #tab-2:checked ~ .content-2,
-#tab-3:checked ~ .content-3,
-#tab-4:checked ~ .content-4,
-#tab-5:checked ~ .content-5,
-#tab-6:checked ~ .content-6 {
+#tab-3:checked ~ .content-3 {
   position: static;
   opacity: 1;
   visibility: visible;
@@ -47,11 +44,6 @@
   background-color: var(--color-orange);
   color: var(--color-white);
   border: 1px solid var(--color-orange);
-}
-#tab-4:checked ~ .tab-labels label[for="tab-4"],
-#tab-5:checked ~ .tab-labels label[for="tab-5"],
-#tab-6:checked ~ .tab-labels label[for="tab-6"] {
-  
 }
 input[type="radio"] {
   display: none;

@@ -26,6 +26,9 @@
             padding: 5px 10px;
         }
     }
+    @include mobile {
+        padding: 5px 0px;
+    }
 }
 .filter-menu {
     display: flex;

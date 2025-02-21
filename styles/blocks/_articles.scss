@@ -1,0 +1,106 @@
+/*----------------------------------articles--------------------------------*/
+
+.articles {
+    &__block {
+        display: flex;
+        gap: 30px;
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
+        padding: 20px;
+        margin-bottom: 10px;
+        @include table {
+            flex-wrap: wrap;
+        }
+        @include mobile {
+            border-radius: 0px;
+            background-color: inherit;
+            padding: 0px;
+        }
+    }
+
+    &__block-image {
+       flex-basis: 150px;
+       height: 150px;
+       @include mobile {
+          flex-basis: 100%;
+       }
+       img {
+           width: 100%;
+           height: 100%;
+           border-radius: var(--border-radius);
+       }
+    }
+
+    &__block-info {
+        flex-basis: 940px;
+        h3 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    &__block-button {
+        max-width: 160px;
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+.article-breadcrumbs {
+    margin-top: 220px;
+    @include mobile {
+        margin-top: 80px;
+    }
+}
+.article {
+    .title {
+        margin-bottom: 40px;
+    }
+    h2 {
+        @include fluid-text(18, 24);
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    h3 {
+        @include fluid-text(16, 18);
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    img {
+        margin-bottom: 40px;
+    }
+    ul {
+        margin-bottom: 40px;
+        margin-left: 30px;
+        li {
+            list-style: disc;
+        }
+    }
+    &__nav {
+        background-color: var(--color-orange-altr);
+        color: var(--color-white);
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: var(--border-radius);
+        ul {
+            margin-bottom: 0px;
+            margin-left: 30px;
+            li {
+                list-style: disc;
+            }
+        }
+    }
+    &__list {
+        p {
+            margin-bottom: 0px;
+        }
+    }
+}
+/*----------------------------------articles--------------------------------*/

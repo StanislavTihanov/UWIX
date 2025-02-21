@@ -3,6 +3,23 @@
     &--color {
         background-color: #E7E7E7;
     }
+    &--mod {
+        ul {
+            li {
+                position: relative;
+                padding-left: 30px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 1px;
+                    top: 9px;
+                    left: 10px;
+                    background-color: #000000;
+                }
+            }
+        }
+    }
 }
 .text {
     @include fluid-text(14, 18);

@@ -53,5 +53,25 @@
             background-color: #D16403;
         }
     }
+    &--mod {
+        @include mobile {
+            background-color:inherit;
+            padding: 0px;
+            border: none;
+            .form__button {
+                background-color: transparent;
+                border: 1px solid var(--color-white);
+            }
+            .form__item input {
+                border: none;
+            }
+            .checkbox__text {
+                color: var(--color-white);
+            }
+            .checkbox__label::before {
+                border: 1px solid var(--color-white);
+            }
+        }
+    }
 }
 /*----------------------------------form--------------------------------*/

@@ -1,6 +1,7 @@
 /*----------------------------------consultation--------------------------------*/
 
 .consultation {
+    position: relative;
     @include mobile {
         margin-top: 40px;
     }

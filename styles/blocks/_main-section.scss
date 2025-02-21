@@ -353,6 +353,7 @@
         .title {
             text-transform: none;
             margin-bottom: 0px;
+            color: var(--color-white);
         }
     }
 }
@@ -504,7 +505,7 @@
 }
 
 .tags.collapsed {
-    max-height: 85px; 
+    max-height: 95px; 
     @include mobile {
         max-height: 80px; 
     }

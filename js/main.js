@@ -388,6 +388,21 @@ if (ratingSlider) {
     }
   });
 }
+const feedbackSlider = document.querySelector('.feedback-slider');
+if (feedbackSlider) {
+  new Swiper(feedbackSlider, {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    speed: 2000,
+    autoHeight: false,
+    navigation: {
+      nextEl: '.swiper-button-prev-feedback',
+      prevEl: '.swiper-button-next-feedback',
+    },
+  });
+}
 //------------------------------------------------------------------------Слайдер
 
 
@@ -496,6 +511,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //------------------------------------------------------------------------выбор городов в шапке сайта
+
+
+//------------------------------------------------------------------------код для работы accordion
+  document.addEventListener("DOMContentLoaded", function () {
+    const detailsList = document.querySelectorAll(".accordion__details");
+
+    function updateDetailsState() {
+      const isMobile = window.innerWidth < 768;
+
+      detailsList.forEach(details => {
+        if (isMobile) {
+          details.removeAttribute("open");
+        }
+      });
+    }
+    // Убираем `open` при загрузке страницы на мобильных устройствах
+    updateDetailsState();
+
+    // Добавляем клик-обработчик для открытия/закрытия на мобильных устройствах
+    detailsList.forEach(details => {
+      details.addEventListener("click", function (event) {
+        if (window.innerWidth < 768) {
+          event.preventDefault(); // Отключаем стандартное поведение
+          details.toggleAttribute("open"); // Переключаем `open`
+        }
+      });
+    });
+
+    // Обновляем при изменении размера экрана (например, если повернуть телефон)
+    window.addEventListener("resize", updateDetailsState);
+  });
+//------------------------------------------------------------------------код для работы accordion
+
 
 
 //------------------------------------------------------------------------select выпадающий список
@@ -674,6 +722,8 @@ document.addEventListener('keydown', function (e) {
   }
 });
 //------------------------------------------------------------------------popup
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const filterItems = document.querySelectorAll(".filter-menu__list li");

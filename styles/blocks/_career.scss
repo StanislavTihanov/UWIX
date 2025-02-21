@@ -1,0 +1,124 @@
+/*----------------------------------career--------------------------------*/
+
+.career {
+    padding-top: 0px;
+    .title {
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-weight: 700;
+        @include fluid-text(18, 24);
+        margin-bottom: 10px;
+    }
+    &__content {
+        .tab-content {
+            padding: 0px;
+        }
+        .tab-labels {
+            flex-wrap: wrap;
+            gap: 10px;
+            .tab-label {
+                text-transform: none;
+            }
+        }
+    }
+    &__top {
+       margin-bottom: 40px;
+    }
+    &__body {
+       display: flex;
+       justify-content: space-between;
+       gap: 40px 10px;
+       margin-bottom: 40px;
+       @include mobile {
+           flex-wrap: wrap;
+       }
+    }
+    &__info {
+        flex-basis: 50%;
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+    &__image {
+        flex-basis: 50%;
+        @include mobile {
+            flex-basis: 100%;
+        }
+        img {
+            width: 100%;
+            border-radius: var(--border-radius);
+        }
+    }
+    &__bottom {
+        background-color: var(--color-orange-altr);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        color: var(--color-white);
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__bottom-info {
+        flex-basis: 845px;
+        @include mobile {
+            order: 1;
+        }
+    }
+
+    &__bottom-logo {
+        flex-basis: 245px;
+        img {
+            width: 100%;
+        }
+        @include mobile {
+            flex-basis: 130px;
+        }
+    }
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__block {
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        flex-basis: 49%;
+        @include table {
+            flex-basis: 100%;
+        }
+    }
+}
+.vacancy {
+    margin-bottom: 20px;
+    background-color: var(--color-white);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    &__top {
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 10px;
+        }
+        span {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            color: var(--color-orange);
+        }
+    }
+@include mobile {
+    padding: 0px;
+    background-color: inherit;
+    border: none;
+}
+}
+
+
+
+/*----------------------------------career--------------------------------*/
