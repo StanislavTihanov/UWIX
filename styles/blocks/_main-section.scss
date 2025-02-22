@@ -355,6 +355,9 @@
             margin-bottom: 0px;
             color: var(--color-white);
         }
+        @include mobile {
+            padding: 10px;
+        }
     }
 }
 

@@ -21,7 +21,7 @@ body {width: 100%;
      scroll-behavior: smooth;}
 input,
 button,
-textarea {font-family: inherit;}
+textarea {font-family: inherit;resize:none;}
 input::-ms-clear {display: none;}
 button {cursor: pointer;}
 button::-moz-focus-inner {padding: 0;border: 0;}

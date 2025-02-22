@@ -46,6 +46,7 @@ input,
 button,
 textarea {
   font-family: inherit;
+  resize: none;
 }
 
 input::-ms-clear {
@@ -1197,6 +1198,11 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   text-transform: none;
   margin-bottom: 0px;
   color: var(--color-white);
+}
+@media (max-width: 768px) {
+  .main-section__solid {
+    padding: 10px;
+  }
 }
 
 .block {

@@ -1,0 +1,114 @@
+/*----------------------------------order--------------------------------*/
+
+.order {
+   padding-top: 0px;
+}
+.order-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px 10px;
+    @include table {
+        flex-wrap: wrap;
+    }
+    &__body {
+        flex-basis: 865px;
+    }
+    &__inner {
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
+        padding: 20px;
+        margin-bottom: 10px;
+        @include mobile {
+            border: none;
+            border-radius: 0px;
+            background-color: inherit;
+            padding: 0px;
+        }
+    }
+    &__top {
+        max-width: 550px;
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px 20px;
+        margin-bottom: 10px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__block {
+        h2 {
+            margin-bottom: 10px;
+            @include fluid-text(16, 18);
+        }
+        &-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &__button {
+        ul {
+            margin-left: 20px;
+            li {
+                list-style: disc;
+                font-size: 12px;
+                line-height: 110%;
+            }
+        }
+        p {
+            font-size: 12px;
+            line-height: 110%;
+        }
+        .label-text {
+            font-size: 12px;
+            line-height: 100%;
+        }
+        .radio-button {
+            margin-bottom: 10px;
+    
+        }
+        @include mobile {
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            background-color: var(--color-white);
+            padding: 10px;
+        }
+    }
+    &__address {
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+    &__address-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 20px;
+        margin-bottom: 10px;
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__card {
+        flex-basis: 276px;
+        @include table {
+            flex-basis: 100%;
+        }
+        .button {
+            max-width: 100%;
+        }
+    }
+}
+
+
+/*----------------------------------order--------------------------------*/

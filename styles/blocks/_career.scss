@@ -95,7 +95,7 @@
         }
     }
 }
-.vacancy {
+.career-vacancy {
     margin-bottom: 20px;
     background-color: var(--color-white);
     border: 1px solid #ddd;
@@ -111,6 +111,11 @@
             @include fluid-text(18, 24);
             color: var(--color-orange);
         }
+        h2 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 10px;
+        }
     }
 @include mobile {
     padding: 0px;
@@ -119,6 +124,46 @@
 }
 }
 
-
+.vacancy {
+    padding-top: 0px;
+    &__content {
+        position: relative;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        @include table {
+            margin-bottom: 40px;
+        }
+    }
+    &__block {
+        h2 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 30px;
+            li {
+                list-style: disc;
+            }
+            margin-bottom: 10px;
+        }
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        .button {
+            padding: 10px 35px;
+        }
+        @include table {
+            position: static;
+        }
+    }
+}
 
 /*----------------------------------career--------------------------------*/

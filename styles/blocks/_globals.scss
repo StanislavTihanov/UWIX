@@ -47,6 +47,10 @@ section {
 .title {
     @include fluid-text(30, 60);
     line-height: 120%;
+    &--mod {
+        font-weight: 700;
+        @include fluid-text(18, 24);
+    }
 }
 .yandex-rating {
     @include mobile {

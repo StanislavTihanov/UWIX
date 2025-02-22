@@ -25,6 +25,7 @@
     }
     &__item {
         margin-bottom: 0.7rem;
+        width: 100%;
     }
     &__input {
         width: 100%;
@@ -39,6 +40,10 @@
         &:focus {
             box-shadow: 0 0 10px var(--color-orange);
         }
+    }
+    &__textarea {
+        height: 40px;
+        overflow-y: hidden;
     }
     &__button {
         width: 100%;

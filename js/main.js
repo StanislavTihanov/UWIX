@@ -546,6 +546,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 //------------------------------------------------------------------------select выпадающий список
 //document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
 //  const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
@@ -945,3 +947,153 @@ document.addEventListener("DOMContentLoaded", function () {
 //});
 //
 //------------------------------------------------------------------------Обработка формы
+
+//-----------------------------------------------------------------------код для работы карзины товаров
+document.addEventListener('DOMContentLoaded', function() {
+  // Проверяем, есть ли на странице ключевые элементы
+  const basketProducts = document.querySelector('.basket__products');
+  const totalElement = document.querySelector('.product__total span');
+  const totalNumberElement = document.querySelector('.product__total-number span');
+  const totalWordElement = document.querySelector('.product__total-number p');
+
+  // Если ключевые элементы отсутствуют, завершаем выполнение
+  if (!basketProducts || !totalElement || !totalNumberElement || !totalWordElement) {
+    return;
+  }
+
+  // Остальной код выполняется только если ключевые элементы есть
+  const checkboxAll = document.querySelector('.checkbox-all .checkbox__input');
+  const deleteAllButton = document.querySelector('.delete-all');
+
+  // Функция для склонения слова "товаров"
+  function getCorrectWordForm(count) {
+    const lastDigit = count % 10;
+    const lastTwoDigits = count % 100;
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+      return 'товаров';
+    }
+    if (lastDigit === 1) {
+      return 'товар';
+    }
+    if (lastDigit >= 2 && lastDigit <= 4) {
+      return 'товара';
+    }
+    return 'товаров';
+  }
+
+  // Функция для обновления общей суммы и количества товаров
+  function updateTotal() {
+    let totalCost = 0;
+    let totalCount = 0;
+
+    // Считаем общую стоимость и количество товаров
+    const productElements = basketProducts.querySelectorAll('.product');
+    productElements.forEach(productElement => {
+      const costElement = productElement.querySelector('.product__cost');
+      const counterElement = productElement.querySelector('[data-counter]');
+
+      if (costElement && counterElement) {
+        const currentCost = parseInt(costElement.textContent.replace(/\D/g, ''), 10);
+        const currentCount = parseInt(counterElement.textContent, 10);
+        totalCost += currentCost * currentCount;
+        totalCount += currentCount;
+      }
+    });
+
+    // Обновляем общую сумму с форматированием
+    totalElement.textContent = `${totalCost.toLocaleString('ru-RU')} ₽`;
+
+    // Обновляем количество товаров с форматированием
+    totalNumberElement.textContent = totalCount.toLocaleString('ru-RU');
+
+    // Обновляем слово "товаров" с правильным склонением
+    const wordForm = getCorrectWordForm(totalCount);
+    totalWordElement.innerHTML = `<span>${totalCount.toLocaleString('ru-RU')}</span> ${wordForm}`;
+  }
+
+  // Функция для выделения всех чекбоксов
+  if (checkboxAll) {
+    checkboxAll.addEventListener('change', function() {
+      const allCheckboxes = basketProducts.querySelectorAll('.checkbox__input:not(.checkbox-all .checkbox__input)');
+      allCheckboxes.forEach(checkbox => {
+        checkbox.checked = checkboxAll.checked;
+      });
+    });
+  }
+
+  // Функция для удаления всех выбранных товаров
+  if (deleteAllButton) {
+    deleteAllButton.addEventListener('click', function() {
+      const selectedProducts = basketProducts.querySelectorAll('.checkbox__input:checked:not(.checkbox-all .checkbox__input)');
+      selectedProducts.forEach(checkbox => {
+        const product = checkbox.closest('.product');
+        if (product) {
+          product.remove(); // Удаляем товар
+        }
+      });
+
+      // Снимаем выделение с "Выделить все" после удаления
+      if (checkboxAll) {
+        checkboxAll.checked = false;
+      }
+
+      // Обновляем общую сумму и количество товаров
+      updateTotal();
+    });
+  }
+
+  // Обработчики для каждого товара
+  basketProducts.querySelectorAll('.product').forEach(productElement => {
+    const costElement = productElement.querySelector('.product__cost');
+    const counterElement = productElement.querySelector('[data-counter]');
+    const minusButton = productElement.querySelector('[data-action="minus"]');
+    const plusButton = productElement.querySelector('[data-action="plus"]');
+    const deleteButton = productElement.querySelector('.product__items-delete');
+
+    let currentCount = parseInt(counterElement.textContent, 10);
+    let currentCost = parseInt(costElement.textContent.replace(/\D/g, ''), 10);
+
+    // Функция обновления стоимости товара
+    function updateCost() {
+      const totalCost = currentCost * currentCount;
+      costElement.textContent = `${totalCost.toLocaleString('ru-RU')} ₽`;
+      updateTotal(); // Обновляем общую сумму и количество товаров
+    }
+
+    // Обработчик для кнопки "-"
+    if (minusButton) {
+      minusButton.addEventListener('click', function() {
+        if (currentCount > 1) {
+          currentCount--;
+          counterElement.textContent = currentCount;
+          updateCost();
+        }
+      });
+    }
+
+    // Обработчик для кнопки "+"
+    if (plusButton) {
+      plusButton.addEventListener('click', function() {
+        currentCount++;
+        counterElement.textContent = currentCount;
+        updateCost();
+      });
+    }
+
+    // Обработчик для кнопки удаления товара
+    if (deleteButton) {
+      deleteButton.addEventListener('click', function() {
+        productElement.remove(); // Удаляем товар
+        updateTotal(); // Обновляем общую сумму и количество товаров после удаления
+      });
+    }
+
+    // Инициализация стоимости при загрузке страницы
+    updateCost();
+  });
+
+  // Инициализация общей суммы и количества товаров при загрузке страницы
+  updateTotal();
+});
+//-----------------------------------------------------------------------код для работы карзины товаров

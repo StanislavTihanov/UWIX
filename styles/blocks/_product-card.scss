@@ -70,13 +70,17 @@
             }
         }
     }
-    &__block {
+    &__block-wrapper {
+        padding-top: 37px;
         position: relative;
         &:last-child {
             flex-basis: 280px;
             @include mobile {
                 flex-basis: 100%;
             }
+        }
+        @include mobile {
+            padding-top: 30px;
         }
     }
     &__info {
@@ -85,19 +89,14 @@
         margin-bottom: 5px;
         border-radius: var(--border-radius);
         color: var(--color-white);
-        margin-top: 37px;
         &-inner {
             display: flex;
             justify-content: space-between;
             gap: 10px;
             align-items: start;
             margin-bottom: 40px;
-            @include mobile {
-                margin-bottom: 10px;
-            }
         }
         @include mobile {
-            margin-top: 30px;
             margin-bottom: 10px;
         }
     }
