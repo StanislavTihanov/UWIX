@@ -33,7 +33,10 @@
 }
 #tab-1:checked ~ .content-1,
 #tab-2:checked ~ .content-2,
-#tab-3:checked ~ .content-3 {
+#tab-3:checked ~ .content-3,
+#tab-4:checked ~ .content-4,
+#tab-5:checked ~ .content-5,
+#tab-6:checked ~ .content-6  {
   position: static;
   opacity: 1;
   visibility: visible;

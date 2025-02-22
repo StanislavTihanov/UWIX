@@ -3907,7 +3907,6 @@ td.table__subtitle {
   }
 }
 .filter__link {
-  border: 1px solid var(--color-orange);
   background-color: var(--color-orange-altr);
   color: var(--color-white);
   padding: 10px 20px;
@@ -4013,21 +4012,22 @@ td.table__subtitle {
 .filter-menu__card .card .card__title {
   font-size: clamp(14px, 1.1111111111vw, 16px);
 }
-.filter-menu__card .card .button {
-  background-color: var(--color-orange-altr);
-  font-size: clamp(14px, 1.1111111111vw, 16px);
-}
-@media (hover: hover) {
-  .filter-menu__card .card .button:hover {
-    background-color: #D16403;
-  }
-}
 .filter-menu__card .card__image {
   padding-top: 160px;
 }
 @media (max-width: 768px) {
   .filter-menu__card .card__image {
     padding-top: 112px;
+  }
+}
+.filter-menu .button {
+  background-color: var(--color-orange-altr);
+  font-size: clamp(14px, 1.1111111111vw, 16px);
+  border: none;
+}
+@media (hover: hover) {
+  .filter-menu .button:hover {
+    background-color: #D16403;
   }
 }
 .filter-menu__slider {
@@ -4931,10 +4931,12 @@ td.table__subtitle {
   display: flex;
   justify-content: space-between;
   gap: 40px 20px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1024px) {
   .basket__body {
     flex-wrap: wrap;
+    margin-bottom: 40px;
   }
 }
 .basket__products {
@@ -5362,6 +5364,62 @@ td.table__subtitle {
   }
 }
 
+.entry-form {
+  max-width: 255px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .entry-form {
+    max-width: 100%;
+  }
+}
+.entry-form .title {
+  margin-bottom: 20px;
+}
+.entry-form .form__input {
+  margin-bottom: 20px;
+  background-color: inherit;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+.entry-form .form__input::-moz-placeholder {
+  color: var(--color-white);
+}
+.entry-form .form__input::placeholder {
+  color: var(--color-white);
+}
+@media (max-width: 768px) {
+  .entry-form .form__input {
+    margin-bottom: 10px;
+  }
+}
+.entry-form .button {
+  max-width: 100%;
+  border-radius: 6px;
+}
+.entry-form .button-white {
+  margin-bottom: 10px;
+}
+.entry-form__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px 10px;
+}
+@media (max-width: 768px) {
+  .entry-form__wrap {
+    flex-wrap: wrap;
+  }
+}
+.entry-form--mod {
+  max-width: 530px;
+}
+@media (max-width: 768px) {
+  .entry-form {
+    padding: 40px 0px;
+  }
+}
+
 /*----------------------------------form--------------------------------*/
 /*----------------------------------radio-buttons--------------------------------*/
 .radio-button input[type=radio] {
@@ -5689,7 +5747,10 @@ td.table__subtitle {
 
 #tab-1:checked ~ .content-1,
 #tab-2:checked ~ .content-2,
-#tab-3:checked ~ .content-3 {
+#tab-3:checked ~ .content-3,
+#tab-4:checked ~ .content-4,
+#tab-5:checked ~ .content-5,
+#tab-6:checked ~ .content-6 {
   position: static;
   opacity: 1;
   visibility: visible;

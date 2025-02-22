@@ -79,4 +79,48 @@
         }
     }
 }
+.entry-form {
+    max-width: 255px;
+    margin: auto;
+    @include mobile {
+        max-width: 100%;
+    }
+    .title {
+        margin-bottom: 20px;
+    }
+    .form__input {
+        margin-bottom: 20px;
+        background-color: inherit;
+        border: 1px solid var(--color-white);
+        color: var(--color-white);
+        &::placeholder {
+            color: var(--color-white);
+        }
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+    .button {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+    .button-white {
+        margin-bottom: 10px;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px 10px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &--mod {
+        max-width: 530px;
+    }
+    @include mobile {
+        padding: 40px 0px;
+    }
+}
 /*----------------------------------form--------------------------------*/

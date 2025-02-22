@@ -6,8 +6,10 @@
         display: flex;
         justify-content: space-between;
         gap: 40px 20px;
+        margin-bottom: 60px;
         @include table {
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
     }
     &__products {

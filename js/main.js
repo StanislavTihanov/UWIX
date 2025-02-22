@@ -1097,3 +1097,59 @@ document.addEventListener('DOMContentLoaded', function() {
   updateTotal();
 });
 //-----------------------------------------------------------------------код для работы карзины товаров
+
+
+//-----------------------------------------------------------------------код для сброса фильтров 
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим контейнер фильтров
+  const filterContainer = document.querySelector('.filter-menu__list-wrapper');
+
+  // Проверяем, существует ли контейнер фильтров
+  if (!filterContainer) {
+    return; // Если контейнера нет, прекращаем выполнение кода
+  }
+
+  // Находим кнопку сброса
+  const resetButton = filterContainer.querySelector('.filter-menu__button-reset');
+
+  // Проверяем, существует ли кнопка сброса
+  if (!resetButton) {
+    return; // Если кнопки нет, прекращаем выполнение кода
+  }
+
+  // Добавляем обработчик события click
+  resetButton.addEventListener('click', function() {
+    // Сбрасываем выбранные элементы списка
+    const listItems = filterContainer.querySelectorAll('.filter-menu__list li');
+    listItems.forEach(item => {
+      item.classList.remove('selected'); // Убираем класс selected, если он используется для выделения выбранных элементов
+    });
+
+    // Сбрасываем значения полей ввода цены
+    const minInput = filterContainer.querySelector('#minInput1');
+    const maxInput = filterContainer.querySelector('#maxInput1');
+    if (minInput) minInput.value = '';
+    if (maxInput) maxInput.value = '';
+
+    // Сбрасываем ползунок (если используется какой-то плагин для слайдера)
+    const slider = filterContainer.querySelector('#slider1');
+    if (slider && slider.noUiSlider) {
+      slider.noUiSlider.reset(); // Пример для noUiSlider
+    }
+
+    // Сбрасываем чекбоксы
+    const checkboxes = filterContainer.querySelectorAll('.checkbox__input');
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+    // Дополнительно можно обновить отображение товаров, если это необходимо
+    // Например, вызвать функцию, которая обновляет список товаров на основе текущих фильтров
+    updateProductList();
+  });
+
+  // Функция для обновления списка товаров (заглушка)
+  function updateProductList() {
+    console.log('Обновление списка товаров...');
+    // Здесь должен быть код для обновления списка товаров на основе текущих фильтров
+  }
+});

@@ -11,7 +11,6 @@
     }
     }
     &__link {
-        border: 1px solid var(--color-orange);
         background-color: var(--color-orange-altr);
         color: var(--color-white);
         padding: 10px 20px;
@@ -103,19 +102,20 @@
             .card__title {
                 @include fluid-text(14, 16);
             }
-            .button {
-                background-color: var(--color-orange-altr);
-                @include fluid-text(14, 16);
-                @include hover {
-                    background-color: #D16403;
-                }
-            }
         }
         .card__image {
             padding-top: 160px;
             @include mobile {
                 padding-top: 112px;
             }
+        }
+    }
+    .button {
+        background-color: var(--color-orange-altr);
+        @include fluid-text(14, 16);
+        border: none;
+        @include hover {
+            background-color: #D16403;
         }
     }
     &__slider {
