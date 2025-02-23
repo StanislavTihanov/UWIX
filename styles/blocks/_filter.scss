@@ -41,8 +41,15 @@
         @include mobile {
             display: none;
         }
+        .button {
+            background-color: var(--color-orange-altr);
+            @include fluid-text(14, 16);
+            border: none;
+            @include hover {
+                background-color: #D16403;
+            }
+        }
     }
-
     &__list {
         margin-bottom: 20px;
         li {
@@ -102,20 +109,20 @@
             .card__title {
                 @include fluid-text(14, 16);
             }
+            .button {
+                background-color: var(--color-orange-altr);
+                @include fluid-text(14, 16);
+                border: none;
+                @include hover {
+                    background-color: #D16403;
+                }
+            }
         }
         .card__image {
             padding-top: 160px;
             @include mobile {
                 padding-top: 112px;
             }
-        }
-    }
-    .button {
-        background-color: var(--color-orange-altr);
-        @include fluid-text(14, 16);
-        border: none;
-        @include hover {
-            background-color: #D16403;
         }
     }
     &__slider {
@@ -178,6 +185,17 @@
             flex-wrap: wrap;
             flex-basis: 100%;
             justify-content: space-between;
+        }
+    }
+    .filter-menu__button-reset {
+        margin: auto;
+        width: 100%;
+    }
+    &__button {
+        .button-outline {
+            padding: 10px;
+            border-radius: var(--border-radius);
+            text-align: center;
         }
     }
 }

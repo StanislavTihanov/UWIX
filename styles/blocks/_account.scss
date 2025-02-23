@@ -1,0 +1,368 @@
+/*----------------------------------account--------------------------------*/
+
+.account {
+    position: relative;
+    &__content {
+        position: relative;
+        @include table {
+            position: static;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .filter-menu {
+        gap: 10px;
+        margin-bottom: 0px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+        .active {
+            color: var(--color-orange);
+            font-weight: 700;
+            @include mobile {
+                color: var(--color-white);
+                background-color: var(--color-orange-altr);
+            }
+        }
+        &__button {
+            @include mobile {
+                position: absolute;
+                bottom: 0;
+                width: 95%;
+            }
+        }
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+    .filter-menu__container {
+        flex-basis: 865px;
+    }
+    &__list {
+        flex-basis: 275px;
+        @include mobile {
+            flex-basis: 100%;
+        }
+        h3 {
+            margin-bottom: 10px;
+            color: #5d5d5d;
+        }
+        .filter-menu__list {
+            li {
+                margin-bottom: 5px;
+                padding-left: 0px;
+                &::after,
+                &::before {
+                    display: none;
+                }
+                @include mobile {
+                    background-color: var(--color-white);
+                    border: 1px solid var(--color-orange);
+                    padding: 8px 10px;
+                    border-radius: 30px;
+                    display: inline-block;
+                }
+            }
+            margin-bottom: 0px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            @include mobile {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &__list-wrapper {
+        @include custom-box;
+        margin-bottom: 10px;
+    }
+    &__wrapper {
+        flex-basis: 570px;
+    }
+    &__top,
+    .account-order,
+    &__block-inner {
+        margin-bottom: 10px;
+        @include custom-box;
+        h2 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 10px;
+        }
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: var(--color-white);
+        border: 1px solid #ddd;
+        padding: 8px 10px;
+        border-radius: var(--border-radius);
+        input {
+            width: 100%;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+    }
+    &__top--mod {
+        h2 {
+            margin-bottom: 0px;
+        }
+    }
+    &__top-inner {
+        @include table {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        @include table {
+            position: relative;
+        }
+    }
+    &__top-icon {
+        display: none;
+        @include table {
+            display: block;
+        }
+    }
+    &__block {
+       flex-basis: 275px;
+       &-item {
+           h3 {
+               font-size: 18px;
+               margin-bottom: 10px;
+           }
+       }
+       @include table {
+        display: none;
+       }
+    }
+    &__button-more {
+        max-width: 175px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    &__content-more {
+        display: none;
+    }
+    &__filter-mob {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 10px;
+        width: 275px;
+        @include desktop {
+            width: 260px;
+        }
+        @include table {
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            top: 33px;
+        }
+        &--mod {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .open-filter {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.account-order {
+    position: relative;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include mobile {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    &__item {
+        h3 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 5px;
+            span {
+                color: var(--color-black);
+            }
+        }
+        h4 {
+            @include fluid-text(14, 18);
+            margin-bottom: 5px;
+            span {
+                color: var(--color-black);
+            }
+        }
+        span {
+            color: #5d5d5d;
+        }
+        margin-bottom: 20px;
+    }
+    &__box {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        &-cost {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 700;
+            @include fluid-text(18, 24);
+        }
+    }
+
+    &__status {
+        padding: 5px 20px;
+        background-color: #dddddd;
+        height: 30px;
+        border-radius: var(--border-radius);
+        @include fluid-text(12, 16);
+        @include mobile {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            padding: 5px 10px;
+        }
+    }
+
+    &__status--paid {
+        background-color: #A7EB95;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        max-width: 335px;
+        .button {
+            padding: 7px 10px;
+            @include fluid-text(14, 16);
+        }
+        .button-filled {
+            background-color: var(--color-orange-altr);
+            @include fluid-text(14, 16);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include hover {
+                background-color: #D16403;
+            }
+        }
+        @include mobile {
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+    }
+    &__quantity {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        position: absolute;
+        top: 45%;
+        right: 20px;
+        img {
+            width: 40px;
+            background-color: var(--color-white);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        @include mobile {
+            position: static;
+        }
+    }
+}
+.promo-codes {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.code {
+    @include custom-box;
+    flex-basis: 275px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &__top {
+        h3 {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-bottom: 5px;
+        }
+        span {
+            font-size: 18px;
+        }
+        margin-bottom: 20px;
+    }
+    p {
+        @include fluid-text(16, 18);
+        margin-bottom: 75px;
+    }
+    @include mobile {
+        flex-basis: 100%;
+    }
+}
+
+.exchange-refund {
+    h2 {
+        font-weight: 700;
+        @include fluid-text(18, 24);
+        margin-bottom: 20px;
+    }
+    &__text {
+        @include custom-box;
+        margin-bottom: 10px;
+        p {
+            margin-bottom: 20px;
+        }
+        @include mobile {
+            background-color: inherit;
+            border: none;
+            padding: 0px;
+        }
+    }
+    &__form {
+        .checkbox {
+           display: none;
+           @include mobile {
+            display: block;
+           }
+        }
+        .form {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           gap: 10px 20px;
+           & :first-child {
+                grid-column: 1 / 4;
+           }
+           & :nth-child(5) {
+                grid-column: 1 / 3;
+           }
+           @include mobile {
+                display: flex;
+                flex-wrap: wrap;
+                &__button {
+                    background-color: var(--color-white);
+                    color: var(--color-black);
+                    border: 1px solid var(--color-orange);
+                }
+           }
+        }
+    }
+}
+
+/*----------------------------------account--------------------------------*/

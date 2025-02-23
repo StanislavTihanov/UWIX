@@ -1,7 +1,7 @@
 /*----------------------------------checkbox--------------------------------*/
 .checkbox {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     &._error .checkbox__label::before{
         border: 1px solid red;
     }

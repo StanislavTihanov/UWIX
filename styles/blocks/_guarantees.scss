@@ -14,13 +14,13 @@
     }
     &__card {
         border: 1px solid #ddd;
-        border-radius: 10px;
+        border-radius: var(--border-radius);
         padding: 21px;
         display: grid;
         grid-template-rows: auto 56px 40px;
         background-color: var(--color-white);
         &_image {
-            margin-bottom: 0.8rem;
+            margin-bottom: 12px;
             padding: 138px 0px 0px 0px;
             border-radius: 10px 10px 2px 2px;
             img {

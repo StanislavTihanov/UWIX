@@ -389,10 +389,7 @@
     justify-content: space-between;
     align-items: stretch;
     gap: 30px;
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    @include custom-box;
     margin-bottom: 20px;
     @include mobile {
         flex-wrap: wrap;

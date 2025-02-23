@@ -32,10 +32,7 @@
     }
 }
 .preview {
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    background-color: var(--color-white);
-    padding: 20px;
+    @include custom-box;
     display: grid;
     grid-template-rows: auto auto 1fr;
     max-width: 360px;

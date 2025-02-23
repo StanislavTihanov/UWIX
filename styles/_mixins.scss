@@ -25,3 +25,9 @@
       }
     }
 }
+@mixin custom-box {
+    background-color: var(--color-white);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: var(--border-radius);
+}

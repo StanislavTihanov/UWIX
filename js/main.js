@@ -431,6 +431,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 //-----------------------------------------------------------------------код для кнопок показать скрыть текст
+document.addEventListener("DOMContentLoaded", function () {
+      const accountMoreButton = document.querySelector(".account__button-more");
+      const accountMoreContent = document.querySelector(".account__content-more");
+
+      if (accountMoreButton && accountMoreContent) {
+        accountMoreButton.addEventListener("click", function () {
+          accountMoreContent.style.display = "block";
+          accountMoreButton.style.display = "none";
+          });
+
+      }
+  
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonsFilter = document.querySelectorAll(".account__top-icon"); // Все кнопки
+  const accountFilters = document.querySelectorAll(".account__filter-mob"); // Все фильтры
+
+  if (buttonsFilter.length && accountFilters.length) {
+    buttonsFilter.forEach((button, index) => {
+      button.addEventListener("click", function () {
+        // Переключаем класс "block" для соответствующего фильтра
+        accountFilters[index].classList.toggle("open-filter");
+      });
+    });
+  }
+});
 
 
 //-----------------------------------------------------------------------код для загрузки файлов в форме
@@ -726,7 +752,7 @@ document.addEventListener('keydown', function (e) {
 //------------------------------------------------------------------------popup
 
 
-
+//------------------------------------------------------------------------фильтрация по атрибутам
 document.addEventListener("DOMContentLoaded", function () {
   const filterItems = document.querySelectorAll(".filter-menu__list li");
   const posts = document.querySelectorAll(".filter-menu__container .post");
@@ -755,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
       filterItems[0].click();
   }
 });
-
+//------------------------------------------------------------------------фильтрация по атрибутам
 
 
 

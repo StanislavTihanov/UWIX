@@ -1237,9 +1237,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   align-items: stretch;
   gap: 30px;
   background-color: var(--color-white);
-  padding: 20px;
-  border-radius: 10px;
   border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: var(--border-radius);
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
