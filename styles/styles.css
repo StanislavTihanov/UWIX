@@ -240,6 +240,7 @@ section {
   transition: all 0.3s ease;
   width: 100%;
   text-align: center;
+  font-size: clamp(14px, 1.1111111111vw, 16px);
 }
 @media (max-width: 768px) {
   .button {
@@ -5651,6 +5652,153 @@ td.table__subtitle {
   }
 }
 
+.settings h3 {
+  font-weight: 700;
+  font-size: clamp(18px, 1.6666666667vw, 24px);
+  margin-bottom: 20px;
+}
+.settings__block {
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+.settings__block .button {
+  max-width: 150px;
+}
+@media (max-width: 768px) {
+  .settings__block .button {
+    max-width: 100%;
+  }
+}
+.settings__items {
+  margin-bottom: 40px;
+}
+.settings__items, .settings__password {
+  display: flex;
+  align-items: stretch;
+  gap: 40px 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .settings__items, .settings__password {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.settings__item {
+  flex-basis: 30%;
+}
+.settings__item p {
+  color: #5D5D5D;
+  margin-bottom: 10px;
+}
+.settings__item .radio-button {
+  align-items: center;
+}
+.settings__item .radio-button .label-text {
+  opacity: 0.7;
+}
+.settings__item .custom-radio {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-orange);
+  border-radius: 2px;
+}
+.settings__item .radio-button input[type=radio]:checked + .custom-radio::after {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--color-orange);
+}
+.settings__item .radio-button input[type=radio]:checked + .custom-radio {
+  border: 1px solid var(--color-orange);
+}
+.settings__item--mod {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+.settings__item-calendar {
+  border: 1px solid #5d5d5d;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .settings__item {
+    flex-basis: 100%;
+  }
+}
+.settings__password .button {
+  flex-basis: 20%;
+}
+@media (max-width: 768px) {
+  .settings__password .button {
+    flex-basis: 100%;
+  }
+}
+.settings__password-label {
+  flex-basis: 30%;
+  background-color: var(--color-white);
+  border: 1px solid #5D5D5D;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px;
+}
+@media (max-width: 768px) {
+  .settings__password-label {
+    flex-basis: 100%;
+  }
+}
+.settings__password-input::-moz-placeholder {
+  font-size: clamp(14px, 1.1111111111vw, 16px);
+}
+.settings__password-input::placeholder {
+  font-size: clamp(14px, 1.1111111111vw, 16px);
+}
+.settings__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.settings__buttons .button {
+  max-width: 180px;
+}
+.settings__button-out {
+  background-color: var(--color-orange-altr);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (hover: hover) {
+  .settings__button-out:hover {
+    background-color: var(--color-orange);
+  }
+}
+.settings__button-delete {
+  background-color: inherit;
+}
+.settings__button-delete span {
+  color: #E41A30;
+}
+.settings__body {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.settings .body-active {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+}
+
 /*----------------------------------account--------------------------------*/
 /*----------------------------------popup--------------------------------*/
 .popup {
@@ -5747,7 +5895,6 @@ td.table__subtitle {
   border-radius: 5px;
   transition: all 0.3s ease 0s;
   border: 1px solid rgba(23, 23, 23, 0.7);
-  height: 100%;
 }
 .form__input::-moz-placeholder {
   font-size: 16px;

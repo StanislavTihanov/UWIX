@@ -364,5 +364,141 @@
         }
     }
 }
+.settings {
+    h3 {
+        font-weight: 700;
+        @include fluid-text(18, 24);
+        margin-bottom: 20px;
+    }
+    &__block {
+        @include custom-box;
+        margin-bottom: 20px;
+        .button {
+            max-width: 150px;
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+    &__items {
+        margin-bottom: 40px;
+    }
+    &__items,
+    &__password {
+        display: flex;
+        align-items: stretch;
+        gap: 40px 20px;
+        flex-wrap: wrap;
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+    &__item {
+        flex-basis: 30%;
+        p {
+            color: #5D5D5D;
+            margin-bottom: 10px;
+        }
+        .radio-button {
+            align-items: center;
+            .label-text {
+                opacity: 0.7;
+            }
+        }
+        .custom-radio {
+            width: 16px;
+            height: 16px;
+            border: 1px solid var(--color-orange);
+            border-radius: 2px;
+        }
+        .radio-button input[type=radio]:checked + .custom-radio::after {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border: 1px solid var(--color-orange);
+        }
+        .radio-button input[type=radio]:checked + .custom-radio {
+            border: 1px solid var(--color-orange);
+        }
+        &--mod {
+            display: flex;
+            gap: 20px;
+            align-items: end;
+        }
+        &-calendar {
+            border: 1px solid #5d5d5d;
+            border-radius: 6px;
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+    &__password {
+        .button {
+            flex-basis: 20%;
+            @include mobile {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &__password-label {
+        flex-basis: 30%;
+        background-color: var(--color-white);
+        border: 1px solid #5D5D5D;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 10px;
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+
+    &__password-input {
+        &::placeholder {
+            @include fluid-text(14, 16);
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .button {
+            max-width: 180px;
+        }
+    }
+    &__button-out {
+        background-color: var(--color-orange-altr);
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        @include hover {
+            background-color: var(--color-orange);
+        }
+    }
+    &__button-delete {
+        background-color: inherit;
+        span {
+            color: #E41A30;
+        }
+    }
+    &__body {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    .body-active {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+    }
+}
 
 /*----------------------------------account--------------------------------*/

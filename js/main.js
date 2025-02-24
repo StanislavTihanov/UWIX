@@ -1179,3 +1179,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Здесь должен быть код для обновления списка товаров на основе текущих фильтров
   }
 });
+//-----------------------------------------------------------------------код для сброса фильтров
+
+//-----------------------------------------------------------------------календарь
+new AirDatepicker('#datepicker');
+//-----------------------------------------------------------------------календарь
+
+//-----------------------------------------------------------------------код для переключения форм в личном кабинете
+// Находим все кнопки и блоки
+const buttonSaves = document.querySelectorAll('.button-save');
+const buttonChanges = document.querySelectorAll('.button-change');
+const bodyChanges = document.querySelectorAll('.settings__body-change');
+const bodySaves = document.querySelectorAll('.settings__body-save');
+
+// Проверяем, что количество элементов совпадает
+if (
+    buttonChanges.length === buttonSaves.length &&
+    buttonChanges.length === bodyChanges.length &&
+    buttonChanges.length === bodySaves.length
+) {
+    // Проходим по каждому набору элементов
+    buttonChanges.forEach((buttonChange, index) => {
+        const bodyChange = bodyChanges[index];
+        const bodySave = bodySaves[index];
+        const buttonSave = buttonSaves[index];
+
+        // Добавляем обработчики событий для каждого набора
+        buttonChange.addEventListener('click', () => {
+            bodyChange.classList.remove('body-active');
+            bodySave.classList.add('body-active');
+        });
+
+        buttonSave.addEventListener('click', () => {
+            bodySave.classList.remove('body-active');
+            bodyChange.classList.add('body-active');
+        });
+    });
+} else {
+    console.log('Количество элементов не совпадает. Скрипт не будет выполнен.');
+}
+//-----------------------------------------------------------------------код для переключения форм в личном кабинете

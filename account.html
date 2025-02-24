@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/air-datepicker.css">
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -811,6 +812,35 @@
                   </div>
                   <div class="account__block"></div>
                 </div>
+
+                <div class="account__container">
+                  <div class="account__wrapper">
+                    <div class="account__top">
+                      <div class="account-order">
+                        <div class="account-order__block">
+                          <div class="account-order__items">
+                            <div class="account-order__item">
+                              <h3>Заказ <span>№12041961</span></h3>
+                              <span>12 апреля 1961</span>
+                            </div>
+                          </div>
+                          <div class="account-order__box-wrap">
+                            <div class="account-order__box">
+                              <div class="account-order__status">
+                                <p>Не оплачен</p>
+                              </div>
+                              <span class="account-order__box-cost">446 ₽</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="account__body">
+                    
+                    </div>
+                  </div>
+                  <div class="account__block"></div>
+                </div>
               </div>
               <div class="post list-2">
                 <div class="account__top">
@@ -1155,7 +1185,108 @@
                 </div>
               </div>
               <div class="post list-5">
-                
+                <div class="settings">
+                  <div class="settings__block">
+                    <h3>Настройки и личные данные</h3>
+                    <div class="settings__body settings__body-change body-active">
+                      <div class="settings__items">
+                        <div class="settings__item">
+                          <p>Фио</p>
+                          <span class="settings__item-name">Иванов ИИ</span>
+                        </div>
+                        <div class="settings__item">
+                          <span class="settings__item-gender">муж</span>
+                        </div>
+                        <div class="settings__item">
+                          <p>Дата рождения</p>
+                          <span class="settings__item-date">01.01.0001</span>
+                        </div>
+                        <div class="settings__item">
+                          <p>Email</p>
+                          <span class="settings__item-email">mail@mail.ru</span>
+                        </div>
+                        <div class="settings__item">
+                          <p>Телефон</p>
+                          <span class="settings__item-tel">8 (968) 657 88 14</span>
+                        </div>
+                        <div class="settings__item">
+                          <p>Город</p>
+                          <span class="settings__item-city">Москва</span>
+                        </div>
+                      </div>
+                      <button class="button button-outline button-change">Изменить</button>
+                    </div>
+                    <div class="settings__body settings__body-save">
+                      <form>
+                        <div class="settings__items">
+                          <div class="settings__item">
+                            <p>Фио</p>
+                            <input class="form__input" type="text" placeholder="Имя Фамаилия">
+                          </div>
+                          <div class="settings__item settings__item--mod">
+                            <label class="radio-button">
+                              <input type="radio" name="option-1" value="1"/>
+                              <span class="custom-radio"></span>
+                              <span class="label-text">Муж</span>
+                            </label>
+                            <label class="radio-button">
+                              <input type="radio" name="option-1" value="1"/>
+                              <span class="custom-radio"></span>
+                              <span class="label-text">Жен</span>
+                            </label>
+                          </div>
+                          <div class="settings__item">
+                            <p>Дата рождения</p>
+                            <label class="settings__item-calendar">
+                              <input type="text" placeholder="ДД\ММ\ГОД" id="datepicker">
+                              <img src="images/icons/calendar.svg" alt="calendar icon">
+                            </label>
+                          </div>
+                          <div class="settings__item">
+                            <p>Email</p>
+                            <input class="form__input" type="email" placeholder="mail@mail.ru">
+                          </div>
+                          <div class="settings__item">
+                            <p>Телефон</p>
+                            <input class="form__input" type="tel" placeholder="Телефон">
+                          </div>
+                          <div class="settings__item">
+                            <p>Город</p>
+                            <input class="form__input" type="text" placeholder="Город">
+                          </div>
+                        </div>
+                        <input class="button button-outline button-save" type="submit" value="Сохранить">
+                      </form>
+                    </div>
+                  </div>
+                  <div class="settings__block">
+                    <h3>Изменить пароль</h3>
+                    <div class="settings__password">
+                      <label class="settings__password-label">
+                        <input class="settings__password-input" type="text" placeholder="Старый пароль">
+                        <img src="images/icons/icon-password1.svg" alt="icon">
+                      </label>
+                      <label class="settings__password-label">
+                        <input class="settings__password-input" type="text" placeholder="Новый пароль">
+                        <img src="images/icons/icon-password2.svg" alt="icon">
+                      </label>
+                      <input class="button button-outline" type="submit" value="Изменить пароль">
+                    </div>
+                  </div>
+                  <div class="settings__buttons">
+                     <button class="button settings__button-out">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0039 1.33192C11.418 1.46082 11.75 1.7616 11.9453 2.17567C12.0469 2.39832 12.0508 2.42176 12.0625 3.22254C12.0703 3.67176 12.0664 4.08192 12.0508 4.12879C12.0039 4.3202 11.6562 4.43348 11.4336 4.33192C11.2383 4.24207 11.2109 4.12489 11.2109 3.40223C11.2109 2.68739 11.1836 2.53895 11.0039 2.35145C10.8047 2.1366 11.0312 2.14832 6.5625 2.14832C3.07031 2.14832 2.40234 2.15614 2.3125 2.20301C2.17188 2.27723 2.00781 2.45692 1.95703 2.58973C1.92578 2.66785 1.91406 4.98426 1.91406 10.1561C1.91406 15.328 1.92578 17.6444 1.95703 17.7225C2.01172 17.871 2.17969 18.0468 2.33203 18.1093C2.4375 18.1561 3.16406 18.1639 6.56641 18.1639H10.6758L10.8359 18.0702C10.9258 18.0194 11.0352 17.9061 11.0859 17.8202C11.1641 17.6757 11.1719 17.6171 11.1719 17.0272C11.1719 16.2772 11.2031 16.121 11.3789 16.0116C11.5508 15.9022 11.8086 15.9296 11.9492 16.0702L12.0508 16.1718V17.0233C12.0508 17.8163 12.043 17.8866 11.957 18.0975C11.832 18.4139 11.5078 18.7538 11.1797 18.9139L10.918 19.0429H2.16797L1.95312 18.9413C1.50781 18.7304 1.15625 18.2929 1.05859 17.8202C1.02734 17.6718 1.01562 15.4608 1.01562 10.1444C1.01562 3.64051 1.02344 2.64442 1.07422 2.4491C1.20312 1.95692 1.46094 1.6366 1.90625 1.41785L2.20312 1.26942L6.48047 1.2616C10.6406 1.25379 10.7695 1.25379 11.0039 1.33192Z" fill="white" />
+                        <path d="M14.8438 6.02389C14.6523 6.0942 14.5313 6.34811 14.5859 6.56295C14.6016 6.62155 15.2695 7.35592 16.1328 8.27389L17.6563 9.88327L5.23828 9.9028L5.12109 10.0239C5.02344 10.1215 5 10.1762 5 10.3169C5 10.4965 5.07422 10.6528 5.1875 10.7114C5.22266 10.727 8.04297 10.7505 11.4531 10.7622L17.6563 10.7817L16.1328 12.4223C14.5508 14.1255 14.5234 14.1645 14.5859 14.4184C14.6484 14.6567 14.9609 14.809 15.1836 14.6997C15.2422 14.6723 16.1406 13.7348 17.1758 12.6215C19.1406 10.5083 19.1523 10.4965 19.0859 10.2348C19.0586 10.1333 15.4727 6.23483 15.2656 6.08248C15.1523 6.00045 14.9766 5.97702 14.8438 6.02389Z" fill="white" />
+                      </svg>
+                      Выйти из аккаунта
+                     </button>
+                     <button class="button settings__button-delete">
+                      <span>X</span>
+                      Удалить аккаунт
+                     </button>
+                  </div>
+                </div>
               </div>
               <div class="post list-6">
                 <div class="account__top account__top--mod">
@@ -1401,6 +1532,7 @@
     </footer>
   </div>
   <script src="https://unpkg.com/imask"></script>
+  <script src="js/air-datepicker.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
