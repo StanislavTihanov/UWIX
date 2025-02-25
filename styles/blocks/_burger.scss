@@ -9,7 +9,7 @@
         border-radius: 8px;
         position: relative;
         display: block;
-        z-index: 999;
+        z-index: 9;
         .burger {
             z-index: 2;
             cursor: pointer;
@@ -35,22 +35,6 @@
                     right: 0.29px;
                 }
             }
-            
-        }
-        &._active .burger__line:nth-child(2){
-            transform: rotate(45deg);
-            left: 25%;
-            top: 50%;
-            width: 20px;
-        }
-        &._active .burger__line:first-child{
-            transform: rotate(-45deg);
-            left: 25%;
-            top: 50%;
-        }
-        &._active .burger__line:last-child{
-
-            opacity: 0;
         }
     }
 }

@@ -8,10 +8,20 @@
             position: static;
         }
     }
+    .body-active {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
         gap: 10px;
+    }
+    .hide {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
     }
     .filter-menu {
         gap: 10px;
@@ -52,7 +62,7 @@
         }
         .filter-menu__list {
             li {
-                margin-bottom: 5px;
+                margin-bottom: 8px;
                 padding-left: 0px;
                 &::after,
                 &::before {
@@ -84,6 +94,9 @@
     }
     &__wrapper {
         flex-basis: 570px;
+    }
+    &__block-inner {
+        flex-basis: 23%;
     }
     &__top,
     .account-order,
@@ -140,6 +153,9 @@
                font-size: 18px;
                margin-bottom: 10px;
            }
+           .checkbox {
+            margin-bottom: 13px;
+           }
        }
        @include table {
         display: none;
@@ -177,6 +193,101 @@
         opacity: 1;
         visibility: visible;
     }
+    &__products {
+        @include custom-box;
+        @include table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        @include mobile {
+            background-color: inherit;
+            padding: 0px;
+            border: none;
+        }
+    }
+    &__product {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        .account-order__buttons {
+            align-items: flex-start;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid #dadada;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+            @include table {
+                border-bottom: 0px;
+                padding-bottom: 0px;
+            }
+        }
+        @include table {
+            display: block;
+        }
+    }
+    &__product-image {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #dadada;
+        border-radius: 10px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        @include table {
+            margin-bottom: 10px;
+            width: 140px;
+            height: 114px;
+        }
+    }
+
+    &__product-title {
+        flex-basis: 370px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        h3 {
+            font-weight: 700;
+            @include fluid-text(14, 18); 
+        }
+        @include table {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__product-cost {
+        font-weight: 700;
+        @include fluid-text(18, 24);
+        color: var(--color-orange);
+        font-family: 'Roboto', Arial, sans-serif;
+        @include table {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    &__product-favourites {
+        cursor: pointer;
+        @include hover {
+            svg path {
+                fill: var(--color-orange);
+            }
+        }
+        svg {
+            background-color: var(--color-white);
+            border-radius: 45%;
+            padding: 2px;
+            width: 30px;
+            height: 30px;
+        }
+        @include table {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
 }
 .account-order {
     position: relative;
@@ -208,7 +319,7 @@
         span {
             color: #5d5d5d;
         }
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__box {
         display: flex;
@@ -247,7 +358,7 @@
         gap: 10px;
         max-width: 335px;
         .button {
-            padding: 7px 10px;
+            padding: 5px 10px;
             @include fluid-text(14, 16);
         }
         .button-filled {
@@ -257,6 +368,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 5px;
             @include hover {
                 background-color: #D16403;
             }
@@ -316,7 +428,6 @@
         flex-basis: 100%;
     }
 }
-
 .exchange-refund {
     h2 {
         font-weight: 700;
@@ -494,11 +605,103 @@
         visibility: hidden;
         position: absolute;
     }
-    .body-active {
-        opacity: 1;
-        visibility: visible;
-        position: static;
+}
+.account__container--mod {
+    display: block;
+    .account__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: inherit;
+        border: none;
+        padding: 0px;
+        @include table {
+            flex-wrap: wrap;
+        }
+    }
+    .account__block {
+        flex-basis: 275px;
+    }
+    .account-order {
+        flex-basis: 570px;
+        margin-bottom: 0px;
+        @include table {
+            flex-basis: 100%;
+        }
+    }
+    .account-order__box {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 10px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+    .account-order__box-wrap {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        .account-order__box {
+            text-align: center;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    .account-order__box {
+        p {
+            font-weight: 700;
+        }
+    }
+    .account-order__change {
+        background-color: inherit;
+        margin-bottom: 10px;
+        color: #5d5d5d;
     }
 }
+.account__card {
+    @include custom-box;
+    @include table {
+        flex-basis: 100%;
+    }
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+        @include fluid-text(16, 18); 
+        &--total {
+            font-weight: 700;
+            @include fluid-text(18, 24);
+            margin-top: 13px;
+            margin-bottom: 20px;
+            span {
+                color: var(--color-orange);
+                font-family: 'Roboto', Arial, sans-serif;
+            }
+        }
+        span {
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+    }
+    .account-order__buttons {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .account__button-download {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+    .account__card-paid {
+        color: #229D00;
+    }
+}
+
 
 /*----------------------------------account--------------------------------*/

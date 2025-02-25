@@ -188,24 +188,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //------------------------------------------------------------------------Меню-Бургер
 const burgerMenu = document.querySelector('.burger__wrapper');
-const menuBody= document.querySelector('.menu');
+const menuBody = document.querySelector('.menu');
+const menuClose = document.querySelector('.menu__close');
+const bodyLock = document.body; // Получаем элемент body
 
-if(burgerMenu) {
+if (burgerMenu) {
     burgerMenu.addEventListener("click", function (e) {
-      burgerMenu.classList.toggle('_active');
-      menuBody.classList.toggle('_active');
+        burgerMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+        bodyLock.classList.toggle('_lock'); // Добавляем/удаляем класс для body
+    });
+}
+
+if (menuClose) {
+    menuClose.addEventListener("click", function (e) {
+        burgerMenu.classList.remove('_active');
+        menuBody.classList.remove('_active');
+        bodyLock.classList.remove('_lock'); // Удаляем класс для body
     });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".menu__btn").forEach(btn => {
-      btn.addEventListener("click", function () {
-          const dropdown = this.querySelector(".menu__dropdown-submenu");
-          if (dropdown) {
-              dropdown.classList.toggle("open-submenu");
-          }
-      });
-  });
+    document.querySelectorAll(".menu__btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const dropdown = this.querySelector(".menu__dropdown-submenu");
+            if (dropdown) {
+                dropdown.classList.toggle("open-submenu");
+            }
+        });
+    });
 });
 
 //------------------------------------------------------------------------Прокрутка при клике
@@ -649,109 +660,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //------------------------------------------------------------------------select выпадающий список
 
-
-//------------------------------------------------------------------------popup
-const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll(".lock-padding");
-
-
-let unlock = true;
-
-const timeout = 800;
-
-if (popupLinks.length > 0) {
-  for (let index = 0; index < popupLinks.length; index++) {
-    const popupLink = popupLinks[index];
-    popupLink.addEventListener("click", function (e) {
-      const popupName = popupLink.getAttribute('href').replace('#', '');
-      const currentPopup = document.getElementById(popupName);
-      popupOpen(currentPopup);
-      e.preventDefault();
-    });
-  }
-}
-
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-  for (let index = 0; index < popupCloseIcon.length; index++) {
-    const el = popupCloseIcon[index];
-    el.addEventListener('click', function (e) {
-      popupClose(el.closest('.popup'));
-      e.preventDefault();
-    })
-  }
-}
-
-function popupOpen(currentPopup) {
-  if (currentPopup && unlock) {
-    const popupActive = document.querySelector('.popup.open');
-    if (popupActive) {
-      popupClose(popupActive, false);
-    } else {
-      bodyLock();
-    }
-    currentPopup.classList.add('open');
-    currentPopup.addEventListener("click", function (e) {
-      if (!e.target.closest('.popup__content')) {
-        popupClose(e.target.closest('.popup'));
-      }
-    });
-  }
-}
-
-function popupClose(popupActive, doUnlock = true) {
-  if (unlock) {
-    popupActive.classList.remove('open');
-    if (doUnlock) {
-      bodyUnlock();
-    }
-  }
-}
-
-function bodyLock() {
-  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-  if (lockPadding.length > 0) {
-    for (let index = 0; index < lockPadding.length; index++) {
-      const el = lockPadding[index];
-      el.style.paddingRight = lockPaddingValue;
-    }
-  }
-  body.style.paddingRight = lockPaddingValue;
-  body.classList.add('lock');
-
-  unlock = false;
-  setTimeout(function () {
-    unlock = true;
-  }, timeout);
-}
-
-function bodyUnlock () {
-  setTimeout(function () {
-    if(lockPadding.length > 0) {
-      for (let index = 0; index < lockPadding.length; index++) {
-        const el = lockPadding[index];
-        el.style.paddingRight = '0px';
-      }
-  }
-    body.style.paddingRight = '0px';
-    body.classList.remove('lock');
-  }, timeout);
-  unlock = false;
-  setTimeout(function () {
-    unlock = true;
-  }, timeout);
-}
-
-document.addEventListener('keydown', function (e) {
-  if (e.which === 27) {
-    const popupActive = document.querySelector('.popup.open');
-    popupClose(popupActive);
-  }
-});
-//------------------------------------------------------------------------popup
-
-
 //------------------------------------------------------------------------фильтрация по атрибутам
 document.addEventListener("DOMContentLoaded", function () {
   const filterItems = document.querySelectorAll(".filter-menu__list li");
@@ -1182,7 +1090,11 @@ document.addEventListener('DOMContentLoaded', function() {
 //-----------------------------------------------------------------------код для сброса фильтров
 
 //-----------------------------------------------------------------------календарь
-new AirDatepicker('#datepicker');
+// Проверяем, существует ли элемент с id="datepicker"
+if (document.getElementById('datepicker')) {
+  // Если элемент существует, инициализируем AirDatepicker
+  new AirDatepicker('#datepicker');
+}
 //-----------------------------------------------------------------------календарь
 
 //-----------------------------------------------------------------------код для переключения форм в личном кабинете
@@ -1218,4 +1130,39 @@ if (
 } else {
     console.log('Количество элементов не совпадает. Скрипт не будет выполнен.');
 }
+
+const buttonShow = document.querySelectorAll('.button-show');
+const buttonHide = document.querySelectorAll('.button-hide');
+const containerHide = document.querySelectorAll('.container-hide');
+const containerShow = document.querySelectorAll('.container-show');
+
+// Обработчик для buttonShow
+buttonShow.forEach(button => {
+    button.addEventListener('click', () => {
+        // Добавляем класс hide к containerHide
+        containerHide.forEach(container => {
+            container.classList.add('hide');
+        });
+
+        // Убираем класс hide у containerShow
+        containerShow.forEach(container => {
+            container.classList.remove('hide');
+        });
+    });
+});
+
+// Обработчик для buttonHide
+buttonHide.forEach(button => {
+    button.addEventListener('click', () => {
+        // Убираем класс hide у containerHide
+        containerHide.forEach(container => {
+            container.classList.remove('hide');
+        });
+
+        // Добавляем класс hide к containerShow
+        containerShow.forEach(container => {
+            container.classList.add('hide');
+        });
+    });
+});
 //-----------------------------------------------------------------------код для переключения форм в личном кабинете
