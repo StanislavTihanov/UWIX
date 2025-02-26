@@ -46,10 +46,15 @@
         padding: 10px 20px;
         border: 1px solid #ddd;
         border-radius: var(--border-radius);
+        width: 150px;
+        height: 130px;
         img {
+            height: 100%;
             width: 100%;
-            width: 120px;
-            height: 120px;
+        }
+        @include mobile {
+            padding: 5px;
+            width: 60px;
         }
     }
 }

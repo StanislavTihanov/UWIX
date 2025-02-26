@@ -2269,7 +2269,7 @@ section {
 }
 @media (max-width: 768px) {
   .consultation {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 .consultation__content {
@@ -2292,7 +2292,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 0px 16px;
   margin-bottom: 27px;
   position: relative;
 }
@@ -2308,6 +2308,12 @@ section {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
+  .consultation__info .title {
+    max-width: 250px;
+    margin-top: -40px;
+  }
+}
+@media (max-width: 768px) {
   .consultation__info {
     order: 1;
   }
@@ -2319,7 +2325,7 @@ section {
 }
 @media (max-width: 768px) {
   .consultation__image {
-    margin-top: -144px;
+    margin-top: -100px;
   }
 }
 .consultation__form .form {
@@ -2801,11 +2807,18 @@ input[type=file] {
   padding: 10px 20px;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
+  width: 150px;
+  height: 130px;
 }
 .partners .partner img {
+  height: 100%;
   width: 100%;
-  width: 120px;
-  height: 120px;
+}
+@media (max-width: 768px) {
+  .partners .partner {
+    padding: 5px;
+    width: 60px;
+  }
 }
 
 .partners-slider {
@@ -4572,6 +4585,9 @@ td.table__subtitle {
 }
 .reviews__company-info {
   flex-basis: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .reviews__company-info h3 {
   font-size: clamp(18px, 1.6666666667vw, 24px);
