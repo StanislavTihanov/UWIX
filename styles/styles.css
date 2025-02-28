@@ -2818,6 +2818,7 @@ input[type=file] {
   .partners .partner {
     padding: 5px;
     width: 60px;
+    height: 60px;
   }
 }
 
@@ -4285,6 +4286,11 @@ td.table__subtitle {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .about__info {
+    flex-wrap: wrap;
+  }
 }
 .about__info-text {
   flex-basis: 865px;

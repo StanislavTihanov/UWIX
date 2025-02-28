@@ -6,6 +6,9 @@
         justify-content: space-between;
         gap: 10px;
         margin-bottom: 60px;
+        @include table {
+            flex-wrap: wrap;
+        }
     }
     &__info-text {
         flex-basis: 865px;
@@ -218,7 +221,6 @@
         padding: 50px 0px;
     }
 }
-
 .about-geography {
     &__top {
         margin-bottom: 40px;

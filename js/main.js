@@ -330,7 +330,6 @@ if (partnersSlider) {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 40,
     speed: 2000,
     autoHeight: false,
     pagination: {
@@ -341,6 +340,14 @@ if (partnersSlider) {
       nextEl: '.swiper-button-prev',
       prevEl: '.swiper-button-next',
     },
+    breakpoints: {
+      320: {
+        spaceBetween: 20,  
+      },
+      1024: {
+        spaceBetween: 40,
+      },
+    }
   });
 }
 const lastArticleSslider = document.querySelector('.last-article-slider');
