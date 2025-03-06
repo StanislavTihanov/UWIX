@@ -31,7 +31,7 @@
         }
     }
     &__info {
-        flex-basis: 448px;
+        flex-basis: 500px;
         .title {
             margin-bottom: 20px;
             @include mobile {
@@ -102,6 +102,11 @@
         height: 100%;
         top: 0;
         left: 0;
+    }
+    &--mod {
+        @include mobile {
+            padding-top: 50px;
+        }
     }
 }
 

@@ -3,7 +3,17 @@
     overflow: hidden;
     position: relative;
     padding-bottom: 40px;
-    max-width: 320px;
+    max-width: 360px;
+    @include table {
+      padding-bottom: 0px;
+      .swiper-pagination {
+        position: relative;
+        margin-top: 20px;
+      }
+    }
+    @include mobile {
+      max-width: 100%;
+    }
 }
 .categories-slider {
   overflow: hidden;

@@ -138,6 +138,9 @@
         @include table {
             margin-bottom: 40px;
         }
+        @include mobile {
+            gap: 0px;
+        }
     }
     &__block {
         h2 {

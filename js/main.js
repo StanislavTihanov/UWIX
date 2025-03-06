@@ -275,7 +275,7 @@ categoriesSliders.forEach((slider, index) => {
     spaceBetween: 20,
     speed: 1000,
     autoHeight: false,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: `.swiper-button-next-${index}`,
       prevEl: `.swiper-button-prev-${index}`,
@@ -734,18 +734,21 @@ document.addEventListener("DOMContentLoaded", function () {
 //}
 //------------------------------------------------------------------------Animation
 
+
+//------------------------------------------------------------------------маска для телефона
+document.addEventListener("DOMContentLoaded", function () {
+  var phoneInputs = document.querySelectorAll('._number'); // Выбираем все поля с классом "phone"
+
+  phoneInputs.forEach(function (input) {
+    IMask(input, { mask: '+{7} (000) 000-00-00' }); // Применяем маску ко всем полям
+  });
+});
+//------------------------------------------------------------------------маска для телефона
 //------------------------------------------------------------------------Обработка формы
 //document.addEventListener('DOMContentLoaded', function () {
 //  const forms = document.querySelectorAll('form'); // Получаем все формы на странице
 //
 //  forms.forEach((form) => {
-//    const phoneInput = form.querySelector('._number'); // Поле ввода телефона
-//
-//    // Добавляем маску для номера телефона
-//    if (phoneInput) {
-//      Inputmask("+7 (999) 999-99-99").mask(phoneInput);
-//    }
-//
 //    form.addEventListener('submit', formSend);
 //
 //    async function formSend(e) {
