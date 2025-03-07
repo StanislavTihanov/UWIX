@@ -825,7 +825,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 }
 @media (max-width: 768px) {
   .main-section__content--mod {
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 }
 .main-section__content--mod .breadcrumbs__item {
@@ -876,6 +876,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   .main-section__body--mod .main-section__info p {
     color: var(--color-black);
   }
+}
+.main-section__body--mod .title {
+  font-size: clamp(26px, 4.1666666667vw, 60px);
 }
 .main-section--mod {
   margin-bottom: 0px;
@@ -1023,7 +1026,7 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   gap: 16px;
   position: absolute;
   z-index: 9;
-  top: -225px;
+  top: -190px;
   right: 0;
   font-size: clamp(12px, 1.1111111111vw, 16px);
 }
@@ -1053,6 +1056,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   .main-section__links {
     gap: 10px;
   }
+}
+.main-section__links--mod {
+  right: 10px;
 }
 @media (max-width: 768px) {
   .main-section__links--mod {
