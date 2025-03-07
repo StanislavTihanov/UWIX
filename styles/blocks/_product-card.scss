@@ -270,6 +270,10 @@
                     font-weight: 700;
                     max-width: 200px;
                     line-height: 120%;
+                    @include mobile {
+                        text-transform: uppercase;
+                        font-weight: 400;
+                    }
                 }
                 .tab-label {
                     padding: 20px;
@@ -340,6 +344,10 @@
                 font-weight: 700;
                 line-height: 120%;
                 margin-bottom: 10px;
+                @include mobile {
+                    text-transform: uppercase;
+                    font-weight: 400
+                }
             }
             p {
                 @include fluid-text(16, 18);

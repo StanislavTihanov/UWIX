@@ -205,6 +205,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 .header__locations-place {
   cursor: pointer;
 }
+.header__locations-icon--mod svg path {
+  fill: var(--color-black);
+}
 .header__text {
   line-height: 120%;
   position: relative;
@@ -1020,8 +1023,8 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
   gap: 16px;
   position: absolute;
   z-index: 9;
-  top: -190px;
-  right: 10px;
+  top: -225px;
+  right: 0;
   font-size: clamp(12px, 1.1111111111vw, 16px);
 }
 @media (max-width: 768px) {
@@ -1122,6 +1125,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
     margin-bottom: 0px;
   }
 }
+.main-section__container--mod .title {
+  text-transform: none;
+}
 .main-section__box {
   color: var(--color-white);
 }
@@ -1193,6 +1199,9 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
     width: 100%;
     margin-bottom: 30px;
     color: var(--color-black);
+  }
+  .main-section__download p {
+    order: -1;
   }
 }
 .main-section .tags {

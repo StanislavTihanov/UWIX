@@ -1,18 +1,4 @@
 "use strict"
-//------------------------------------------------------------------------Готовые блоки кода
-
-//------------------------------------------------------------------------preloader
-//document.body.onload = () => {
-//  setTimeout(() => {
-//    let preloader = document.getElementById('preloader');
-//    if (!preloader.classList.contains('done')) {
-//      preloader.classList.add('done');
-//    }
-//  }, 1000);
-//}
-//------------------------------------------------------------------------preloader
-
-
 //------------------------------------------------------------------------разворот тегов
 document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.querySelector('.toggle-btn');
@@ -29,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+//------------------------------------------------------------------------разворот тегов
 
 //----------------------------------------------------------------------ползунки для фильтра
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,63 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //----------------------------------------------------------------------ползунки для фильтра
-
-//------------------------------------------------------------------------разворот тегов
-
-
-
-//------------------------------------------------------------------------таймер обратного отсчета
-//const startDays = 2; // Количество дней
-//const startHours = 5; // Количество часов
-//const startMinutes = 10; // Количество минут
-//const startSeconds = 0; // Количество секунд
-//
-//// Переводим все в секунды
-//let time = startDays * 24 * 60 * 60 + startHours * 60 * 60 + startMinutes * 60 + startSeconds;
-//
-//const countdownElement = document.getElementById('countdown');
-//
-//function updateCountdown() {
-//    const days = Math.floor(time / (24 * 60 * 60)); // Количество дней
-//    const hours = Math.floor((time % (24 * 60 * 60)) / 3600); // Количество часов
-//    const minutes = Math.floor((time % 3600) / 60); // Количество минут
-//    const seconds = time % 60; // Количество секунд
-//
-//    // Форматируем время
-//    countdownElement.innerText = `${days}:${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-//
-//    if (time > 0) {
-//        time--;
-//    } else {
-//        clearInterval(timer);
-//        countdownElement.innerText = "Время вышло!";
-//    }
-//}
-//
-//const timer = setInterval(updateCountdown, 1000);
-//------------------------------------------------------------------------таймер обратного отсчета
-
-
-//------------------------------------------------------------------------search
-//const searchButtons = document.querySelectorAll('.search__btn');
-//const searchWindows = document.querySelectorAll('.search__window');
-//
-//searchButtons.forEach((searchBtn, index) => {
-//  const searchWindow = searchWindows[index]; // Привязываем соответствующее окно к каждой кнопке
-//
-//  searchBtn.addEventListener("click", function (e) {
-//    e.stopPropagation();
-//    searchWindow.classList.toggle('_act'); // Открываем/закрываем конкретное окно поиска
-//  });
-//
-//  document.addEventListener("click", function (e) {
-//    if (!searchBtn.contains(e.target) && !searchWindow.contains(e.target)) {
-//      searchWindow.classList.remove('_act'); // Закрываем окно, если клик вне кнопки или окна
-//    }
-//  });
-//});
-
-//------------------------------------------------------------------------search
 
 //------------------------------------------------------------------------код для прилипания блока в Price
 document.addEventListener("DOMContentLoaded", function () {
@@ -219,38 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//------------------------------------------------------------------------Прокрутка при клике
-//let buttons = document.querySelectorAll('.menu__link');
-//
-//buttons.forEach((elem)=>{
-//  elem.addEventListener('click',()=>{
-//    menuBody.classList.remove('_active');
-//    burgerMenu.classList.remove('_active');
-//  })
-//})
-//
-//const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-//
-//if (menuLinks.length > 0) {
-//  menuLinks.forEach(menuLink => {
-//    menuLink.addEventListener("click", onMenuLinkClick);
-//  });
-//  function onMenuLinkClick(e) {
-//    const menuLink = e.target;
-//    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//        const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
-//      
-//        window.scrollTo({
-//        top:gotoBlockValue,
-//        behavior: "smooth"
-//      });
-//      e.preventDefault();
-//    }
-//  }
-//}
-//------------------------------------------------------------------------Прокрутка при клике
-
 //------------------------------------------------------------------------Слайдер
 const mainSliders = document.querySelectorAll('.main-slider');
 mainSliders.forEach((slider) => {
@@ -275,7 +173,7 @@ categoriesSliders.forEach((slider, index) => {
     spaceBetween: 20,
     speed: 1000,
     autoHeight: false,
-    loop: false,
+    loop: true,
     navigation: {
       nextEl: `.swiper-button-next-${index}`,
       prevEl: `.swiper-button-prev-${index}`,
@@ -449,6 +347,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 //-----------------------------------------------------------------------код для кнопок показать скрыть текст
+
+//-----------------------------------------------------------------------код для секций аккаутна
 document.addEventListener("DOMContentLoaded", function () {
       const accountMoreButton = document.querySelector(".account__button-more");
       const accountMoreContent = document.querySelector(".account__content-more");
@@ -475,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
+//-----------------------------------------------------------------------код для секций аккаутна
 
 //-----------------------------------------------------------------------код для загрузки файлов в форме
 document.addEventListener("DOMContentLoaded", function() {
@@ -589,84 +489,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //------------------------------------------------------------------------код для работы accordion
 
 
-
-
-
-//------------------------------------------------------------------------select выпадающий список
-//document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
-//  const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-//  const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-//  const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-//  const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-//
-//  // Функция для закрытия текущего дропдауна
-//  function closeCurrentDropdown() {
-//    dropDownList.classList.remove('dropdown__list--active');
-//    dropDownBtn.classList.remove('dropdown__button--active');
-//  }
-//
-//  // Открыть/закрыть текущий дропдаун
-//  dropDownBtn.addEventListener('click', function (e) {
-//    e.stopPropagation(); // Остановить всплытие события
-//    e.preventDefault(); // Предотвращаем отправку формы
-//    const isActive = dropDownList.classList.contains('dropdown__list--active');
-//
-//    // Закрываем все дропдауны перед открытием текущего
-//    document.querySelectorAll('.dropdown__list--active').forEach(function(activeList) {
-//      activeList.classList.remove('dropdown__list--active');
-//    });
-//    document.querySelectorAll('.dropdown__button--active').forEach(function(activeButton) {
-//      activeButton.classList.remove('dropdown__button--active');
-//    });
-//
-//    // Если текущий дропдаун не был активным, открываем его
-//    if (!isActive) {
-//      dropDownList.classList.add('dropdown__list--active');
-//      dropDownBtn.classList.add('dropdown__button--active');
-//    }
-//  });
-//
-//  // Выбор элемента списка
-//  dropDownListItems.forEach(function (listItem) {
-//    listItem.addEventListener('click', function (e) {
-//      e.stopPropagation(); // Остановить всплытие события
-//      e.preventDefault(); // Предотвращаем отправку формы
-//      dropDownBtn.innerText = this.innerText;
-//      dropDownBtn.focus();
-//      dropDownInput.value = this.dataset.value;
-//      closeCurrentDropdown(); // Закрываем текущий дропдаун после выбора
-//    });
-//  });
-//
-//  // Закрытие при клике снаружи
-//  document.addEventListener('click', function (e) {
-//    if (!dropDownWrapper.contains(e.target)) {
-//      closeCurrentDropdown(); // Закрываем только текущий дропдаун
-//    }
-//  });
-//
-//  // Закрытие при нажатии Tab или Escape
-//  document.addEventListener('keydown', function (e) {
-//    if (e.key === 'Tab' || e.key === 'Escape') {
-//      closeCurrentDropdown(); // Закрываем только текущий дропдаун
-//    }
-//  });
-//});
-//
-//// Инициализация кнопки после загрузки
-//function initMyButton() {
-//  const myButton = document.getElementById('myButton');
-//  
-//  if (myButton && myButton.style.display !== 'none') {
-//    myButton.addEventListener('click', function(event) {
-//      event.preventDefault();
-//    });
-//  }
-//}
-//window.onload = initMyButton;
-
-//------------------------------------------------------------------------select выпадающий список
-
 //------------------------------------------------------------------------фильтрация по атрибутам
 document.addEventListener("DOMContentLoaded", function () {
   const filterItems = document.querySelectorAll(".filter-menu__list li");
@@ -699,42 +521,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //------------------------------------------------------------------------фильтрация по атрибутам
 
 
-
-//------------------------------------------------------------------------Animation
-//const animItems = document.querySelectorAll('._anim-items');
-//if (animItems.length > 0) {
-//  window.addEventListener('scroll', animOnScroll);
-//  function animOnScroll() {
-//    for (let index = 0; index < animItems.length; index++) {
-//        const animItem = animItems[index];
-//        const animItemHeight = animItem.offsetHeight;
-//        const animItemOffset = offset(animItem).top;
-//        const animStart = 5;
-//
-//        let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//
-//        if (animItemHeight > window.innerHeight) {
-//          animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//        }
-//
-//        if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-//          animItem.classList.add('_action');
-//        } else {
-//          animItem.classList.remove('_action');
-//        }
-//    }
-//  }
-//  function offset(el) {
-//    const rect = el.getBoundingClientRect(),
-//    scrollLeft  = window.pageXOffset || document.documentElement.scrollLeft,
-//    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//    return {top: rect.top + scrollTop, left: rect.left + screenLeft}
-//  }
-//  animOnScroll();
-//}
-//------------------------------------------------------------------------Animation
-
-
 //------------------------------------------------------------------------маска для телефона
 document.addEventListener("DOMContentLoaded", function () {
   var phoneInputs = document.querySelectorAll('._number'); // Выбираем все поля с классом "phone"
@@ -744,153 +530,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //------------------------------------------------------------------------маска для телефона
-//------------------------------------------------------------------------Обработка формы
-//document.addEventListener('DOMContentLoaded', function () {
-//  const forms = document.querySelectorAll('form'); // Получаем все формы на странице
-//
-//  forms.forEach((form) => {
-//    form.addEventListener('submit', formSend);
-//
-//    async function formSend(e) {
-//      e.preventDefault();
-//
-//      let error = formValidate(form);
-//      let formData = new FormData(form);
-//
-//      const formImage = form.querySelector('#formImage');
-//      if (formImage && formImage.files[0]) {
-//        formData.append('image', formImage.files[0]);
-//      }
-//
-//      if (error === 0) {
-//        form.classList.add('_sending');
-//        let response = await fetch('send.php', {
-//          method: 'POST',
-//          body: formData
-//        });
-//
-//      if (response.ok) {
-//        let result = await response.json();
-//        
-//        // Закрытие формы (например, скрытие через класс)
-//        form.style.display = 'none';
-//        
-//        // Добавляем сообщение об успешной отправке
-//        const successMessage = document.createElement('div');
-//        successMessage.classList.add('success-message'); // Добавляем класс для стилизации
-//        successMessage.textContent = 'Форма успешно отправлена! Спасибо за ваш отклик.';
-//        form.parentElement.appendChild(successMessage); // Добавляем сообщение в контейнер формы
-//        
-//        const formPreview = form.querySelector('#formPreview');
-//        if (formPreview) {
-//          formPreview.innerHTML = '';
-//        }
-//        form.reset();
-//        form.classList.remove('_sending');
-//      } else {
-//        showErrorMessage('Ошибка при отправке формы');
-//        form.classList.remove('_sending');
-//      }
-//      }
-//    }
-//
-//    function formValidate(form) {
-//      let error = 0;
-//      let formReq = form.querySelectorAll('._req');
-//
-//      formReq.forEach((input) => {
-//        formRemoveError(input);
-//
-//        if (input.classList.contains('_email')) {
-//          if (!emailTest(input)) { // проверка на корректность email
-//            formAddError(input);
-//            error++;
-//          }
-//        } else if (input.classList.contains('_number')) {
-//          if (!phoneTest(input)) { // проверка на корректность телефона
-//            formAddError(input);
-//            error++;
-//          }
-//        } else if (input.getAttribute('type') === "checkbox" && input.checked === false) {
-//          formAddError(input);
-//          error++;
-//        } else {
-//          if (input.value === '') {
-//            formAddError(input);
-//            error++;
-//          }
-//        }
-//      });
-//      return error;
-//    }
-//
-//    function formAddError(input) {
-//      input.parentElement.classList.add('_error');
-//      input.classList.add('_error');
-//    
-//      // Ищем элемент с классом form__error внутри контейнера родителя
-//      const errorSpan = input.parentElement.querySelector('.form__error');
-//      if (errorSpan) {
-//        errorSpan.classList.add('view'); // Добавляем класс view
-//      }
-//    }
-//    
-//    function formRemoveError(input) {
-//      input.parentElement.classList.remove('_error');
-//      input.classList.remove('_error');
-//    
-//      // Ищем элемент с классом form__error внутри контейнера родителя
-//      const errorSpan = input.parentElement.querySelector('.form__error');
-//      if (errorSpan) {
-//        errorSpan.classList.remove('view'); // Удаляем класс view
-//      }
-//    }
-//    
-//    // проверка email
-//    function emailTest(input) {
-//      return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(input.value);
-//    }
-//
-//    // проверка телефона
-//    function phoneTest(input) {
-//      return /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(input.value);
-//    }
-//
-//    // Работа с изображением
-//    const formImage = form.querySelector('#formImage');
-//    const formPreview = form.querySelector('#formPreview');
-//
-//    if (formImage) {
-//      formImage.addEventListener('change', () => {
-//        uploadFile(formImage.files[0]);
-//      });
-//
-//      function uploadFile(file) {
-//        if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-//          showErrorMessage('Только изображения');
-//          formImage.value = '';
-//          return;
-//        }
-//        if (file.size > 2 * 1024 * 1024) {
-//          showErrorMessage('Файл должен быть менее 2 МБ');
-//          return;
-//        }
-//        let reader = new FileReader();
-//        reader.onload = function (e) {
-//          if (formPreview) {
-//            formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-//          }
-//        };
-//        reader.onerror = function (e) {
-//          showErrorMessage('Ошибка загрузки изображения');
-//        };
-//        reader.readAsDataURL(file);
-//      }
-//    }
-//  });
-//});
-//
-//------------------------------------------------------------------------Обработка формы
 
 //-----------------------------------------------------------------------код для работы карзины товаров
 document.addEventListener('DOMContentLoaded', function() {

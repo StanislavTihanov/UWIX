@@ -1,5 +1,6 @@
 /*----------------------------------filter--------------------------------*/
 .filter {
+    padding-top: 0px;
     &__links {
        display: flex;
        justify-content: space-between;
@@ -65,7 +66,7 @@
                 content: '';
                 width: 7px;
                 height: 1px;
-                top: 5px;
+                top: 8px;
                 left: 0;
                 background-color: var(--color-black);
                 transform: rotate(-45deg);
@@ -75,7 +76,7 @@
                 content: '';
                 width: 7px;
                 height: 1px;
-                top: 10px;
+                top: 12px;
                 left: 0;
                 background-color: var(--color-black);
                 transform: rotate(45deg);
@@ -98,6 +99,7 @@
         }
         @include mobile {
             grid-template-columns: 1fr 1fr;
+            width: 100%;
         }
     }
     &__card {
@@ -123,6 +125,9 @@
             @include mobile {
                 padding-top: 112px;
             }
+        }
+        @include mobile {
+            max-width: 100%;
         }
     }
     &__slider {

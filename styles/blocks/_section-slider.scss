@@ -56,6 +56,9 @@
         @include mobile {
            position: static;
         }
+        .button {
+            padding: 10px 33px;
+        }
     }
     &__body {
         position: relative;

@@ -52,6 +52,13 @@
         &-place {
             cursor: pointer;
         }
+        &-icon {
+            &--mod {
+                svg path {
+                    fill: var(--color-black);
+                }
+            }
+        }
     }
     &__text {
         line-height: 120%;

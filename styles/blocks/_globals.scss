@@ -100,9 +100,6 @@ section {
         background-color: #D16403;
     }
 }
-.button-download {
-    background-color: var(--color-gray);
-}
 .button-white,
 .button-download {
     background-color: var(--color-white);
@@ -120,6 +117,13 @@ section {
         border: 1px solid var(--color-white);
         background-color: var(--color-orange);
         color: var(--color-white);
+    }
+}
+.button-download {
+    background-color: var(--color-gray);
+    @include mobile {
+        max-width: 100%;
+        border: 1px solid var(--color-orange);
     }
 }
 .button-white-outline {

@@ -270,10 +270,6 @@ section {
   }
 }
 
-.button-download {
-  background-color: var(--color-gray);
-}
-
 .button-white,
 .button-download {
   background-color: var(--color-white);
@@ -294,6 +290,16 @@ section {
     border: 1px solid var(--color-white);
     background-color: var(--color-orange);
     color: var(--color-white);
+  }
+}
+
+.button-download {
+  background-color: var(--color-gray);
+}
+@media (max-width: 768px) {
+  .button-download {
+    max-width: 100%;
+    border: 1px solid var(--color-orange);
   }
 }
 
@@ -416,6 +422,9 @@ section {
 }
 .header__locations-place {
   cursor: pointer;
+}
+.header__locations-icon--mod svg path {
+  fill: var(--color-black);
 }
 .header__text {
   line-height: 120%;
@@ -1236,6 +1245,9 @@ section {
     position: static;
   }
 }
+.section-slider__btn .button {
+  padding: 10px 33px;
+}
 .section-slider__body {
   position: relative;
 }
@@ -1508,8 +1520,8 @@ section {
   gap: 16px;
   position: absolute;
   z-index: 9;
-  top: -190px;
-  right: 10px;
+  top: -225px;
+  right: 0;
   font-size: clamp(12px, 1.1111111111vw, 16px);
 }
 @media (max-width: 768px) {
@@ -1610,6 +1622,9 @@ section {
     margin-bottom: 0px;
   }
 }
+.main-section__container--mod .title {
+  text-transform: none;
+}
 .main-section__box {
   color: var(--color-white);
 }
@@ -1681,6 +1696,9 @@ section {
     width: 100%;
     margin-bottom: 30px;
     color: var(--color-black);
+  }
+  .main-section__download p {
+    order: -1;
   }
 }
 .main-section .tags {
@@ -2662,7 +2680,7 @@ section {
   gap: 15px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  font-size: clamp(13px, 1.1111111111vw, 16px);
+  font-size: clamp(12px, 1.1111111111vw, 16px);
 }
 @media (hover: hover) {
   .estimate__form .form__item-download:hover {
@@ -2901,6 +2919,7 @@ input[type=file] {
 @media (max-width: 768px) {
   .preview {
     max-width: 100%;
+    grid-template-rows: auto auto auto 50px;
   }
 }
 .preview__image {
@@ -2911,10 +2930,15 @@ input[type=file] {
   border-radius: 10px 10px 2px 2px;
 }
 .preview__button {
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 .preview .button {
   display: inline;
+}
+@media (max-width: 768px) {
+  .preview .button {
+    display: block;
+  }
 }
 
 .subscribe h3 {
@@ -3757,6 +3781,12 @@ td.table__subtitle {
   max-width: 200px;
   line-height: 120%;
 }
+@media (max-width: 768px) {
+  .product-card__reception .tabs .tab-labels > h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
 .product-card__reception .tabs .tab-labels .tab-label {
   padding: 20px;
   cursor: auto;
@@ -3829,6 +3859,12 @@ td.table__subtitle {
   font-weight: 700;
   line-height: 120%;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .product-card__related-info h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
 }
 .product-card__related-info p {
   font-size: clamp(16px, 1.25vw, 18px);
@@ -3950,6 +3986,9 @@ td.table__subtitle {
 
 /*----------------------------------card--------------------------------*/
 /*----------------------------------filter--------------------------------*/
+.filter {
+  padding-top: 0px;
+}
 .filter__links {
   display: flex;
   justify-content: space-between;
@@ -4030,7 +4069,7 @@ td.table__subtitle {
   content: "";
   width: 7px;
   height: 1px;
-  top: 5px;
+  top: 8px;
   left: 0;
   background-color: var(--color-black);
   transform: rotate(-45deg);
@@ -4040,7 +4079,7 @@ td.table__subtitle {
   content: "";
   width: 7px;
   height: 1px;
-  top: 10px;
+  top: 12px;
   left: 0;
   background-color: var(--color-black);
   transform: rotate(45deg);
@@ -4065,6 +4104,7 @@ td.table__subtitle {
 @media (max-width: 768px) {
   .filter-menu__cards {
     grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
 }
 .filter-menu__card {
@@ -4094,6 +4134,11 @@ td.table__subtitle {
 @media (max-width: 768px) {
   .filter-menu__card .card__image {
     padding-top: 112px;
+  }
+}
+@media (max-width: 768px) {
+  .filter-menu__card {
+    max-width: 100%;
   }
 }
 .filter-menu__slider {
@@ -4625,6 +4670,7 @@ td.table__subtitle {
 
 .feedback {
   padding-top: 0px;
+  margin-top: -50px;
 }
 .feedback__content {
   position: relative;

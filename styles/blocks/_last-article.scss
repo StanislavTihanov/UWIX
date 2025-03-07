@@ -39,6 +39,7 @@
     height: 100%;
     @include mobile {
         max-width: 100%; 
+        grid-template-rows: auto auto auto 50px;
     }
     &__image {
         padding-top: 138px;
@@ -48,10 +49,13 @@
         }
     }
     &__button {
-        margin: 20px 0px;
+        margin: 10px 0px;
     }
     .button {
         display: inline;
+        @include mobile {
+            display: block
+        }
     }
 }
 .subscribe {
